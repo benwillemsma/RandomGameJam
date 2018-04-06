@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class CyclopsChargeAttack<Data> : CyclopsAttackState<Data> where Data: CyclopsData
 {
-    #region EnemyState Variables
+    #region ChargeAttack Variables
 
     #endregion
 
-    public CyclopsChargeAttack(Data characterData,Collider attackCollider) : base(characterData, attackCollider) { }
+    public CyclopsChargeAttack(Data characterData, EffectManager attackCollider) : base(characterData, attackCollider) { }
 
     public override IEnumerator EnterState(BaseState prevState)
     {
@@ -25,6 +25,7 @@ public class CyclopsChargeAttack<Data> : CyclopsAttackState<Data> where Data: Cy
     protected override void UpdateTransition() { }
 
     protected override void UpdateMovement() { }
+    protected override void UpdateNavAgent() { }
     protected override void UpdateAnimator() { }
     protected override void UpdatePhysics() { }
 

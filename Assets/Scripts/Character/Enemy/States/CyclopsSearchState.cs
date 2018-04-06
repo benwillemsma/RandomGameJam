@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CyclopsSearchState<Data> : CharacterState<Data> where Data: CyclopsData
+public class CyclopsSearchState<Data> : CyclopsBaseState<Data> where Data: CyclopsData
 {
-    #region EnemyState Variables
+    #region CyclopsSearchState Variables
 
     #endregion
 
@@ -25,6 +25,7 @@ public class CyclopsSearchState<Data> : CharacterState<Data> where Data: Cyclops
     protected override void UpdateTransition() { }
 
     protected override void UpdateMovement() { }
+    protected override void UpdateNavAgent() { }
     protected override void UpdateAnimator() { }
     protected override void UpdatePhysics() { }
 

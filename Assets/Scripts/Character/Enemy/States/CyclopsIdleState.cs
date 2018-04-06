@@ -3,9 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CyclopsIdleState<Data> : CharacterState<Data> where Data : CyclopsData
+public class CyclopsIdleState<Data> : CyclopsBaseState<Data> where Data : CyclopsData
 {
-    #region EnemyState Variables
+    #region CyclopsIdleState Variables
 
     #endregion
 
@@ -26,6 +26,7 @@ public class CyclopsIdleState<Data> : CharacterState<Data> where Data : CyclopsD
     protected override void UpdateTransition() { }
 
     protected override void UpdateMovement() { }
+    protected override void UpdateNavAgent() { }
     protected override void UpdateAnimator() { }
     protected override void UpdatePhysics() { }
 

@@ -3,15 +3,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class CyclopsAttackState<Data> : CharacterState<Data> where Data: CyclopsData
+public abstract class CyclopsAttackState<Data> : CyclopsBaseState<Data> where Data: CyclopsData
 {
-    #region EnemyState Variables
+    #region AttackState Variables
 
-    protected Collider attackCollider;
+    protected EffectManager attackCollider;
 
     #endregion
 
-    public CyclopsAttackState(Data characterData, Collider attackCollider) : base(characterData)
+    public CyclopsAttackState(Data characterData, EffectManager attackCollider) : base(characterData)
     {
         this.attackCollider = attackCollider;
     }
@@ -26,5 +26,10 @@ public abstract class CyclopsAttackState<Data> : CharacterState<Data> where Data
     {
         if (attackCollider) attackCollider.enabled = false;
         return base.ExitState(nextState);
+    }
+
+    protected void Recoil()
+    {
+
     }
 }

@@ -212,6 +212,15 @@ public class GameManager : MonoBehaviour
     }
     #endregion
 
+    #region Static Functions
+    public delegate void Callback();
+    public static IEnumerator CallAfterDelay(Callback callback, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        if (callback != null) callback();
+    }
+    #endregion
+
     #region Main
 
     private void Awake()
