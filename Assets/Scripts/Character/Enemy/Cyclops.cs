@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class BaseEnemy : CharacterData
+public class Cyclops : HumanoidData
 {
     protected override void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
