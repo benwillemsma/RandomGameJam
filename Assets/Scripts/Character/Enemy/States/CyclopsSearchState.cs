@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CyclopsSearchState<Data> : CharacterState<Data> where Data: Cyclops
+public class CyclopsSearchState<Data> : CharacterState<Data> where Data: CyclopsData
 {
     #region EnemyState Variables
 

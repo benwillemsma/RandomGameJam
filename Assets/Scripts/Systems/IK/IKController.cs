@@ -42,8 +42,6 @@ public class IKController : MonoBehaviour
     {
         if (_RightHand.weight == 0 && _LeftHand.weight == 0 && _RightFoot.weight == 0 && _LeftFoot.weight == 0)
             SetBoneTransforms();
-
-        _lookAtPosition = mainCamera.position + mainCamera.forward * 50;
     }
     protected virtual void OnAnimatorIK(int layerIndex)
     {

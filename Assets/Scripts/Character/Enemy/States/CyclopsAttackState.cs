@@ -1,38 +1,30 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CyclopsAttackState<Data> : CharacterState<Data> where Data: Cyclops
+public abstract class CyclopsAttackState<Data> : CharacterState<Data> where Data: CyclopsData
 {
     #region EnemyState Variables
 
+    protected Collider attackCollider;
+
     #endregion
 
-    public CyclopsAttackState(Data characterData) : base(characterData) { }
+    public CyclopsAttackState(Data characterData, Collider attackCollider) : base(characterData)
+    {
+        this.attackCollider = attackCollider;
+    }
 
     public override IEnumerator EnterState(BaseState prevState)
     {
+        if (attackCollider) attackCollider.enabled = true;
         return base.EnterState(prevState);
     }
 
     public override IEnumerator ExitState(BaseState nextState)
     {
+        if (attackCollider) attackCollider.enabled = false;
         return base.ExitState(nextState);
     }
-
-    protected override void UpdateState() { }
-    protected override void UpdatePaused() { }
-    protected override void UpdateTransition() { }
-
-    protected override void UpdateMovement() { }
-    protected override void UpdateAnimator() { }
-    protected override void UpdatePhysics() { }
-
-    public override void OnTriggerEnter(Collider collider) { }
-    public override void OnTriggerExit(Collider collider) { }
-    public override void OnTriggerStay(Collider collider) { }
-
-    public override void OnCollisionEnter(Collision collision) { }
-    public override void OnCollisionExit(Collision collision) { }
-    public override void OnCollisionStay(Collision collision) { }
 }

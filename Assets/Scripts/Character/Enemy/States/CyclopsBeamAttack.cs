@@ -1,15 +1,14 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CyclopsIdleState<Data> : CharacterState<Data> where Data : CyclopsData
+public class CyclopsBeamAttack<Data> : CyclopsAttackState<Data> where Data: CyclopsData
 {
     #region EnemyState Variables
 
     #endregion
 
-    public CyclopsIdleState(Data characterData) : base(characterData) { }
+    public CyclopsBeamAttack(Data characterData, Collider attackCollider) : base(characterData, attackCollider) { }
 
     public override IEnumerator EnterState(BaseState prevState)
     {

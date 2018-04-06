@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class CyclopsBaseState<Data> : CharacterState<Data> where Data: Cyclops
+public abstract class CyclopsBaseState<Data> : CharacterState<Data> where Data: CyclopsData
 {
     #region EnemyState Variables
 
