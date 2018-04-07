@@ -29,7 +29,6 @@ public abstract class BaseState
     //Transition Functions
     /// <summary>
     /// Called when the State is Entered before first StateUpdate, This is the Current State.
-    /// Call Base.EnterState Last.
     /// </summary>
     /// <param name="prevState"></param>
     /// <returns></returns>
@@ -49,7 +48,6 @@ public abstract class BaseState
 
     /// <summary>
     /// Called when the State is Exited after final StateUpdate, This is still the Current State.
-    /// Call Base.ExitState Last.
     /// </summary>
     /// <param name="prevState"></param>
     /// <returns></returns>
@@ -62,7 +60,7 @@ public abstract class BaseState
     //State Updates
     public virtual void Update()
     {
-        if (!(hasStarted || hasStopped))
+        if (hasStarted || !hasStopped)
         {
             if (stateManager.IsPaused)
                 UpdatePaused();

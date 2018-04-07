@@ -2,12 +2,7 @@
 
 public class ClimbingNode : MonoBehaviour
 {
-    private Vector3 playerPosition;
-    public Vector3 PlayerPosition
-    {
-        get {return playerPosition; }
-    }
-
+    // Public
     [Space(10)]
     public Transform rightHand;
     public Transform leftHand;
@@ -18,8 +13,27 @@ public class ClimbingNode : MonoBehaviour
     public float[] distances;
 
     public float DetectionRadius = 2f;
+
     private ClimbingNode currentNode;
     private Vector3[] CompareDirection = new Vector3[8];
+
+    //Private
+    public Vector3 PlayerOffset;
+    public Vector3 PlayerPosition
+    {
+        get { return transform.position + transform.rotation * PlayerOffset; }
+    }
+    private bool m_active = true;
+    public bool Active
+    {
+        get { return m_active; }
+    }
+    private int m_rotation;
+    public int Rotation
+    {
+        get { return m_rotation; }
+        set { m_rotation = value; }
+    }
 
     protected void Start ()
     {
@@ -32,8 +46,7 @@ public class ClimbingNode : MonoBehaviour
 
             for (int i = 0; i < distances.Length; i++)
                 distances[i] = Mathf.Infinity;
-
-            playerPosition = transform.position - transform.forward * 0.4f - transform.up * 1.7f;
+            
             CalculateNodeNeighbors();
         }
     }
@@ -44,13 +57,19 @@ public class ClimbingNode : MonoBehaviour
             Rotate();
     }
 
-    private void OnDrawGizmos()
+    private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.grey;
         Gizmos.DrawLine(transform.position, rightHand.transform.position);
         Gizmos.DrawLine(transform.position, leftHand.transform.position);
         Gizmos.DrawLine(transform.position, rightFoot.transform.position);
         Gizmos.DrawLine(transform.position, leftFoot.transform.position);
+
+        Gizmos.color = Color.blue;
+        Gizmos.DrawSphere(rightHand.transform.position, 0.1f);
+        Gizmos.DrawSphere(leftHand.transform.position, 0.1f);
+        Gizmos.DrawSphere(rightFoot.transform.position, 0.1f);
+        Gizmos.DrawSphere(leftFoot.transform.position, 0.1f);
 
         Gizmos.color = Color.red;
         for (int i = 0; i < neighbours.Length; i++)
@@ -60,9 +79,21 @@ public class ClimbingNode : MonoBehaviour
         }
     }
 
-    private void Rotate()
+    public virtual void Rotate()
     {
+        m_active = Vector3.Dot(-transform.forward, Vector3.up) < 0.9f;
 
+        if (Vector3.Dot(transform.up, Vector3.up) < 0)
+        {
+            m_rotation = (m_rotation + 4) % 8;
+            transform.rotation = Quaternion.AngleAxis(180, transform.forward) * transform.rotation;
+        }
+
+        if (transform.rotation.eulerAngles.z > 0.5f && transform.rotation.eulerAngles.z < 359.5f)
+        {
+            m_rotation = Mathf.RoundToInt((360 - transform.localEulerAngles.z) / 45);
+            transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, 0);
+        }
     }
 
     #region NeighbourFunctions

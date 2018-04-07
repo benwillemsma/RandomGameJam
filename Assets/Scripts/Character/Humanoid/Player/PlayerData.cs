@@ -3,7 +3,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class PlayerData : CharacterData
+public class PlayerData : HumanoidData
 {
     #region Variables
 

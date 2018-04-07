@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class PlayerState : CharacterState<PlayerData>
+public abstract class PlayerState : HumanoidState<PlayerData>
 {
     #region PlayerState Variables
 

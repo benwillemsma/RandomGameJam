@@ -44,7 +44,6 @@ public class StateManager : MonoBehaviour
     public void ChangeState(BaseState newState)
     {
         StartCoroutine(HandleStateTransition(newState));
-        CurrentState = m_state.ToString();
     }
     protected IEnumerator HandleStateTransition(BaseState newState)
     {
@@ -63,12 +62,13 @@ public class StateManager : MonoBehaviour
         //Enter State
         SetTriggers(newState);
         SetCollisions(newState);
-
+        
         m_state.InTransition = true;
         yield return StartCoroutine(m_state.EnterState(prevState));
         m_state.InTransition = false;
 
         prevState = null;
+        CurrentState = m_state.ToString();
     }
 
     // Trigger Delegates
