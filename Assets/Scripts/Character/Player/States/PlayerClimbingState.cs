@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerClimbingState : PlayerState<PlayerData>
+public class PlayerClimbingState : PlayerState
 {
     public PlayerClimbingState(PlayerData player) : base(player) { }
 

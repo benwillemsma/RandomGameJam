@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CyclopsSearchState<Data> : CyclopsBaseState<Data> where Data: CyclopsData
+public class CyclopsSearchState : CyclopsBaseState<CyclopsData>
 {
     #region CyclopsSearchState Variables
 
     #endregion
 
-    public CyclopsSearchState(Data characterData) : base(characterData) { }
+    public CyclopsSearchState(CyclopsData characterData) : base(characterData) { }
 
     public override IEnumerator EnterState(BaseState prevState)
     {

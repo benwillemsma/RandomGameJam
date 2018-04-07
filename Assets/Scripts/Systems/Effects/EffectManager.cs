@@ -27,6 +27,7 @@ public class EffectManager : MonoBehaviour
 
     private void OnEnable()
     {
+        if (!collider) collider = GetComponent<Collider>();
         collider.enabled = true;
     }
 
@@ -42,7 +43,7 @@ public class EffectManager : MonoBehaviour
             if (collision.gameObject.tag == affectTags[i])
             {
                 CharacterData character = collision.collider.attachedRigidbody.GetComponent<CharacterData>();
-                if (character && !affectedCharaters.Contains(character))
+                if (character && character != owningCharacter && !affectedCharaters.Contains(character))
                 {
                     affectedCharaters.Add(character);
                     for (int e = 0; e < effects.Count; e++)
@@ -71,8 +72,9 @@ public class EffectManager : MonoBehaviour
 
     protected void OnCollisionExit(Collision collision)
     {
+        Debug.Log(collision.collider, collision.collider);
         CharacterData character = collision.collider.attachedRigidbody.GetComponent<CharacterData>();
-        if (character && affectedCharaters.Contains(character))
+        if (character && character != owningCharacter && affectedCharaters.Contains(character))
         {
             affectedCharaters.Remove(character);
             for (int e = 0; e < effects.Count; e++)

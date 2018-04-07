@@ -4,7 +4,12 @@ using UnityEngine;
 
 public class StateManager : MonoBehaviour
 {
-    public BaseState State;
+    private BaseState m_state;
+    public BaseState State
+    {
+        get { return m_state; }
+        set { m_state = value; }
+    }
     private bool m_isPaused;
     public bool IsPaused
     {
@@ -18,50 +23,50 @@ public class StateManager : MonoBehaviour
     protected void Start()
     {
         //Initialize trigger Delegates
-        SetTriggers(State);
-        SetCollisions(State);
+        SetTriggers(m_state);
+        SetCollisions(m_state);
 
-        State.EnterState(null);
-        CurrentState = State.ToString();
+        m_state.EnterState(null);
+        CurrentState = m_state.ToString();
     }
 
     protected void Update()
     {
-        if (State != null) State.Update();
+        if (m_state != null) m_state.Update();
     }
 
     protected void FixedUpdate()
     {
-        if (State != null) State.FixedUpdate();
+        if (m_state != null) m_state.FixedUpdate();
     }
 
     //State Functions
     public void ChangeState(BaseState newState)
     {
         StartCoroutine(HandleStateTransition(newState));
-        CurrentState = State.ToString();
+        CurrentState = m_state.ToString();
     }
     protected IEnumerator HandleStateTransition(BaseState newState)
     {
-        //Exit State
-        State.InTransition = true;
-        yield return StartCoroutine(State.ExitState(newState));
-        State.InTransition = false;
+        //Exit StateoverTime
+        m_state.InTransition = true;
+        yield return StartCoroutine(m_state.ExitState(newState));
+        m_state.InTransition = false;
 
-        RemoveTriggers(State);
-        RemoveCollisions(State);
+        RemoveTriggers(m_state);
+        RemoveCollisions(m_state);
 
         //Set New State
-        BaseState prevState = State;
-        State = newState;
+        BaseState prevState = m_state;
+        m_state = newState;
 
         //Enter State
         SetTriggers(newState);
         SetCollisions(newState);
 
-        State.InTransition = true;
-        yield return StartCoroutine(State.EnterState(prevState));
-        State.InTransition = false;
+        m_state.InTransition = true;
+        yield return StartCoroutine(m_state.EnterState(prevState));
+        m_state.InTransition = false;
 
         prevState = null;
     }

@@ -7,6 +7,23 @@ public class PlayerData : CharacterData
 {
     #region Variables
 
+    [Header("Movement")]
+    [Range(0, 10)]
+    public float runSpeed = 8;
+    [Range(4, 10)]
+    public float jumpForce = 6;
+    [Range(0, 10)]
+    public float airControl = 5;
+    public bool toggleCrouch;
+    public LayerMask groundMask;
+
+    [Header("Camera")]
+    [Range(0, 50)]
+    public float CameraSensitivity = 30;
+    [Range(0, 2)]
+    public float CameraOffset = 0.75f;
+    public bool InvertedCamera;
+
     #endregion
 
     #region Trigger Input
@@ -42,10 +59,7 @@ public class PlayerData : CharacterData
     private void Start ()
     {
         m_stateM.State = new PlayerWalkingState(this);
-        StartCoroutine(m_stateM.State.EnterState(null));
     }
-
-   
 
     protected override void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {

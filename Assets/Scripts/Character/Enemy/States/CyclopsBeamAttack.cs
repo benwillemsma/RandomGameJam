@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CyclopsBeamAttack<Data> : CyclopsAttackState<Data> where Data: CyclopsData
+public class CyclopsBeamAttack : CyclopsAttackState
 {
     #region BeamAttack Variables
 
     #endregion
 
-    public CyclopsBeamAttack(Data characterData, EffectManager attackCollider) : base(characterData, attackCollider) { }
+    public CyclopsBeamAttack(CyclopsData characterData, EffectManager attackCollider) : base(characterData, attackCollider) { }
 
     public override IEnumerator EnterState(BaseState prevState)
     {

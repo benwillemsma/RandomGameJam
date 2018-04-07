@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerWalkingState : PlayerState<PlayerData>
+public class PlayerWalkingState : PlayerState
 {
+    private bool sprinting;
+
     public PlayerWalkingState(PlayerData player) : base(player) { }
 
     //State Transitions
@@ -25,9 +27,22 @@ public class PlayerWalkingState : PlayerState<PlayerData>
     protected override void UpdateTransition() { }
 
     // Character Updates
-    protected override void UpdateMovement() { }
+    protected override void UpdateMovement()
+    {
+        movementDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical")).normalized;
+        movementDirection = rb.transform.rotation * movementDirection;
+        sprinting = Input.GetButton("Sprint");
+        if (sprinting) movementDirection *= 1.5f;
+
+        rb.transform.Rotate(rb.transform.up, Input.GetAxis("Mouse X") * Time.deltaTime * data.CameraSensitivity, Space.World);
+    }
     protected override void UpdateAnimator() { }
-    protected override void UpdatePhysics() { }
+    protected override void UpdatePhysics()
+    {
+        float fallspeed = rb.velocity.y;
+        rb.velocity = movementDirection * data.runSpeed;
+        rb.velocity += Vector3.up * fallspeed;
+    }
     protected override void UpdateInput() { }
 
     //Trigger Functions

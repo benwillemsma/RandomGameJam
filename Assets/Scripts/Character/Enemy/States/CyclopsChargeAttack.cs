@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CyclopsChargeAttack<Data> : CyclopsAttackState<Data> where Data: CyclopsData
+public class CyclopsChargeAttack : CyclopsAttackState
 {
     #region ChargeAttack Variables
 
     #endregion
 
-    public CyclopsChargeAttack(Data characterData, EffectManager attackCollider) : base(characterData, attackCollider) { }
+    public CyclopsChargeAttack(CyclopsData characterData, EffectManager attackCollider) : base(characterData, attackCollider) { }
 
     public override IEnumerator EnterState(BaseState prevState)
     {

@@ -19,6 +19,11 @@ public class CyclopsData : HumanoidData
 
     #endregion
 
+    private void Start()
+    {
+        m_stateM.State = new CyclopsIdleState(this);
+    }
+
     protected override void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
     }

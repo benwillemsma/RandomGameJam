@@ -25,9 +25,10 @@ public class IKController : MonoBehaviour
     protected Vector3 CameraForward;
 
     //Unity Functions
-    protected virtual void Start()
+    protected void Awake()
     {
         anim = GetComponent<Animator>();
+        if (!anim.isHuman) enabled = false;
         mainCamera = Camera.main.transform;
     }
     protected virtual void OnDrawGizmos()

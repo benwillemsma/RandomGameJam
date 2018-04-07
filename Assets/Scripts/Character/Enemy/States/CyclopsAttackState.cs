@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class CyclopsAttackState<Data> : CyclopsBaseState<Data> where Data: CyclopsData
+public abstract class CyclopsAttackState : CyclopsBaseState<CyclopsData>
 {
     #region AttackState Variables
 
@@ -11,7 +11,7 @@ public abstract class CyclopsAttackState<Data> : CyclopsBaseState<Data> where Da
 
     #endregion
 
-    public CyclopsAttackState(Data characterData, EffectManager attackCollider) : base(characterData)
+    public CyclopsAttackState(CyclopsData characterData, EffectManager attackCollider) : base(characterData)
     {
         this.attackCollider = attackCollider;
     }

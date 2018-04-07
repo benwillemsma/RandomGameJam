@@ -3,13 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CyclopsIdleState<Data> : CyclopsBaseState<Data> where Data : CyclopsData
+public class CyclopsIdleState : CyclopsBaseState<CyclopsData>
 {
     #region CyclopsIdleState Variables
 
     #endregion
 
-    public CyclopsIdleState(Data characterData) : base(characterData) { }
+    public CyclopsIdleState(CyclopsData characterData) : base(characterData) { }
 
     public override IEnumerator EnterState(BaseState prevState)
     {
