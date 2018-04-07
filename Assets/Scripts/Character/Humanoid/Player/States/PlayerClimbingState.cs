@@ -16,6 +16,8 @@ public class PlayerClimbingState : PlayerState
     private const int NONE = -1;
     private const int RIGHT = 0;
     private const int LEFT = 1;
+    private const int UP = 2;
+    private const int DOWN = 3;
 
     private int nodeIndex;
     private int movePolarity = RIGHT;
@@ -37,9 +39,6 @@ public class PlayerClimbingState : PlayerState
     public override IEnumerator ExitState(BaseState nextState)
     {
         rb.useGravity = true;
-        Vector3 rotation = rb.transform.localEulerAngles;
-        rotation.x = 0; rotation.z = 0;
-        rb.transform.localEulerAngles = rotation;
         yield return base.ExitState(nextState);
     }
 
@@ -94,10 +93,10 @@ public class PlayerClimbingState : PlayerState
             lookDirection = Vector3.ProjectOnPlane(lookDirection, rb.transform.up);
 
             //Root Position - While Stationary
-            rb.transform.position = (currentNodes[1].PlayerPosition + currentNodes[0].PlayerPosition) / 2;
+            rb.transform.position = Vector3.Lerp(rb.transform.position, (currentNodes[1].PlayerPosition + currentNodes[0].PlayerPosition) / 2, Time.deltaTime * 2);
 
             //Root Rotation - While Stationary
-            rb.transform.rotation = Quaternion.Lerp(currentNodes[1].transform.rotation, currentNodes[0].transform.rotation, 0.5f);
+            rb.transform.rotation = Quaternion.Lerp(currentNodes[1].transform.rotation, currentNodes[0].transform.rotation, Time.deltaTime * 2);
         }
     }
     protected override void UpdateAnimator() { }
@@ -120,15 +119,14 @@ public class PlayerClimbingState : PlayerState
     private int FindNextMove()
     {
         int move = IndexPolarity(nodeIndex);
-        if (move == NONE)
+        if (move == NONE) // Moving Up or Down
         {
             if (currentNodes[1] != currentNodes[0])
                 move = (movePolarity + 1) % 2;
-            else
-                move = movePolarity;
+            else move = movePolarity;
         }
         else if (currentNodes[1] != currentNodes[0])
-            move = (move + 1) % 2;
+            move = (movePolarity + 1) % 2;
         return move;
     }
 
@@ -157,11 +155,13 @@ public class PlayerClimbingState : PlayerState
     }
     private int IndexPolarity(int index)
     {
+        int polarity;
         if (index < 4 && index > 0)
-            return RIGHT;
+            polarity = RIGHT;
         else if (index > 4)
-            return LEFT;
-        else return NONE;
+            polarity = LEFT;
+        else polarity = NONE;
+        return polarity;
     }
 
     //State Actions

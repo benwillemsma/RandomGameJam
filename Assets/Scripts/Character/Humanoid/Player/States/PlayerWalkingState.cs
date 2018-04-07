@@ -39,6 +39,7 @@ public class PlayerWalkingState : PlayerState
     protected override void UpdateMovement()
     {
         if (sprinting) movementDirection *= 1.5f;
+        rb.transform.rotation = Quaternion.Lerp(rb.transform.rotation, properRotation, Time.deltaTime * 2);
         rb.transform.Rotate(rb.transform.up, Input.GetAxis("Mouse X") * Time.deltaTime * data.CameraSensitivity, Space.World);
     }
     protected override void UpdateAnimator() { }

@@ -8,6 +8,7 @@ public abstract class PlayerState : HumanoidState<PlayerData>
     
     protected bool canInput = true;
     protected Vector3 movementDirection;
+    protected Quaternion properRotation;
 
     #endregion
 
@@ -15,6 +16,7 @@ public abstract class PlayerState : HumanoidState<PlayerData>
 
     protected override void UpdateState()
     {
+        properRotation = Quaternion.LookRotation(Vector3.ProjectOnPlane(rb.transform.forward, Vector3.up), Vector3.up);
         base.UpdateState();
         if (canInput) UpdateInput();
     }

@@ -92,13 +92,11 @@ public class GameManager : MonoBehaviour
 
     #region Player Managment
     public GameObject playerPrefab;
-    public static SpawnManager levelSpawn;
 
     private void SpawnPlayer()
     {
-        Debug.Log(levelSpawn);
-        Transform spawnTransfrom = levelSpawn.GetNextSpawn();
-        Instantiate(playerPrefab, spawnTransfrom.position, spawnTransfrom.rotation).GetComponent<PlayerData>();
+        PlayerData playerRef = playerPrefab.GetComponent<PlayerData>();
+        playerRef = Instantiate(playerRef, playerRef.SpawnPoint, playerRef.spawn ? playerRef.spawn.rotation : Quaternion.identity);
     }
 
     public void Quit()

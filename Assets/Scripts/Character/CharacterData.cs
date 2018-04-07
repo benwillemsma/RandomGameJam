@@ -30,33 +30,19 @@ public abstract class CharacterData : MonoBehaviour
     }
     #endregion
 
-    #region Pause Info
-    private bool m_paused;
-
-    public bool isPaused
-    {
-        get { return m_paused; }
-    }
-    public virtual void PauseController()
-    {
-        StateM.IsPaused = true;
-
-        RB.velocity = Vector3.zero;
-        m_paused = true;
-    }
-    public virtual void UnPauseController()
-    {
-        StateM.IsPaused = false;
-        m_paused = false;
-    }
-    #endregion
-
     #region Health Info
     [Space(10)]
-    [SerializeField]
-    protected Transform respawnPoint;
+    public Transform spawn;
     protected Vector3 m_startLocation;
-    
+    public Vector3 SpawnPoint
+    {
+        get
+        {
+            if (spawn) return spawn.position;
+            else return m_startLocation;
+        }
+    }
+
     [SerializeField]
     protected float m_maxHealth = 100;
     [SerializeField]
@@ -111,12 +97,8 @@ public abstract class CharacterData : MonoBehaviour
 
     public void RespawnCharacter()
     {
-        if (respawnPoint)
-        {
-            transform.position = respawnPoint.position;
-            RB.velocity = Vector3.zero;
-        }
-        else Destroy(gameObject);
+        transform.position = SpawnPoint;
+        RB.velocity = Vector3.zero;
     }
     #endregion
 

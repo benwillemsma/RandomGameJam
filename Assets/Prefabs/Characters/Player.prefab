@@ -385,12 +385,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da0ec9f0f3caf5a4f9a571446f9d5182, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  respawnPoint: {fileID: 0}
+  spawn: {fileID: 0}
   m_maxHealth: 100
   m_damageImmuneDuration: 0.5
   m_deathDelay: 3
   runSpeed: 8
-  jumpForce: 6
+  jumpForce: 10
   airControl: 5
   toggleCrouch: 0
   groundMask:
