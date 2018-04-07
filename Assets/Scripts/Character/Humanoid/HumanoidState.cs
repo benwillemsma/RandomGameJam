@@ -20,5 +20,5 @@ public abstract class HumanoidState<Data> : CharacterState<Data> where Data : Hu
     /// <summary>
     /// Humanoid IKUpdate, Called After AnimatorUpdate;
     /// </summary>
-    protected abstract void UpdateIK();
+    protected virtual void UpdateIK() { }
 }

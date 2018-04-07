@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CyclopsSearchState : CyclopsBaseState<CyclopsData>
+public class CyclopsSearchState : CyclopsState
 {
     #region CyclopsSearchState Variables
 
@@ -24,8 +24,8 @@ public class CyclopsSearchState : CyclopsBaseState<CyclopsData>
     protected override void UpdatePaused() { }
     protected override void UpdateTransition() { }
 
+    protected override void UpdateAI() { }
     protected override void UpdateMovement() { }
-    protected override void UpdateNavAgent() { }
     protected override void UpdateAnimator() { }
     protected override void UpdatePhysics() { }
 

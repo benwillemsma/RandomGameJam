@@ -37,6 +37,9 @@ public class PlayerClimbingState : PlayerState
     public override IEnumerator ExitState(BaseState nextState)
     {
         rb.useGravity = true;
+        Vector3 rotation = rb.transform.localEulerAngles;
+        rotation.x = 0; rotation.z = 0;
+        rb.transform.localEulerAngles = rotation;
         yield return base.ExitState(nextState);
     }
 
@@ -187,7 +190,6 @@ public class PlayerClimbingState : PlayerState
         elapsedTime = 0;
         while (elapsedTime <= 1)
         {
-            elapsedTime += Time.deltaTime * movementSpeed;
             if (Input.GetButtonDown("Jump"))
             {
                 Jump();
@@ -229,6 +231,7 @@ public class PlayerClimbingState : PlayerState
                 (currentNodes[(movePolarity + 1) % 2].PlayerPosition + nextNode.PlayerPosition) / 2,
                 elapsedTime);
 
+            elapsedTime += Time.deltaTime * movementSpeed;
             yield return null;
         }
         currentNodes[movePolarity] = nextNode;

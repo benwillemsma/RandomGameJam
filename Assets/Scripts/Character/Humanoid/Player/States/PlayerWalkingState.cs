@@ -5,7 +5,8 @@ using UnityEngine;
 
 public class PlayerWalkingState : PlayerState
 {
-    private bool sprinting;
+    private bool grounded = true;
+    private bool sprinting = false;
 
     public PlayerWalkingState(PlayerData player) : base(player) { }
 
@@ -30,10 +31,10 @@ public class PlayerWalkingState : PlayerState
     // Character Updates
     protected override void UpdateInput()
     {
+        CheckGround();
         movementDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical")).normalized;
         movementDirection = rb.transform.rotation * movementDirection;
         sprinting = Input.GetButton("Sprint");
-        if (Input.GetButton("Jump")) Jump();
     }
     protected override void UpdateMovement()
     {
@@ -43,19 +44,40 @@ public class PlayerWalkingState : PlayerState
     protected override void UpdateAnimator() { }
     protected override void UpdatePhysics()
     {
-        float fallspeed = rb.velocity.y;
-        rb.velocity = movementDirection * data.runSpeed;
-        rb.velocity += Vector3.up * fallspeed;
+        if (grounded)
+        {
+            if (Input.GetButton("Jump") && rb.velocity.y <= 0)
+                Jump();
+            else
+            {
+                float fallspeed = rb.velocity.y;
+                rb.velocity = movementDirection * data.runSpeed;
+                rb.velocity += Vector3.up * fallspeed;
+            }
+        }
+        else rb.AddForce(Vector3.down * 10);
     }
     protected override void UpdateIK() { }
 
     // State Actions
     private void Jump()
     {
+        grounded = false;
         rb.AddForce(Vector3.up * data.jumpForce, ForceMode.Impulse);
     }
 
-    //Trigger Functions
+    private void CheckGround()
+    {
+        Vector3 velocity = Vector3.ProjectOnPlane(rb.velocity.normalized, Vector3.up) * 0.2f;
+        Vector3 start = rb.transform.position + rb.transform.up + velocity;
+        Vector3 direction = -rb.transform.up;
+
+        RaycastHit hit;
+        if (Physics.Raycast(start, direction, out hit, 1.5f, ~data.groundMask))
+            grounded = hit.distance < 1.1f;
+    }
+
+    //Physics  Functions
     public override void OnTriggerEnter(Collider collider)
     {
         ClimbingNode node;
@@ -65,12 +87,4 @@ public class PlayerWalkingState : PlayerState
             if (node) stateManager.ChangeState(new PlayerClimbingState(data, node));
         }
     }
-    public override void OnTriggerStay(Collider collider) { }
-    public override void OnTriggerExit(Collider collider) { }
-
-    //Colission Functions
-    public override void OnCollisionEnter(Collision collision) { }
-    public override void OnCollisionStay(Collision collision) { }
-    public override void OnCollisionExit(Collision collision) { }
-
 }

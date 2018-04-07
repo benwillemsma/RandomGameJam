@@ -5,9 +5,8 @@ using UnityEngine;
 public abstract class PlayerState : HumanoidState<PlayerData>
 {
     #region PlayerState Variables
-
-    public float speed;
-
+    
+    protected bool canInput = true;
     protected Vector3 movementDirection;
 
     #endregion
@@ -16,12 +15,12 @@ public abstract class PlayerState : HumanoidState<PlayerData>
 
     protected override void UpdateState()
     {
-        UpdateInput();
         base.UpdateState();
+        if (canInput) UpdateInput();
     }
 
     /// <summary>
-    /// Character InputUpdate, Called Before StateUpdate;
+    /// Player InputUpdate, Called Before StateUpdate;
     /// </summary>
     protected abstract void UpdateInput();
 }

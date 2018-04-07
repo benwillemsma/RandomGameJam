@@ -10,7 +10,7 @@ public class PlayerData : HumanoidData
     [Header("Movement")]
     [Range(0, 10)]
     public float runSpeed = 8;
-    [Range(4, 10)]
+    [Range(4, 20)]
     public float jumpForce = 6;
     [Range(0, 10)]
     public float airControl = 5;

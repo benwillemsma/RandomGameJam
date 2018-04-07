@@ -60,7 +60,7 @@ public abstract class BaseState
     //State Updates
     public virtual void Update()
     {
-        if (hasStarted || !hasStopped)
+        if (hasStarted && !hasStopped)
         {
             if (stateManager.IsPaused)
                 UpdatePaused();
@@ -79,34 +79,34 @@ public abstract class BaseState
         if (!stateManager.IsPaused)
             UpdatePhysics();
     }
-    
+
     /// <summary>
     /// Physics Update, Called From StateManager FixedUpdate
     /// </summary>
-    protected abstract void UpdatePhysics();
+    protected virtual void UpdatePhysics() { }
 
     /// <summary>
     /// Paused Update, Regular Update Called from StateManager Update
     /// </summary>
-    protected abstract void UpdateState();
+    protected virtual void UpdateState() { }
 
     /// <summary>
     /// Paused Update, Update Called when StateManager is Paused
     /// </summary>
-    protected abstract void UpdatePaused();
+    protected virtual void UpdatePaused() { }
 
     /// <summary>
     /// Paused Update, Update Called when StateManager is Transitioning
     /// </summary>
-    protected abstract void UpdateTransition();
+    protected virtual void UpdateTransition() { }
 
     //Trigger Functions
-    public abstract void OnTriggerEnter(Collider collider);
-    public abstract void OnTriggerStay(Collider collider);
-    public abstract void OnTriggerExit(Collider collider);
+    public virtual void OnTriggerEnter(Collider collider) { }
+    public virtual void OnTriggerStay(Collider collider) { }
+    public virtual void OnTriggerExit(Collider collider) { }
 
     //Colission Functions
-    public abstract void OnCollisionEnter(Collision collision);
-    public abstract void OnCollisionStay(Collision collision);
-    public abstract void OnCollisionExit(Collision collision);
+    public virtual void OnCollisionEnter(Collision collision) { }
+    public virtual void OnCollisionStay(Collision collision) { }
+    public virtual void OnCollisionExit(Collision collision) { }
 }

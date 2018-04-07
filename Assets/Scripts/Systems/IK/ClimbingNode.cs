@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 
+[RequireComponent(typeof(Collider))]
 public class ClimbingNode : MonoBehaviour
 {
     // Public
@@ -17,12 +18,15 @@ public class ClimbingNode : MonoBehaviour
     private ClimbingNode currentNode;
     private Vector3[] CompareDirection = new Vector3[8];
 
-    //Private
     public Vector3 PlayerOffset;
     public Vector3 PlayerPosition
     {
         get { return transform.position + transform.rotation * PlayerOffset; }
     }
+
+    //Private
+    private Collider col;
+
     private bool m_active = true;
     public bool Active
     {
@@ -37,6 +41,8 @@ public class ClimbingNode : MonoBehaviour
 
     protected void Start ()
     {
+        col = GetComponent<Collider>();
+
         if (!rightHand || !leftHand || !rightFoot || !leftFoot)
             Debug.LogError("Climbing Node: " + gameObject.name + " is not set up properly", this);
         else
@@ -82,6 +88,7 @@ public class ClimbingNode : MonoBehaviour
     public virtual void Rotate()
     {
         m_active = Vector3.Dot(-transform.forward, Vector3.up) < 0.9f;
+        col.enabled = m_active;
 
         if (Vector3.Dot(transform.up, Vector3.up) < 0)
         {

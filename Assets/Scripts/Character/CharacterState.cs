@@ -24,10 +24,10 @@ public abstract class CharacterState<Data> : BaseState where Data : CharacterDat
     /// <summary>
     /// Character MovementUpdate, Called from StateUpdate;
     /// </summary>
-    protected abstract void UpdateMovement();
+    protected virtual void UpdateMovement() { }
 
     /// <summary>
     /// Character AnimatorUpdate, Called from StateUpdate;
     /// </summary>
-    protected abstract void UpdateAnimator();
+    protected virtual void UpdateAnimator() { }
 }

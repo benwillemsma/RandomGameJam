@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class CyclopsAttackState : CyclopsBaseState<CyclopsData>
+public abstract class CyclopsAttackState : CyclopsState
 {
     #region AttackState Variables
 
@@ -28,7 +28,7 @@ public abstract class CyclopsAttackState : CyclopsBaseState<CyclopsData>
         return base.ExitState(nextState);
     }
 
-    protected void Recoil()
+    protected virtual void Recoil()
     {
 
     }

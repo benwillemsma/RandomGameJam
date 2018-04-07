@@ -74,8 +74,9 @@ GameObject:
   - component: {fileID: 54704754302652110}
   - component: {fileID: 136859276569861270}
   - component: {fileID: 82264616212384668}
-  - component: {fileID: 114525623364207112}
-  - component: {fileID: 114729855289954224}
+  - component: {fileID: 114814631026113000}
+  - component: {fileID: 114354673219437188}
+  - component: {fileID: 114591062691849964}
   m_Layer: 9
   m_Name: Player
   m_TagString: Player
@@ -90,7 +91,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1100138717557886}
   m_LocalRotation: {x: 0.09113709, y: -0, z: -0, w: 0.99583834}
-  m_LocalPosition: {x: 0, y: 3.49, z: -3.74}
+  m_LocalPosition: {x: 0, y: 4.555, z: -9.51}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4511117424818862}
@@ -103,7 +104,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1236937215625884}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.7, z: 0}
+  m_LocalPosition: {x: 0, y: 1.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4511117424818862}
@@ -334,7 +335,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114525623364207112
+--- !u!114 &114354673219437188
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -361,7 +362,19 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   pivotPoint: {fileID: 4507272650997436}
---- !u!114 &114729855289954224
+--- !u!114 &114591062691849964
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1820605546886962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2adb600c1083b04a97679f57d0113c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainCamera: {fileID: 0}
+--- !u!114 &114814631026113000
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -382,7 +395,7 @@ MonoBehaviour:
   toggleCrouch: 0
   groundMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 6
   CameraSensitivity: 30
   CameraOffset: 0
   InvertedCamera: 0

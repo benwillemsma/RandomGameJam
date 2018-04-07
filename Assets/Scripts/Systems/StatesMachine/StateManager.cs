@@ -25,8 +25,8 @@ public class StateManager : MonoBehaviour
         //Initialize trigger Delegates
         SetTriggers(m_state);
         SetCollisions(m_state);
-
-        m_state.EnterState(null);
+        
+        StartCoroutine(m_state.EnterState(null));
         CurrentState = m_state.ToString();
     }
 
@@ -43,12 +43,13 @@ public class StateManager : MonoBehaviour
     //State Functions
     public void ChangeState(BaseState newState)
     {
+        m_state.InTransition = true;
+        newState.InTransition = true;
         StartCoroutine(HandleStateTransition(newState));
     }
     protected IEnumerator HandleStateTransition(BaseState newState)
     {
         //Exit StateoverTime
-        m_state.InTransition = true;
         yield return StartCoroutine(m_state.ExitState(newState));
         m_state.InTransition = false;
 
@@ -63,7 +64,6 @@ public class StateManager : MonoBehaviour
         SetTriggers(newState);
         SetCollisions(newState);
         
-        m_state.InTransition = true;
         yield return StartCoroutine(m_state.EnterState(prevState));
         m_state.InTransition = false;
 

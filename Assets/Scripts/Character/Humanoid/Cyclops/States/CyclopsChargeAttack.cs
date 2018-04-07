@@ -24,8 +24,8 @@ public class CyclopsChargeAttack : CyclopsAttackState
     protected override void UpdatePaused() { }
     protected override void UpdateTransition() { }
 
+    protected override void UpdateAI() { }
     protected override void UpdateMovement() { }
-    protected override void UpdateNavAgent() { }
     protected override void UpdateAnimator() { }
     protected override void UpdatePhysics() { }
 
