@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 20971703023463004}
   - component: {fileID: 124662390114659798}
   - component: {fileID: 81812609284340442}
-  - component: {fileID: 114546304472454236}
+  - component: {fileID: 114830315819034598}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -347,21 +347,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentState: 
---- !u!114 &114546304472454236
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1100138717557886}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b3e746082292ffa4b971baa048fc7f51, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  terrainMask:
-    serializedVersion: 2
-    m_Bits: 0
-  pivotPoint: {fileID: 4507272650997436}
 --- !u!114 &114591062691849964
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -399,6 +384,21 @@ MonoBehaviour:
   CameraSensitivity: 30
   CameraOffset: 0
   InvertedCamera: 0
+--- !u!114 &114830315819034598
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1100138717557886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3e746082292ffa4b971baa048fc7f51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  terrainMask:
+    serializedVersion: 2
+    m_Bits: 0
+  pivotPoint: {fileID: 4507272650997436}
 --- !u!124 &124662390114659798
 Behaviour:
   m_ObjectHideFlags: 1

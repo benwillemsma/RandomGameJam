@@ -34,6 +34,7 @@ public class PlayerWalkingState : PlayerState
         CheckGround();
         movementDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical")).normalized;
         movementDirection = rb.transform.rotation * movementDirection;
+        movementDirection = Vector3.ProjectOnPlane(movementDirection, Vector3.up);
         sprinting = Input.GetButton("Sprint");
     }
     protected override void UpdateMovement()
@@ -74,8 +75,8 @@ public class PlayerWalkingState : PlayerState
         Vector3 direction = -rb.transform.up;
 
         RaycastHit hit;
-        if (Physics.Raycast(start, direction, out hit, 1.5f, ~data.groundMask))
-            grounded = hit.distance < 1.1f;
+        if (Physics.Raycast(start, direction, out hit, 1.1f, ~data.groundMask))
+            grounded = true;
     }
 
     //Physics  Functions

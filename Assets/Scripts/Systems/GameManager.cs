@@ -16,6 +16,8 @@ public class GameManager : MonoBehaviour
     private string m_playScene = "PlayScene";
     private string m_hudScene = "HudScene";
 
+    public float objectDestroyDelay = 10;
+
     private static bool m_gameOver = false;
     public bool GameOver
     {

@@ -8,16 +8,18 @@ public abstract class EnemyState<Data> : HumanoidState<Data> where Data: EnemyDa
     #region PlayerState Variables
 
     protected NavMeshAgent agent;
-    protected bool useAI;
-   
+
     #endregion
 
-    public EnemyState(Data enemyData) : base(enemyData) { }
+    public EnemyState(Data enemyData) : base(enemyData)
+    {
+        agent = data.Agent;
+    }
 
     protected override void UpdateState()
     {
         base.UpdateState();
-        if (useAI) UpdateAI();
+        if (data.useAI) UpdateAI();
     }
 
     /// <summary>

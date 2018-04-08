@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class PlayerData : HumanoidData
 {
     #region Variables
+    public float lightPerSecond;
+    public float lightLevel;
 
     [Header("Movement")]
     [Range(0, 10)]
@@ -63,6 +65,13 @@ public class PlayerData : HumanoidData
 
     protected override void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
+
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.tag == "LightArea")
+            lightLevel = Mathf.Clamp(lightLevel + (Time.deltaTime * lightPerSecond), 0, 100);
     }
     #endregion
 }

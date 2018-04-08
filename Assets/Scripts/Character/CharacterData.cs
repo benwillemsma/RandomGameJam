@@ -10,23 +10,19 @@ public abstract class CharacterData : MonoBehaviour
 {
     #region Components
     protected StateManager m_stateM;
-    protected Animator m_anim;
-    protected Rigidbody m_rb;
-
     public StateManager StateM
     {
         get { return m_stateM; }
-        set { m_stateM = value; }
     }
+    protected Rigidbody m_rb;
     public Rigidbody RB
     {
         get { return m_rb; }
-        set { m_rb = value; }
     }
+    protected Animator m_anim;
     public Animator Anim
     {
         get { return m_anim; }
-        set { m_anim = value; }
     }
     #endregion
 

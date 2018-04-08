@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -13,6 +12,7 @@ public class CyclopsIdleState : CyclopsState
 
     public override IEnumerator EnterState(BaseState prevState)
     {
+        data.patrolIndex = Random.Range(0, data.patrolPoints.Length - 1);
         return base.EnterState(prevState);
     }
 
@@ -21,20 +21,14 @@ public class CyclopsIdleState : CyclopsState
         return base.ExitState(nextState);
     }
 
-    protected override void UpdateState() { }
-    protected override void UpdatePaused() { }
-    protected override void UpdateTransition() { }
-
-    protected override void UpdateAI() { }
-    protected override void UpdateMovement() { }
-    protected override void UpdateAnimator() { }
-    protected override void UpdatePhysics() { }
-
-    public override void OnTriggerEnter(Collider collider) { }
-    public override void OnTriggerExit(Collider collider) { }
-    public override void OnTriggerStay(Collider collider) { }
-
-    public override void OnCollisionEnter(Collision collision) { }
-    public override void OnCollisionExit(Collision collision) { }
-    public override void OnCollisionStay(Collision collision) { }
+    protected override void UpdateAI()
+    {
+        if ((rb.transform.position - agent.destination).magnitude < 2)
+        {
+            data.patrolIndex = Random.Range(0, data.patrolPoints.Length - 1);
+            data.StartCoroutine(GameManager.CallAfterDelay
+                (() => MoveTo(data.patrolPoints[data.patrolIndex]),
+                Random.Range(3, 10)));
+        }
+    }
 }

@@ -21,20 +21,5 @@ public class CyclopsBeamAttack : CyclopsAttackState
         return base.ExitState(nextState);
     }
 
-    protected override void UpdateState() { }
-    protected override void UpdatePaused() { }
-    protected override void UpdateTransition() { }
-
     protected override void UpdateAI() { }
-    protected override void UpdateMovement() { }
-    protected override void UpdateAnimator() { }
-    protected override void UpdatePhysics() { }
-
-    public override void OnTriggerEnter(Collider collider) { }
-    public override void OnTriggerExit(Collider collider) { }
-    public override void OnTriggerStay(Collider collider) { }
-
-    public override void OnCollisionEnter(Collision collision) { }
-    public override void OnCollisionExit(Collision collision) { }
-    public override void OnCollisionStay(Collision collision) { }
 }
