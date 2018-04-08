@@ -34,13 +34,34 @@ public class NodeClimbingState : PlayerState
     //Transitions
     public override IEnumerator EnterState(BaseState prevState)
     {
+        // State Is NOT Being Updated
         rb.velocity = Vector3.zero;
         rb.useGravity = false;
+        IK.HeadWeight = 0;
+        
         yield return base.EnterState(prevState);
+
+        // State Is Being Updated
+        while (elapsedTime < 1)
+        {
+            IK.GlobalWeight = Mathf.Lerp(IK.RightHand.weight, 1, elapsedTime);
+            IK.RightFoot.weight = Mathf.Lerp(IK.RightFoot.weight, freehang ? 0 : 1, elapsedTime);
+            IK.LeftFoot.weight = IK.RightFoot.weight;
+            yield return null;
+        }
     }
     public override IEnumerator ExitState(BaseState nextState)
     {
         rb.useGravity = true;
+        elapsedTime = 0;
+
+        while (elapsedTime < 1)
+        {
+            IK.GlobalWeight = Mathf.Lerp(IK.RightHand.weight, 1, elapsedTime);
+            IK.RightFoot.weight = Mathf.Lerp(IK.RightFoot.weight, freehang ? 0 : 1, elapsedTime);
+            IK.LeftFoot.weight = IK.RightFoot.weight;
+            yield return null;
+        }
         yield return base.ExitState(nextState);
     }
 
@@ -112,15 +133,7 @@ public class NodeClimbingState : PlayerState
     protected override void UpdateAnimator() { }
     protected override void UpdateIK()
     {
-        if (!moving)
-        {
-            IK.SetIKPositions(currentNodes[0].rightHand, currentNodes[1].leftHand, currentNodes[0].rightFoot, currentNodes[1].leftFoot);
-
-            IK.GlobalWeight = 1;
-            IK.RightFoot.weight = Mathf.Lerp(IK.RightFoot.weight, freehang ? 0 : 1, Time.deltaTime * 2);
-            IK.LeftFoot.weight = Mathf.Lerp(IK.RightFoot.weight, freehang ? 0 : 1, Time.deltaTime * 2);
-            IK.HeadWeight = 0;
-        }
+        if (!moving) IK.SetIKPositions(currentNodes[0].rightHand, currentNodes[1].leftHand, currentNodes[0].rightFoot, currentNodes[1].leftFoot);
     }
 
     protected override void UpdatePhysics() { }

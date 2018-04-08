@@ -54,6 +54,8 @@ public class ThirdPersonCamera : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Q)) player.CameraOffset = -player.CameraOffset;
         aimOffset = Mathf.Lerp(aimOffset, player.CameraOffset, Time.deltaTime * 3);
         transform.localPosition = (mainOffset.normalized * zoom) + (Vector3.right * aimOffset);
+
+        CheckLineOfSight();
     }
 
     private Vector3 ClampCameraForward(Vector3 inForward)
@@ -62,10 +64,18 @@ public class ThirdPersonCamera : MonoBehaviour
         if (forwardCheck < 0.1736f)
         {
             if (forwardCheck < 0f) inForward = Vector3.Reflect(inForward, player.transform.forward);
-            float upCheck = Vector3.Dot(inForward,player.transform.up);
+            float upCheck = Vector3.Dot(inForward, player.transform.up);
             if (upCheck > 0) inForward = player.transform.rotation * new Vector3(0, 0.9848f, 0.1736f);
             else inForward = player.transform.rotation * new Vector3(0, -0.9848f, 0.1736f);
         }
         return inForward;
+    }
+
+    private void CheckLineOfSight()
+    {
+        Vector3 direction = transform.position - pivotPoint.position;
+        RaycastHit hit;
+        if (Physics.Raycast(pivotPoint.position, direction, out hit, direction.magnitude, ~player.groundMask))
+            transform.position = hit.point - direction.normalized * 0.5f;
     }
 }

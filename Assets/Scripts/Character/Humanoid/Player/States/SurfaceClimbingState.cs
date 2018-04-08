@@ -13,6 +13,8 @@ public class SurfaceClimbingState : PlayerState
     private float moveX = 0;
     private float moveY = 0;
 
+    private bool freehang = false;
+
     public SurfaceClimbingState(PlayerData player,Collider surface) : base(player)
     {
         Surfaces.Add(surface);
@@ -46,7 +48,8 @@ public class SurfaceClimbingState : PlayerState
 
     protected override void UpdateInput()
     {
-        SurfaceCheck(); moveX = Input.GetAxisRaw("Horizontal");
+        SurfaceCheck();
+        moveX = Input.GetAxisRaw("Horizontal");
         moveY = Input.GetAxisRaw("Vertical");
 
         movementDirection = new Vector3(moveX, moveY, 0).normalized * movementSpeed;
@@ -55,6 +58,7 @@ public class SurfaceClimbingState : PlayerState
     }
     protected override void UpdateMovement()
     {
+        if (cur_SurfaceHit.collider) freehang = Vector3.Dot(-cur_SurfaceHit.normal, Vector3.up) > 0.5f;
         Vector3 forward = Vector3.Lerp(-last_SurfaceHit.normal, -cur_SurfaceHit.normal, Time.deltaTime * 3);
         properRotation = Quaternion.LookRotation(forward, Vector3.up);
         rb.transform.rotation = Quaternion.Lerp(rb.transform.rotation, properRotation, Time.deltaTime * 5);

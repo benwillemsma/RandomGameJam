@@ -1,3 +1,8 @@
+//  Reference:
+//  https://www.youtube.com/watch?v=yFHbWUiIi1E
+//  http://www.shaderslab.com/demo-60---fur-shader.html
+
+
 using UnityEngine;
 using System.Collections;
 

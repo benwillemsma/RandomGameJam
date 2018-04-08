@@ -155,7 +155,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
+  near clip plane: 0.1
   far clip plane: 1000
   field of view: 60
   orthographic: 0
@@ -374,6 +374,8 @@ MonoBehaviour:
   m_maxHealth: 100
   m_damageImmuneDuration: 0.5
   m_deathDelay: 3
+  lightPerSecond: 5
+  lightLevel: 0
   runSpeed: 8
   jumpForce: 10
   airControl: 5
@@ -381,6 +383,9 @@ MonoBehaviour:
   groundMask:
     serializedVersion: 2
     m_Bits: 6
+  climbingMask:
+    serializedVersion: 2
+    m_Bits: 1024
   CameraSensitivity: 30
   CameraOffset: 0
   InvertedCamera: 0

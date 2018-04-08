@@ -1,4 +1,8 @@
-﻿#pragma target 3.0
+﻿//  Reference:
+//  https://www.youtube.com/watch?v=yFHbWUiIi1E
+//  http://www.shaderslab.com/demo-60---fur-shader.html
+
+#pragma target 3.0
 #include "UnityCG.cginc"
 
 struct v2f {
