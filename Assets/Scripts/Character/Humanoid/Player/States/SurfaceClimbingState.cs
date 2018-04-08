@@ -6,6 +6,9 @@ public class SurfaceClimbingState : PlayerState
 {
     private List<Collider> Surfaces = new List<Collider>();
 
+    private Transform climbParent;
+    private Vector3 offset;
+
     private RaycastHit last_SurfaceHit;
     private RaycastHit cur_SurfaceHit;
 
@@ -55,6 +58,9 @@ public class SurfaceClimbingState : PlayerState
         movementDirection = new Vector3(moveX, moveY, 0).normalized * movementSpeed;
         movementDirection = rb.transform.rotation * movementDirection;
         movementDirection = Vector3.ProjectOnPlane(movementDirection, -cur_SurfaceHit.normal);
+
+        if (Vector3.Dot(cur_SurfaceHit.normal, Vector3.up) > 0.5f)
+            stateManager.ChangeState(new PlayerWalkingState(data));
     }
     protected override void UpdateMovement()
     {
@@ -68,8 +74,13 @@ public class SurfaceClimbingState : PlayerState
         if (Input.GetButton("Jump")) Jump();
         else
         {
-            rb.velocity = movementDirection * data.runSpeed;
-            if (cur_SurfaceHit.collider) rb.velocity += -cur_SurfaceHit.normal * 0.2f;
+            if (climbParent)
+            {
+                if (offset != Vector3.zero) rb.transform.position = climbParent.position + offset;
+                rb.velocity = movementDirection * data.runSpeed;
+                if (cur_SurfaceHit.collider) rb.velocity += -cur_SurfaceHit.normal * 0.2f;
+                offset = rb.transform.position - climbParent.position + (rb.velocity * Time.deltaTime);
+            }
         }
     }
 
@@ -82,6 +93,11 @@ public class SurfaceClimbingState : PlayerState
         {
             last_SurfaceHit = cur_SurfaceHit;
             cur_SurfaceHit = hit;
+            if (cur_SurfaceHit.transform != climbParent)
+            {
+                climbParent = cur_SurfaceHit.transform;
+                offset = rb.transform.position - climbParent.position;
+            }
             return true;
         }
         return false;

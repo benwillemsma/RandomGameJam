@@ -7,7 +7,16 @@ public class PlayerData : HumanoidData
 {
     #region Variables
     public float lightPerSecond;
+    public float lightCharge;
+
+    [Header("Stealth")]
+    public float detectionLevel;
+    public float soundLevel;
     public float lightLevel;
+    public float TotalDetection
+    {
+        get { return soundLevel + lightLevel + detectionLevel; }
+    }
 
     [Header("Movement")]
     [Range(0, 10)]
@@ -59,20 +68,20 @@ public class PlayerData : HumanoidData
         }
     }
 
+    private void FixedUpdate()
+    {
+        lightLevel = LightChecker.instance.GetLIghtValue(transform.position + transform.up);
+    }
+
     private void Start ()
     {
         m_stateM.State = new PlayerWalkingState(this);
     }
 
-    protected override void OnSceneLoaded(Scene scene, LoadSceneMode mode)
-    {
-
-    }
-
     private void OnTriggerStay(Collider other)
     {
         if (other.tag == "LightArea")
-            lightLevel = Mathf.Clamp(lightLevel + (Time.deltaTime * lightPerSecond), 0, 100);
+            lightCharge = Mathf.Clamp(lightCharge + (Time.deltaTime * lightPerSecond), 0, 100);
     }
     #endregion
 }

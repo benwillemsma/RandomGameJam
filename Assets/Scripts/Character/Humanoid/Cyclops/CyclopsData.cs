@@ -20,8 +20,4 @@ public class CyclopsData : EnemyData
     {
         m_stateM.State = new CyclopsIdleState(this);
     }
-
-    protected override void OnSceneLoaded(Scene scene, LoadSceneMode mode)
-    {
-    }
 }

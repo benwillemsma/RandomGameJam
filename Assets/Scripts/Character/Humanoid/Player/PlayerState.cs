@@ -5,7 +5,7 @@ using UnityEngine;
 public abstract class PlayerState : HumanoidState<PlayerData>
 {
     #region PlayerState Variables
-    
+
     protected bool canInput = true;
     protected Vector3 movementDirection;
     protected Quaternion properRotation;
@@ -19,6 +19,10 @@ public abstract class PlayerState : HumanoidState<PlayerData>
         properRotation = Quaternion.LookRotation(Vector3.ProjectOnPlane(rb.transform.forward, Vector3.up), Vector3.up);
         base.UpdateState();
         if (canInput) UpdateInput();
+
+        Vector3 velocityLevel = rb.velocity;
+        velocityLevel.y = 0;
+        data.detectionLevel = velocityLevel.magnitude;
     }
 
     /// <summary>

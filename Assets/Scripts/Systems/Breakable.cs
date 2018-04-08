@@ -7,6 +7,7 @@ public class Breakable : MonoBehaviour
 {
     public GameObject brokenObject;
     public string[] checkTags;
+    public Breakable[] childBreakables;
 
     private void Awake()
     {
@@ -18,18 +19,22 @@ public class Breakable : MonoBehaviour
         for (int i = 0; i < checkTags.Length; i++)
         {
             if (other.attachedRigidbody.tag.Contains(checkTags[i]))
-                Break(); 
+                StartCoroutine(Break(0));
         }
     }
 
-    public void Break()
+    public IEnumerator Break(float delay)
     {
+        yield return new WaitForSeconds(delay);
         Transform objects = Instantiate(brokenObject, transform.position, transform.rotation).transform;
 
         for (int i = 0; i < objects.childCount; i++)
         {
-            float delay = Random.Range(0, 5) + GameManager.Instance.objectDestroyDelay;
-            Destroy(objects.GetChild(i).gameObject, delay);
+            delay = Random.Range(0, 5) + GameManager.Instance.objectDestroyDelay;
+            Breakable childBreakable = objects.GetChild(i).GetComponent<Breakable>();
+
+            if (childBreakable) childBreakable.StartCoroutine(childBreakable.Break(delay));
+            else Destroy(objects.GetChild(i).gameObject, delay);
         }
         Destroy(gameObject);
     }

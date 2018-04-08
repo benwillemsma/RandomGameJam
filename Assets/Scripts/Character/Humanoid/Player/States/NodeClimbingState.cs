@@ -34,32 +34,37 @@ public class NodeClimbingState : PlayerState
     //Transitions
     public override IEnumerator EnterState(BaseState prevState)
     {
-        // State Is NOT Being Updated
         rb.velocity = Vector3.zero;
         rb.useGravity = false;
         IK.HeadWeight = 0;
-        
-        yield return base.EnterState(prevState);
 
-        // State Is Being Updated
-        while (elapsedTime < 1)
+        elapsedTime = 0;
+        while (elapsedTime < 0.5f)
         {
-            IK.GlobalWeight = Mathf.Lerp(IK.RightHand.weight, 1, elapsedTime);
-            IK.RightFoot.weight = Mathf.Lerp(IK.RightFoot.weight, freehang ? 0 : 1, elapsedTime);
+            if (!moving) IK.SetIKPositions(currentNodes[0].rightHand, currentNodes[1].leftHand, currentNodes[0].rightFoot, currentNodes[1].leftFoot);
+            rb.transform.position = Vector3.Lerp(rb.transform.position, (currentNodes[1].PlayerPosition + currentNodes[0].PlayerPosition) / 2, elapsedTime * 2);
+
+            Quaternion desiredRotation = currentNodes[0].transform.rotation;
+            if (freehang) desiredRotation = Quaternion.Euler(0, desiredRotation.eulerAngles.y, desiredRotation.eulerAngles.z);
+            rb.transform.rotation = Quaternion.Lerp(rb.transform.rotation, desiredRotation, elapsedTime * 2);
+
+            IK.GlobalWeight = Mathf.Lerp(IK.RightHand.weight, 1, elapsedTime * 2);
+            IK.RightFoot.weight = Mathf.Lerp(IK.RightFoot.weight, freehang ? 0 : 1, elapsedTime * 2);
             IK.LeftFoot.weight = IK.RightFoot.weight;
+            elapsedTime += Time.deltaTime;
             yield return null;
         }
+        yield return base.EnterState(prevState);
     }
     public override IEnumerator ExitState(BaseState nextState)
     {
         rb.useGravity = true;
-        elapsedTime = 0;
 
-        while (elapsedTime < 1)
+        elapsedTime = 0;
+        while (elapsedTime < 0.5f)
         {
-            IK.GlobalWeight = Mathf.Lerp(IK.RightHand.weight, 1, elapsedTime);
-            IK.RightFoot.weight = Mathf.Lerp(IK.RightFoot.weight, freehang ? 0 : 1, elapsedTime);
-            IK.LeftFoot.weight = IK.RightFoot.weight;
+            rb.transform.rotation = Quaternion.Lerp(rb.transform.rotation, properRotation, elapsedTime * 2);
+            IK.GlobalWeight = Mathf.Lerp(IK.RightHand.weight, 0, elapsedTime * 2);
             yield return null;
         }
         yield return base.ExitState(nextState);
@@ -106,7 +111,7 @@ public class NodeClimbingState : PlayerState
                     }
                     else
                     {
-                        Collider col = SurfaceCheck(); Debug.Log(col);
+                        Collider col = SurfaceCheck();
                         if (col) stateManager.ChangeState(new SurfaceClimbingState(data, col)); 
                     }
                 }
@@ -122,21 +127,14 @@ public class NodeClimbingState : PlayerState
             lookDirection = Vector3.ProjectOnPlane(lookDirection, rb.transform.up);
 
             //Root Position - While Stationary
-            rb.transform.position = Vector3.Lerp(rb.transform.position, (currentNodes[1].PlayerPosition + currentNodes[0].PlayerPosition) / 2, Time.deltaTime * 5);
+            rb.transform.position = (currentNodes[1].PlayerPosition + currentNodes[0].PlayerPosition) / 2;
 
             //Root Rotation - While Stationary
             Quaternion desiredRotation = Quaternion.Lerp(currentNodes[1].transform.rotation, currentNodes[0].transform.rotation, 0.5f);
             if (freehang) desiredRotation = Quaternion.Euler(0, desiredRotation.eulerAngles.y, desiredRotation.eulerAngles.z);
-            rb.transform.rotation = Quaternion.Lerp(rb.transform.rotation, desiredRotation, Time.deltaTime * 5);
+            rb.transform.rotation = desiredRotation;
         }
     }
-    protected override void UpdateAnimator() { }
-    protected override void UpdateIK()
-    {
-        if (!moving) IK.SetIKPositions(currentNodes[0].rightHand, currentNodes[1].leftHand, currentNodes[0].rightFoot, currentNodes[1].leftFoot);
-    }
-
-    protected override void UpdatePhysics() { }
 
     //State Behaviour
     private int FindNextMove()

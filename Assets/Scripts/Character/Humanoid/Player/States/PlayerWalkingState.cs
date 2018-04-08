@@ -5,14 +5,16 @@ using UnityEngine;
 
 public class PlayerWalkingState : PlayerState
 {
-    private bool grounded = true;
+    private bool grounded;
     private bool sprinting = false;
+    private bool crouching = false;
 
     public PlayerWalkingState(PlayerData player) : base(player) { }
 
     //State Transitions
     public override IEnumerator EnterState(BaseState prevState)
     {
+        CheckGround();
         yield return base.EnterState(prevState);
     }
     public override IEnumerator ExitState(BaseState nextState)
@@ -35,11 +37,26 @@ public class PlayerWalkingState : PlayerState
         movementDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical")).normalized;
         movementDirection = rb.transform.rotation * movementDirection;
         movementDirection = Vector3.ProjectOnPlane(movementDirection, Vector3.up);
+
+        if (Input.GetButtonDown("Crouch"))
+        {
+            if (data.toggleCrouch)
+                crouching = !crouching;
+            else
+            {
+                crouching = true;
+                sprinting = false;
+            }
+        }
+        else if (Input.GetButtonUp("Crouch") && !data.toggleCrouch)
+            crouching = false;
         sprinting = Input.GetButton("Sprint");
+        if (sprinting) crouching = false;
     }
     protected override void UpdateMovement()
     {
         if (sprinting) movementDirection *= 1.5f;
+        else if (crouching) movementDirection /= 2f;
         rb.transform.rotation = Quaternion.Lerp(rb.transform.rotation, properRotation, Time.deltaTime * 5);
         rb.transform.Rotate(rb.transform.up, Input.GetAxis("Mouse X") * Time.deltaTime * data.CameraSensitivity, Space.World);
     }
@@ -55,8 +72,8 @@ public class PlayerWalkingState : PlayerState
                 rb.velocity = movementDirection * data.runSpeed;
                 rb.velocity += Vector3.up * fallspeed;
             }
+            rb.AddForce(Vector3.down * 20);
         }
-        else rb.AddForce(Vector3.down * 10);
     }
 
     // State Actions

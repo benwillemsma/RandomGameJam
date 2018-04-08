@@ -377,7 +377,7 @@ MonoBehaviour:
   lightPerSecond: 5
   lightLevel: 0
   runSpeed: 8
-  jumpForce: 10
+  jumpForce: 6
   airControl: 5
   toggleCrouch: 0
   groundMask:
