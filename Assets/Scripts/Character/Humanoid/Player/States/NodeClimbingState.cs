@@ -2,16 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerClimbingState : PlayerState
+public class NodeClimbingState : PlayerState
 {
-    protected ClimbingNode[] currentNodes = new ClimbingNode[2];
+    private ClimbingNode[] currentNodes = new ClimbingNode[2];
 
-    protected Vector3 moveDirection;
-    protected Vector3 lookDirection;
+    private Vector3 moveDirection;
+    private Vector3 lookDirection;
 
-    protected float movementSpeed = 3f;
-    protected float moveX = 0;
-    protected float moveY = 0;
+    private float movementSpeed = 3f;
+    private float moveX = 0;
+    private float moveY = 0;
 
     private const int NONE = -1;
     private const int RIGHT = 0;
@@ -25,7 +25,7 @@ public class PlayerClimbingState : PlayerState
     private bool moving = false;
     private bool freehang = false;
 
-    public PlayerClimbingState(PlayerData player, ClimbingNode node) : base(player)
+    public NodeClimbingState(PlayerData player, ClimbingNode node) : base(player)
     {
         currentNodes[0] = node;
         currentNodes[1] = node;
@@ -78,10 +78,15 @@ public class PlayerClimbingState : PlayerState
 
                     movePolarity = FindNextMove();
                     ClimbingNode NextNode = FindNextNode();
-                    if (NextNode as ClimbingNode)
+                    if (NextNode && NextNode as ClimbingNode)
                     {
                         moving = true;
                         data.StartCoroutine(Climb(NextNode as ClimbingNode));
+                    }
+                    else
+                    {
+                        Collider col = SurfaceCheck(); Debug.Log(col);
+                        if (col) stateManager.ChangeState(new SurfaceClimbingState(data, col)); 
                     }
                 }
             }
@@ -137,27 +142,39 @@ public class PlayerClimbingState : PlayerState
 
     private ClimbingNode FindNextNode()
     {
-        ClimbingNode baseNode = currentNodes[movePolarity];
         if (currentNodes[0] != currentNodes[1])
-            baseNode = currentNodes[(movePolarity + 1) % 2];
-
-        nodeIndex = (nodeIndex + baseNode.Rotation) % 8;
-        if (currentNodes[0] == currentNodes[1])
+            return currentNodes[(movePolarity + 1) % 2];
+        else if (currentNodes[0] == currentNodes[1])
         {
+            nodeIndex = (nodeIndex + currentNodes[0].Rotation) % 8;
             //Find direct Neighbour from currentNode
-            if (!baseNode.neighbours[nodeIndex])
+            if (!currentNodes[0].neighbours[nodeIndex])
             {
                 //No direct Neighbour found searching for indirect Neighbour
-                if (baseNode.neighbours[(nodeIndex + 1) % 8])
+                if (currentNodes[0].neighbours[(nodeIndex + 1) % 8])
                     nodeIndex = (nodeIndex + 1) % 8;
-                else if (baseNode.neighbours[Mathf.Abs((nodeIndex - 1)) % 8])
+                else if (currentNodes[0].neighbours[Mathf.Abs((nodeIndex - 1)) % 8])
                     nodeIndex = Mathf.Abs((nodeIndex - 1)) % 8;
-                else return baseNode;
+                else return null;
             }
-            return baseNode.neighbours[nodeIndex];
+            return currentNodes[0].neighbours[nodeIndex];
         }
-        return baseNode;
+        return null;
     }
+
+    private Collider SurfaceCheck()
+    {
+        Vector3 start = rb.transform.position + rb.transform.up;
+        Vector3 direction = rb.transform.forward;
+        RaycastHit[] hit = (Physics.RaycastAll(start, direction, 1f, data.climbingMask));
+        for (int i = 0; i < hit.Length; i++)
+        {
+            if (hit[i].collider.tag=="ClimbingSurface")
+                return hit[i].collider;
+        }
+        return null;
+    }
+
     private int IndexPolarity(int index)
     {
         int polarity;
@@ -245,12 +262,4 @@ public class PlayerClimbingState : PlayerState
         currentNodes[movePolarity] = nextNode;
         moving = false;
     }
-
-    public override void OnTriggerEnter(Collider collider) { }
-    public override void OnTriggerStay(Collider collider) { }
-    public override void OnTriggerExit(Collider collider) { }
-
-    public override void OnCollisionEnter(Collision collision) { }
-    public override void OnCollisionStay(Collision collision) { }
-    public override void OnCollisionExit(Collision collision) { }
 }

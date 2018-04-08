@@ -43,7 +43,6 @@ public class PlayerWalkingState : PlayerState
         rb.transform.rotation = Quaternion.Lerp(rb.transform.rotation, properRotation, Time.deltaTime * 5);
         rb.transform.Rotate(rb.transform.up, Input.GetAxis("Mouse X") * Time.deltaTime * data.CameraSensitivity, Space.World);
     }
-    protected override void UpdateAnimator() { }
     protected override void UpdatePhysics()
     {
         if (grounded)
@@ -59,7 +58,6 @@ public class PlayerWalkingState : PlayerState
         }
         else rb.AddForce(Vector3.down * 10);
     }
-    protected override void UpdateIK() { }
 
     // State Actions
     private void Jump()
@@ -80,13 +78,19 @@ public class PlayerWalkingState : PlayerState
     }
 
     //Physics  Functions
-    public override void OnTriggerEnter(Collider collider)
+    public override void OnTriggerEnter(Collider other)
     {
-        ClimbingNode node;
         if (!inTransition)
         {
-            node = collider.gameObject.GetComponent<ClimbingNode>();
-            if (node) stateManager.ChangeState(new PlayerClimbingState(data, node));
+            if (other.tag == "ClimbingNode")
+            {
+                ClimbingNode node = other.gameObject.GetComponent<ClimbingNode>();
+                if (node) stateManager.ChangeState(new NodeClimbingState(data, node));
+            }
+            else if (other.tag == "ClimbingSurface")
+            {
+                stateManager.ChangeState(new SurfaceClimbingState(data, other));
+            }
         }
     }
 }

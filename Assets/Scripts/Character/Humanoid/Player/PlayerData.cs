@@ -18,6 +18,7 @@ public class PlayerData : HumanoidData
     public float airControl = 5;
     public bool toggleCrouch;
     public LayerMask groundMask;
+    public LayerMask climbingMask;
 
     [Header("Camera")]
     [Range(0, 50)]

@@ -38,7 +38,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4261999668604252}
   - component: {fileID: 33858525689551066}
-  - component: {fileID: 136848512685484148}
   - component: {fileID: 23510467835799398}
   m_Layer: 9
   m_Name: CyclopsModel
@@ -57,6 +56,7 @@ GameObject:
   - component: {fileID: 4113288571243360}
   - component: {fileID: 95282305186847238}
   - component: {fileID: 54619429982960298}
+  - component: {fileID: 136821783895385276}
   - component: {fileID: 195994781131582710}
   - component: {fileID: 82186431164490202}
   - component: {fileID: 114823052882986078}
@@ -64,7 +64,7 @@ GameObject:
   - component: {fileID: 114239839111980820}
   m_Layer: 9
   m_Name: Cyclops
-  m_TagString: Untagged
+  m_TagString: Enemy/Cyclops
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -89,7 +89,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1246744207472628}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 0.56, z: 80}
+  m_LocalPosition: {x: 0, y: 0, z: 80}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4261999668604252}
@@ -373,19 +373,19 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!136 &136848512685484148
+--- !u!136 &136821783895385276
 CapsuleCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1242146998167014}
+  m_GameObject: {fileID: 1246744207472628}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
+  m_Radius: 6
+  m_Height: 24
   m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 12, z: 0}
 --- !u!195 &195994781131582710
 NavMeshAgent:
   m_ObjectHideFlags: 1

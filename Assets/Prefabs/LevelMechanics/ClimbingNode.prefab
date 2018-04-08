@@ -21,9 +21,9 @@ GameObject:
   - component: {fileID: 4699151126102142}
   - component: {fileID: 114076466424886312}
   - component: {fileID: 65550090479248446}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ClimbingNode
-  m_TagString: Untagged
+  m_TagString: ClimbingNode
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -36,7 +36,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4599392850431730}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: LeftHand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51,7 +51,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4214125747879590}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: RightFoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -66,7 +66,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4897708025004316}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: RightHand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -81,7 +81,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4602503086550170}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: LeftHand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -187,4 +187,5 @@ MonoBehaviour:
   neighbours: []
   distances: []
   DetectionRadius: 2
+  freehang: 0
   PlayerOffset: {x: 0, y: -2, z: -0.5}
