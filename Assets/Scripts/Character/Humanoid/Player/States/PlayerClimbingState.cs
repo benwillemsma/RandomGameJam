@@ -23,6 +23,7 @@ public class PlayerClimbingState : PlayerState
     private int movePolarity = RIGHT;
 
     private bool moving = false;
+    private bool freehang = false;
 
     public PlayerClimbingState(PlayerData player, ClimbingNode node) : base(player)
     {
@@ -33,6 +34,7 @@ public class PlayerClimbingState : PlayerState
     //Transitions
     public override IEnumerator EnterState(BaseState prevState)
     {
+        rb.velocity = Vector3.zero;
         rb.useGravity = false;
         yield return base.EnterState(prevState);
     }
@@ -87,16 +89,19 @@ public class PlayerClimbingState : PlayerState
     }
     protected override void UpdateMovement()
     {
+        freehang = currentNodes[0].freehang || currentNodes[1].freehang;
         if (!moving && currentNodes[0] && currentNodes[1])
         {
             lookDirection = Camera.main.transform.forward;
             lookDirection = Vector3.ProjectOnPlane(lookDirection, rb.transform.up);
 
             //Root Position - While Stationary
-            rb.transform.position = Vector3.Lerp(rb.transform.position, (currentNodes[1].PlayerPosition + currentNodes[0].PlayerPosition) / 2, Time.deltaTime * 2);
+            rb.transform.position = Vector3.Lerp(rb.transform.position, (currentNodes[1].PlayerPosition + currentNodes[0].PlayerPosition) / 2, Time.deltaTime * 5);
 
             //Root Rotation - While Stationary
-            rb.transform.rotation = Quaternion.Lerp(currentNodes[1].transform.rotation, currentNodes[0].transform.rotation, Time.deltaTime * 2);
+            Quaternion desiredRotation = Quaternion.Lerp(currentNodes[1].transform.rotation, currentNodes[0].transform.rotation, 0.5f);
+            if (freehang) desiredRotation = Quaternion.Euler(0, desiredRotation.eulerAngles.y, desiredRotation.eulerAngles.z);
+            rb.transform.rotation = Quaternion.Lerp(rb.transform.rotation, desiredRotation, Time.deltaTime * 5);
         }
     }
     protected override void UpdateAnimator() { }
@@ -107,8 +112,8 @@ public class PlayerClimbingState : PlayerState
             IK.SetIKPositions(currentNodes[0].rightHand, currentNodes[1].leftHand, currentNodes[0].rightFoot, currentNodes[1].leftFoot);
 
             IK.GlobalWeight = 1;
-            IK.RightFoot.weight = 1;
-            IK.LeftFoot.weight = 1;
+            IK.RightFoot.weight = Mathf.Lerp(IK.RightFoot.weight, freehang ? 0 : 1, Time.deltaTime * 2);
+            IK.LeftFoot.weight = Mathf.Lerp(IK.RightFoot.weight, freehang ? 0 : 1, Time.deltaTime * 2);
             IK.HeadWeight = 0;
         }
     }
@@ -220,10 +225,13 @@ public class PlayerClimbingState : PlayerState
             }
 
             //Root Rotaion - While moving
-            rb.transform.rotation = Quaternion.Lerp(
+            Quaternion desiredRotation = Quaternion.Lerp(
                 Quaternion.Lerp(currentNodes[LEFT].transform.rotation, currentNodes[RIGHT].transform.rotation, 0.5f),
                 Quaternion.Lerp(currentNodes[(movePolarity + 1) % 2].transform.rotation, nextNode.transform.rotation, 0.5f),
-                elapsedTime);
+                elapsedTime
+                );
+            if (freehang) desiredRotation = Quaternion.Euler(0, desiredRotation.eulerAngles.y, desiredRotation.eulerAngles.z);
+            rb.transform.rotation = Quaternion.Lerp(rb.transform.rotation, desiredRotation, Time.deltaTime * 5);
 
             //Root Position - While moving
             rb.transform.position = Vector3.Lerp(

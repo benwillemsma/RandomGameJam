@@ -14,17 +14,21 @@ public class ClimbingNode : MonoBehaviour
     public float[] distances;
 
     public float DetectionRadius = 2f;
-
-    private ClimbingNode currentNode;
-    private Vector3[] CompareDirection = new Vector3[8];
+    public bool freehang;
 
     public Vector3 PlayerOffset;
     public Vector3 PlayerPosition
     {
-        get { return transform.position + transform.rotation * PlayerOffset; }
+        get
+        {
+            if (freehang) return transform.position + Vector3.down * 2;
+            else return transform.position + transform.rotation * PlayerOffset;
+        }
     }
 
     //Private
+    private Vector3[] CompareDirection = new Vector3[8];
+
     private Collider col;
 
     private bool m_active = true;
@@ -89,6 +93,7 @@ public class ClimbingNode : MonoBehaviour
     {
         m_active = Vector3.Dot(-transform.forward, Vector3.up) < 0.9f;
         col.enabled = m_active;
+        freehang = Vector3.Dot(transform.forward, Vector3.up) > 0.5f;
 
         if (Vector3.Dot(transform.up, Vector3.up) < 0)
         {
@@ -99,14 +104,15 @@ public class ClimbingNode : MonoBehaviour
         if (transform.rotation.eulerAngles.z > 0.5f && transform.rotation.eulerAngles.z < 359.5f)
         {
             m_rotation = Mathf.RoundToInt((360 - transform.localEulerAngles.z) / 45);
-            transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, 0);
+            Vector3 eulerRotation = transform.eulerAngles;
+            eulerRotation.z = 0;
+            transform.rotation = Quaternion.Euler(eulerRotation);
         }
     }
 
     #region NeighbourFunctions
     private void CalculateNodeNeighbors()
     {
-        currentNode = GetComponent<ClimbingNode>();
         Collider[] NodeTriggers = Physics.OverlapSphere(transform.position, DetectionRadius);
         ClimbingNode[] detectedNodes = new ClimbingNode[NodeTriggers.Length];
 
@@ -131,7 +137,7 @@ public class ClimbingNode : MonoBehaviour
         
         foreach (ClimbingNode checkNode in detectedNodes)
         {
-            if (checkNode && (checkNode != currentNode))
+            if (checkNode && (checkNode != this))
                 DetermineNeighbour(checkNode);
         }
     }
@@ -146,18 +152,18 @@ public class ClimbingNode : MonoBehaviour
             if (Vector3.Angle(relativeDirection, checkNode.transform.position - transform.position) < compareAngle)
             {
                 float newDistance = (checkNode.transform.position - transform.position).magnitude;
-                if (currentNode.neighbours[i] != null)
+                if (neighbours[i] != null)
                 {
-                    if (newDistance < currentNode.distances[i])
+                    if (newDistance < distances[i])
                     {
-                        currentNode.neighbours[i] = checkNode;
-                        currentNode.distances[i] = newDistance;
+                        neighbours[i] = checkNode;
+                        distances[i] = newDistance;
                     }
                 }
                 else
                 {
-                    currentNode.neighbours[i] = checkNode;
-                    currentNode.distances[i] = newDistance;
+                    neighbours[i] = checkNode;
+                    distances[i] = newDistance;
                 }
             }
         }
@@ -165,10 +171,10 @@ public class ClimbingNode : MonoBehaviour
 
     private void ResetNeighbours()
     {
-        for (int i = 0; i < currentNode.neighbours.Length; i++)
+        for (int i = 0; i < neighbours.Length; i++)
         {
-            if (currentNode.neighbours[i])
-                currentNode.neighbours[i] = null;
+            if (neighbours[i])
+                neighbours[i] = null;
         }
     }
     #endregion
