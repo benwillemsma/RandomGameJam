@@ -19,15 +19,16 @@ public abstract class CharacterState<Data> : BaseState where Data : CharacterDat
     protected override void UpdateState()
     {
         UpdateMovement();
-        UpdateAnimator();
+        if (anim) UpdateAnimator();
     }
-    /// <summary>
-    /// Character MovementUpdate, Called from StateUpdate;
+
+    /// /// <summary>
+    /// Character MovementUpdate, first update to be Called in StateUpdate
     /// </summary>
     protected virtual void UpdateMovement() { }
 
     /// <summary>
-    /// Character AnimatorUpdate, Called from StateUpdate;
+    /// Character AnimatorUpdate, Called after MovementUpdate if Animator was found.
     /// </summary>
     protected virtual void UpdateAnimator() { }
 }

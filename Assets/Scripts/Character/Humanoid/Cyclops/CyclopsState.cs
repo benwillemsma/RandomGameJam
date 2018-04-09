@@ -6,8 +6,6 @@ public abstract class CyclopsState : EnemyState<CyclopsData>
 {
     #region CyclopsState Variables
 
-
-
     #endregion
 
     public CyclopsState(CyclopsData cyclops) : base(cyclops) { }

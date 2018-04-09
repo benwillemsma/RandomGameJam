@@ -14,11 +14,11 @@ public abstract class HumanoidState<Data> : CharacterState<Data> where Data : Hu
     protected override void UpdateState()
     {
         base.UpdateState();
-        UpdateIK();
+        if (IK) UpdateIK();
     }
 
     /// <summary>
-    /// Humanoid IKUpdate, Called After AnimatorUpdate;
+    /// Humanoid IKUpdate, Called After AnimatorUpdate If IKController was found;
     /// </summary>
     protected virtual void UpdateIK() { }
 }

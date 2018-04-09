@@ -19,19 +19,19 @@ public abstract class EnemyState<Data> : HumanoidState<Data> where Data: EnemyDa
     protected override void UpdateState()
     {
         base.UpdateState();
-        if (data.useAI) UpdateAI();
+        if (data.useAI && agent) UpdateAI();
     }
 
     /// <summary>
-    /// Cyclops InputUpdate, Called After StateUpdate;
+    /// Cyclops InputUpdate, Called After StateUpdate if NavMeshAgent was found.
     /// </summary>
     protected abstract void UpdateAI();
 
-    protected void MoveTo(Transform point)
+    protected virtual void MoveTo(Transform point)
     {
         agent.SetDestination(point.position);
     }
-    protected void MoveTo(Vector3 point)
+    protected virtual void MoveTo(Vector3 point)
     {
         agent.SetDestination(point);
     }

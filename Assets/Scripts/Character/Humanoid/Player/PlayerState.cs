@@ -26,7 +26,7 @@ public abstract class PlayerState : HumanoidState<PlayerData>
     }
 
     /// <summary>
-    /// Player InputUpdate, Called Before StateUpdate;
+    /// Player InputUpdate, Called frame before StateUpdate if player canInput.
     /// </summary>
     protected abstract void UpdateInput();
 }
