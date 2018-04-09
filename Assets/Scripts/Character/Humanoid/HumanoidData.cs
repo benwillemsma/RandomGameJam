@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(IKController))]
 public class HumanoidData : CharacterData
 {
     #region Variables
@@ -18,7 +17,8 @@ public class HumanoidData : CharacterData
     protected override void Awake()
     {
         base.Awake();
-        IK = GetComponent<IKController>();
+        IK = GetComponentInChildren<IKController>();
+        if (!IK) { Debug.Log("No IKController found For:" + this, this); enabled = false; }
     }
     #endregion
 }

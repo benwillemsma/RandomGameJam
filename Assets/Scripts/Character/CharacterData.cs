@@ -4,7 +4,6 @@ using UnityEngine.SceneManagement;
 using UnityEngine;
 
 [RequireComponent(typeof(StateManager))]
-[RequireComponent(typeof(Animator))]
 [RequireComponent(typeof(AudioSource))]
 public abstract class CharacterData : MonoBehaviour
 {
@@ -116,12 +115,14 @@ public abstract class CharacterData : MonoBehaviour
     #region Main
     protected virtual void Awake()
     {
-        m_stateM = GetComponentInChildren<StateManager>();
+        m_stateM = GetComponent<StateManager>();
+        m_audioSource = GetComponent<AudioSource>();
         m_rb = GetComponentInChildren<Rigidbody>();
+        if (!m_rb) { Debug.Log("No Rigidbody found For:" + this, this); enabled = false; }
         m_anim = GetComponentInChildren<Animator>();
-        m_audioSource = GetComponentInChildren<AudioSource>();
+        if (!m_anim) { Debug.Log("No Animator found For:" + this, this); enabled = false; }
 
-        m_currentHealth = m_maxHealth;
+m_currentHealth = m_maxHealth;
         m_startLocation = transform.position;
     }
 

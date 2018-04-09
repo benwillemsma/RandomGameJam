@@ -6,27 +6,54 @@ public class IKTarget
 {
     Vector3 _position = Vector3.zero;
     Quaternion _rotation = Quaternion.identity;
-    float _weight = 0;
+
+    float _positionweight = 0;
+    float _rotationWeight = 0;
 
     public IKTarget()
     {
         _position = Vector3.zero;
         _rotation = Quaternion.identity;
-        _weight = 0;
+        weight = 0;
     }
-
+    public IKTarget(Vector3 position)
+    {
+        _position = position;
+        _rotation = rotation;
+        weight = 0;
+    }
+    public IKTarget(Quaternion rotation)
+    {
+        _position = position;
+        _rotation = rotation;
+        weight = 0;
+    }
     public IKTarget(Vector3 position, float weight)
     {
         _position = position;
-        _rotation = Quaternion.identity;
-        _weight = weight;
+        _rotation = rotation;
+        _positionweight = weight;
+        _rotationWeight = 0;
     }
-
+    public IKTarget(Quaternion rotation, float weight)
+    {
+        _position = position;
+        _rotation = rotation;
+        _positionweight = 0;
+        _rotationWeight = weight;
+    }
     public IKTarget(Vector3 position, Quaternion rotation, float weight)
     {
         _position = position;
         _rotation = rotation;
-        _weight = weight;
+        this.weight = weight;
+    }
+    public IKTarget(Vector3 position, Quaternion rotation, float posWeight, float rotWeight)
+    {
+        _position = position;
+        _rotation = rotation;
+        _positionweight = posWeight;
+        _rotationWeight = rotWeight;
     }
 
     public void Set(Transform t)
@@ -56,7 +83,23 @@ public class IKTarget
 
     public float weight
     {
-        set { _weight = value; }
-        get { return _weight; }
+        get { return (_positionweight + _rotationWeight) / 2; }
+        set
+        {
+            _positionweight = value;
+            _rotationWeight = value;
+        }
+    }
+
+    public float positionWeight
+    {
+        get { return _positionweight; }
+        set { _positionweight = value; }
+    }
+
+    public float rotationWeight
+    {
+        get { return _rotationWeight; }
+        set { _rotationWeight = value; }
     }
 }

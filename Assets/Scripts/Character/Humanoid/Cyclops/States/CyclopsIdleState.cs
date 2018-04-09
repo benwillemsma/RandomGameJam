@@ -21,6 +21,11 @@ public class CyclopsIdleState : CyclopsState
         return base.ExitState(nextState);
     }
 
+    protected override void UpdateAnimator()
+    {
+        anim.SetFloat("Speed", agent.velocity.magnitude);
+    }
+
     protected override void UpdateAI()
     {
         if ((rb.transform.position - agent.destination).magnitude < 2)

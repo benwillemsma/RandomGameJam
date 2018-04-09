@@ -24,5 +24,6 @@ public class EnemyData : HumanoidData
     {
         base.Awake();
         m_agent = GetComponentInChildren<NavMeshAgent>();
+        if (!m_agent) { Debug.Log("No NavMeshAgent found For:" + this, this); enabled = false; }
     }
 }

@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-[RequireComponent(typeof(Animator))]
 public class IKController : MonoBehaviour
 {
     protected Animator anim;
@@ -27,8 +26,8 @@ public class IKController : MonoBehaviour
     //Unity Functions
     protected void Awake()
     {
-        anim = GetComponent<Animator>();
-        if (!anim.isHuman) enabled = false;
+        anim = GetComponentInChildren<Animator>();
+        if (!anim || !anim.isHuman) enabled = false;
         mainCamera = Camera.main.transform;
     }
     protected virtual void OnDrawGizmos()
@@ -56,14 +55,14 @@ public class IKController : MonoBehaviour
 
         //  --Arm IK--
         //RightHand
-        anim.SetIKPositionWeight(AvatarIKGoal.RightHand, _RightHand.weight);
-        anim.SetIKRotationWeight(AvatarIKGoal.RightHand, _RightHand.weight);
+        anim.SetIKPositionWeight(AvatarIKGoal.RightHand, _RightHand.positionWeight);
+        anim.SetIKRotationWeight(AvatarIKGoal.RightHand, _RightHand.rotationWeight);
         anim.SetIKPosition(AvatarIKGoal.RightHand, _RightHand.position);
         anim.SetIKRotation(AvatarIKGoal.RightHand, _RightHand.rotation);
 
         //LeftHand
-        anim.SetIKPositionWeight(AvatarIKGoal.LeftHand, _LeftHand.weight);
-        anim.SetIKRotationWeight(AvatarIKGoal.LeftHand, _LeftHand.weight);
+        anim.SetIKPositionWeight(AvatarIKGoal.LeftHand, _LeftHand.positionWeight);
+        anim.SetIKRotationWeight(AvatarIKGoal.LeftHand, _LeftHand.rotationWeight);
         anim.SetIKPosition(AvatarIKGoal.LeftHand, _LeftHand.position);
         anim.SetIKRotation(AvatarIKGoal.LeftHand, _LeftHand.rotation);
 
@@ -77,14 +76,14 @@ public class IKController : MonoBehaviour
 
         //  --Leg IK--
         //RightFoot
-        anim.SetIKPositionWeight(AvatarIKGoal.RightFoot, _RightFoot.weight);
-        anim.SetIKRotationWeight(AvatarIKGoal.RightFoot, _RightFoot.weight);
+        anim.SetIKPositionWeight(AvatarIKGoal.RightFoot, _RightFoot.positionWeight);
+        anim.SetIKRotationWeight(AvatarIKGoal.RightFoot, _RightFoot.rotationWeight);
         anim.SetIKPosition(AvatarIKGoal.RightFoot, _RightFoot.position);
         anim.SetIKRotation(AvatarIKGoal.RightFoot, _RightFoot.rotation);
 
         //LeftFoot
-        anim.SetIKPositionWeight(AvatarIKGoal.LeftFoot, _LeftFoot.weight);
-        anim.SetIKRotationWeight(AvatarIKGoal.LeftFoot, _LeftFoot.weight);
+        anim.SetIKPositionWeight(AvatarIKGoal.LeftFoot, _LeftFoot.positionWeight);
+        anim.SetIKRotationWeight(AvatarIKGoal.LeftFoot, _LeftFoot.rotationWeight);
         anim.SetIKPosition(AvatarIKGoal.LeftFoot, _LeftFoot.position);
         anim.SetIKRotation(AvatarIKGoal.LeftFoot, _LeftFoot.rotation);
 
