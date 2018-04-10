@@ -1,35 +1,25 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class CyclopsAttackState : CyclopsState
+public class CyclopsAttackState : CyclopsWalkingState
 {
     #region AttackState Variables
 
-    protected EffectManager attackCollider;
-
     #endregion
 
-    public CyclopsAttackState(CyclopsData characterData, EffectManager attackCollider) : base(characterData)
+    public CyclopsAttackState(CyclopsData characterData) : base(characterData)
     {
-        this.attackCollider = attackCollider;
     }
 
-    public override IEnumerator EnterState(BaseState prevState)
+    protected override void SetDestination()
     {
-        if (attackCollider) attackCollider.enabled = true;
-        return base.EnterState(prevState);
-    }
+        agent.speed = 8;
+        agent.SetDestination(player.transform.position);
 
-    public override IEnumerator ExitState(BaseState nextState)
-    {
-        if (attackCollider) attackCollider.enabled = false;
-        return base.ExitState(nextState);
-    }
-
-    protected virtual void Recoil()
-    {
-
+        if ((rb.transform.position - agent.destination).magnitude <= agent.stoppingDistance)
+        {
+            //attack();
+        }
     }
 }

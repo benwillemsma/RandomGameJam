@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CyclopsIdleState : CyclopsState
+public class CyclopsWalkingState : CyclopsState
 {
     #region CyclopsIdleState Variables
 
@@ -10,17 +10,14 @@ public class CyclopsIdleState : CyclopsState
 
     #endregion
 
-    public CyclopsIdleState(CyclopsData characterData) : base(characterData) { }
+    public CyclopsWalkingState(CyclopsData characterData) : base(characterData)
+    {
+    }
 
     public override IEnumerator EnterState(BaseState prevState)
     {
         data.patrolIndex = Random.Range(0, data.patrolPoints.Length - 1);
         return base.EnterState(prevState);
-    }
-
-    public override IEnumerator ExitState(BaseState nextState)
-    {
-        return base.ExitState(nextState);
     }
 
     protected override void UpdateAnimator()
@@ -32,6 +29,14 @@ public class CyclopsIdleState : CyclopsState
 
     protected override void UpdateAI()
     {
+        SetDestination();
+        base.UpdateAI();
+    }
+
+    protected virtual void SetDestination()
+    {
+        agent.speed = 5;
+
         if ((rb.transform.position - agent.destination).magnitude <= agent.stoppingDistance)
         {
             data.patrolIndex = Random.Range(0, data.patrolPoints.Length - 1);
@@ -43,17 +48,14 @@ public class CyclopsIdleState : CyclopsState
 
     protected override void MoveTo(Transform point)
     {
-        Turn(point.position);
+        float newAngle = Vector3.SignedAngle(rb.transform.forward, point.position - rb.transform.position, Vector3.up);
+        turnAngle = Mathf.Lerp(turnAngle, newAngle, Time.deltaTime * agent.speed);
         base.MoveTo(point);
     }
     protected override void MoveTo(Vector3 point)
     {
-        Turn(point);
+        float newAngle = Vector3.SignedAngle(rb.transform.forward, point - rb.transform.position, Vector3.up);
+        turnAngle = Mathf.Lerp(turnAngle, newAngle, Time.deltaTime * agent.speed);
         base.MoveTo(point);
-    }
-
-    private void Turn(Vector3 point)
-    {
-        turnAngle = Vector3.SignedAngle(rb.transform.forward, point - rb.transform.position, Vector3.up);
     }
 }

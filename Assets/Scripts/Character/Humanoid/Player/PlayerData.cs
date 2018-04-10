@@ -9,13 +9,14 @@ public class PlayerData : HumanoidData
     public float lightPerSecond;
     public float lightCharge;
 
+    public const float MaxDetection = 20;
     [Header("Stealth")]
-    public float detectionLevel;
     public float soundLevel;
     public float lightLevel;
-    public float TotalDetection
+    public float TotalDetection(Vector3 atPosition)
     {
-        get { return soundLevel + lightLevel + detectionLevel; }
+        float distance = (transform.position - atPosition).magnitude;
+        return soundLevel/distance + lightLevel;
     }
 
     [Header("Movement")]

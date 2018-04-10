@@ -376,7 +376,6 @@ MonoBehaviour:
   m_deathDelay: 3
   lightPerSecond: 5
   lightCharge: 0
-  detectionLevel: 0
   soundLevel: 0
   lightLevel: 0
   runSpeed: 8

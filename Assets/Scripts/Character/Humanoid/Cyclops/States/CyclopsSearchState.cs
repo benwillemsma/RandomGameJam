@@ -2,23 +2,26 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CyclopsSearchState : CyclopsState
+public class CyclopsSearchState : CyclopsWalkingState
 {
     #region CyclopsSearchState Variables
 
     #endregion
 
-    public CyclopsSearchState(CyclopsData characterData) : base(characterData) { }
+    public CyclopsSearchState(CyclopsData characterData) : base(characterData)
+    {
+        data.detectionLevel = data.searchThreshold;
+    }
 
     public override IEnumerator EnterState(BaseState prevState)
     {
+        SetDestination();
         return base.EnterState(prevState);
     }
 
-    public override IEnumerator ExitState(BaseState nextState)
+    protected override void SetDestination()
     {
-        return base.ExitState(nextState);
+        agent.speed = 3;
+        agent.SetDestination(player.transform.position);
     }
-
-    protected override void UpdateAI() { }
 }

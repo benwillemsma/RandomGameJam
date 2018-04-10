@@ -24,7 +24,7 @@ public abstract class PlayerState : HumanoidState<PlayerData>
 
         Vector3 velocityLevel = rb.velocity;
         velocityLevel.y = 0;
-        data.detectionLevel = velocityLevel.magnitude;
+        data.soundLevel = velocityLevel.magnitude;
         climbing = Input.GetButton("Grab");
     }
 

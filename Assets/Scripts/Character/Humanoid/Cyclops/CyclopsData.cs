@@ -7,17 +7,26 @@ public class CyclopsData : EnemyData
 {
     #region CyclopsIdleState Variables
 
-    [Header("CyclopsData")]
-    public float Attack1_Damage;
-    public float Attack1_Duration;
-    
-    public float Attack2_Damage;
-    public float Attack2_Duration;
+    [Header("Vision Data")]
+    public Transform eye;
+    [Range(1,90)]
+    public float visionAngle;
+    public LayerMask VisionMask;
+
+    [Header("Detection Data")]
+    public float detectionLevel;
+
+    [Range(0, PlayerData.MaxDetection)]
+    public float walkingThreshold;
+    [Range(1, PlayerData.MaxDetection)]
+    public float searchThreshold;
+    [Range(2, PlayerData.MaxDetection)]
+    public float attackThreshold;
 
     #endregion
 
     private void Start()
     {
-        m_stateM.State = new CyclopsIdleState(this);
+        m_stateM.State = new CyclopsWalkingState(this);
     }
 }
