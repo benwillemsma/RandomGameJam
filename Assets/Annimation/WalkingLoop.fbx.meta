@@ -124,7 +124,7 @@ ModelImporter:
             outSlope: 0
             tangentMode: 0
           - serializedVersion: 2
-            time: 0.3997453
+            time: 0.34960338
             value: 0
             inSlope: 0
             outSlope: 0
@@ -136,7 +136,7 @@ ModelImporter:
             outSlope: 0
             tangentMode: 0
           - serializedVersion: 2
-            time: 0.8505141
+            time: 0.849568
             value: 1
             inSlope: -0.0000008623827
             outSlope: -0.0000008623827
@@ -167,19 +167,19 @@ ModelImporter:
             outSlope: 0
             tangentMode: 0
           - serializedVersion: 2
-            time: 0.3489982
+            time: 0.3499443
             value: 1
             inSlope: 0
             outSlope: 0
             tangentMode: 0
           - serializedVersion: 2
-            time: 0.45076832
+            time: 0.4507683
             value: 0
             inSlope: 0
             outSlope: 0
             tangentMode: 0
           - serializedVersion: 2
-            time: 0.9009066
+            time: 0.85076475
             value: 0
             inSlope: 0
             outSlope: 0

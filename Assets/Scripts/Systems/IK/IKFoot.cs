@@ -84,12 +84,12 @@ public class IKFoot : MonoBehaviour
             if (rightfoot)
             {
                 IK.RightFoot.positionWeight = anim.GetFloat("RightFoot");
-                IK.RightFoot.position = Vector3.Lerp(IK.RightFoot.position, newPosition, Time.deltaTime * 5);
+                IK.RightFoot.position = Vector3.Lerp(IK.RightFoot.position, newPosition, Time.deltaTime * 10);
             }
             else
             {
                 IK.LeftFoot.positionWeight = anim.GetFloat("LeftFoot");
-                IK.LeftFoot.position = Vector3.Lerp(IK.LeftFoot.position, newPosition, Time.deltaTime * 5);
+                IK.LeftFoot.position = Vector3.Lerp(IK.LeftFoot.position, newPosition, Time.deltaTime * 10);
             }
         }
     }
