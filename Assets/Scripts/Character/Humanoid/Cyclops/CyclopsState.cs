@@ -67,10 +67,7 @@ public abstract class CyclopsState : EnemyState<CyclopsData>
         {
             RaycastHit hit;
             if (!Physics.Raycast(data.eye.position, direction, out hit, direction.magnitude, data.VisionMask))
-            {
-                Debug.Log("Sees Player");
                 return true;
-            }
         }
         return false;
     }

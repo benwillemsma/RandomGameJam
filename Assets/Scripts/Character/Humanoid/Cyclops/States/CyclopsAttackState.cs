@@ -6,20 +6,31 @@ public class CyclopsAttackState : CyclopsWalkingState
 {
     #region AttackState Variables
 
+    protected static float beamCooldown;
+
     #endregion
 
     public CyclopsAttackState(CyclopsData characterData) : base(characterData)
     {
+
+    }
+
+    protected override void UpdateAI()
+    {
+        base.UpdateAI();
+        if ((rb.transform.position - agent.destination).magnitude <= agent.stoppingDistance)
+        {
+            //AxeAttack();
+        }
+        else if (hasDetectedPlayer && beamCooldown <= 0 && (rb.transform.position - agent.destination).magnitude > 20)
+        {
+            //BeamAttack();
+        }
     }
 
     protected override void SetDestination()
     {
-        agent.speed = 8;
-        agent.SetDestination(player.transform.position);
-
-        if ((rb.transform.position - agent.destination).magnitude <= agent.stoppingDistance)
-        {
-            //attack();
-        }
+        agent.speed = 6.5f;
+        MoveTo(player.transform.position);
     }
 }

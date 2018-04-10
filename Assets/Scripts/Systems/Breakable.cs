@@ -33,9 +33,8 @@ public class Breakable : MonoBehaviour
             delay = Random.Range(0, 5) + GameManager.Instance.objectDestroyDelay;
             Breakable childBreakable = objects.GetChild(i).GetComponent<Breakable>();
 
-            if (childBreakable) childBreakable.StartCoroutine(childBreakable.Break(delay));
-            else Destroy(objects.GetChild(i).gameObject, delay);
+            if (!childBreakable) Destroy(objects.GetChild(i).gameObject, delay);
         }
-        Destroy(gameObject);
+        DestroyImmediate(gameObject);
     }
 }

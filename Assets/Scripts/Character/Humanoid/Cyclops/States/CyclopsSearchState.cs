@@ -21,7 +21,11 @@ public class CyclopsSearchState : CyclopsWalkingState
 
     protected override void SetDestination()
     {
-        agent.speed = 3;
-        agent.SetDestination(player.transform.position);
+        if (hasDetectedPlayer)
+        {
+            agent.speed = 5;
+            MoveTo(player.transform);
+        }
+        else base.SetDestination();
     }
 }

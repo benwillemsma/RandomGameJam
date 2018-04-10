@@ -22,11 +22,39 @@ public class CyclopsData : EnemyData
     public float searchThreshold;
     [Range(2, PlayerData.MaxDetection)]
     public float attackThreshold;
+    
+    [Header("Particles")]
+    public ParticleSystem Fire;
+    public ParticleSystem Smoke;
+    public ParticleSystem EyeBeam;
+    private bool onFire;
 
     #endregion
 
     private void Start()
     {
         m_stateM.State = new CyclopsWalkingState(this);
+    }
+
+    protected override void Update()
+    {
+        base.Update();
+        if (Input.GetKeyDown(KeyCode.P))
+            OnFire(!onFire);
+    }
+
+    public void OnFire(bool toggle)
+    {
+        onFire = toggle;
+        if (onFire)
+        {
+            Fire.Play();
+            Smoke.Play();
+        }
+        else
+        {
+            Fire.Stop();
+            Smoke.Stop();
+        }
     }
 }
