@@ -3100,7 +3100,44 @@ Prefab:
       propertyPath: m_StoppingDistance
       value: 10
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 4349310358464082, guid: ad582db803344994ab4de6ee0d7ccf81, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4733001152294942, guid: ad582db803344994ab4de6ee0d7ccf81, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 65551804648575344, guid: ad582db803344994ab4de6ee0d7ccf81,
+        type: 2}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 65661411023847412, guid: ad582db803344994ab4de6ee0d7ccf81,
+        type: 2}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 195994781131582710, guid: ad582db803344994ab4de6ee0d7ccf81,
+        type: 2}
+      propertyPath: m_BaseOffset
+      value: -1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114554202442532106, guid: ad582db803344994ab4de6ee0d7ccf81,
+        type: 2}
+      propertyPath: walkingSpeed
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114801557369393172, guid: ad582db803344994ab4de6ee0d7ccf81,
+        type: 2}
+      propertyPath: walkingSpeed
+      value: 0.1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 54050680919553202, guid: ad582db803344994ab4de6ee0d7ccf81, type: 2}
+    - {fileID: 54668533033467146, guid: ad582db803344994ab4de6ee0d7ccf81, type: 2}
+    - {fileID: 65551804648575344, guid: ad582db803344994ab4de6ee0d7ccf81, type: 2}
+    - {fileID: 65661411023847412, guid: ad582db803344994ab4de6ee0d7ccf81, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: ad582db803344994ab4de6ee0d7ccf81, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &881065067
@@ -7463,7 +7500,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1912230636
 Transform:
   m_ObjectHideFlags: 0
