@@ -95,9 +95,9 @@ public class PlayerWalkingState : PlayerState
     }
 
     //Physics  Functions
-    public override void OnTriggerEnter(Collider other)
+    public override void OnTriggerStay(Collider other)
     {
-        if (!inTransition)
+        if (!inTransition && climbing)
         {
             if (other.tag == "ClimbingNode")
             {

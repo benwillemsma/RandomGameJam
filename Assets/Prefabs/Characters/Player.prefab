@@ -117,7 +117,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1820605546886962}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 60, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4507272650997436}
@@ -375,9 +375,12 @@ MonoBehaviour:
   m_damageImmuneDuration: 0.5
   m_deathDelay: 3
   lightPerSecond: 5
+  lightCharge: 0
+  detectionLevel: 0
+  soundLevel: 0
   lightLevel: 0
   runSpeed: 8
-  jumpForce: 6
+  jumpForce: 8
   airControl: 5
   toggleCrouch: 0
   groundMask:

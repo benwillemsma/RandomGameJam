@@ -7,6 +7,8 @@ public abstract class PlayerState : HumanoidState<PlayerData>
     #region PlayerState Variables
 
     protected bool canInput = true;
+    protected bool climbing;
+
     protected Vector3 movementDirection;
     protected Quaternion properRotation;
 
@@ -23,6 +25,7 @@ public abstract class PlayerState : HumanoidState<PlayerData>
         Vector3 velocityLevel = rb.velocity;
         velocityLevel.y = 0;
         data.detectionLevel = velocityLevel.magnitude;
+        climbing = Input.GetButton("Grab");
     }
 
     /// <summary>
