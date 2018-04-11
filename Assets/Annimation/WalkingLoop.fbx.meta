@@ -58,6 +58,8 @@ ModelImporter:
     2100000: defaultMat
     4300000: Group6169
     7400000: WalkingLoop
+    7400002: WalkingLoopRight
+    7400004: WalkingLoopLeft
     9500000: //RootNode
     13700000: Group6169
   externalObjects: {}

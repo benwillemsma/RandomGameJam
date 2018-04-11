@@ -27,6 +27,7 @@ public class NodeClimbingState : PlayerState
 
     public NodeClimbingState(PlayerData player, ClimbingNode node) : base(player)
     {
+        climbing = true;
         currentNodes[0] = node;
         currentNodes[1] = node;
     }
@@ -87,13 +88,12 @@ public class NodeClimbingState : PlayerState
 
             moveDirection = new Vector3(moveX, moveY, 0);
 
-            if ((!currentNodes[0] && !currentNodes[1])
+            if (!climbing || (!currentNodes[0] && !currentNodes[1])
                 || (!currentNodes[0].Active && !currentNodes[1].Active)
                 || (!currentNodes[0].gameObject.activeInHierarchy && !currentNodes[1].gameObject.activeInHierarchy))
                 stateManager.ChangeState(new PlayerWalkingState(data));
 
-            if (Input.GetButtonDown("Jump"))
-                Jump();
+            if (Input.GetButtonDown("Jump")) Jump();
 
             else if (Vector3.Dot(Vector3.Project(data.transform.forward, Vector3.up), lookDirection) >= 0)
             {
@@ -112,7 +112,7 @@ public class NodeClimbingState : PlayerState
                     else
                     {
                         Collider col = SurfaceCheck();
-                        if (col) stateManager.ChangeState(new SurfaceClimbingState(data, col)); 
+                        if (col) stateManager.ChangeState(new SurfaceClimbingState(data, col));
                     }
                 }
             }

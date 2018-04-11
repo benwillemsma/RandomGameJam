@@ -20,6 +20,7 @@ public class SurfaceClimbingState : PlayerState
 
     public SurfaceClimbingState(PlayerData player,Collider surface) : base(player)
     {
+        climbing = true;
         Surfaces.Add(surface);
     }
 
@@ -59,7 +60,7 @@ public class SurfaceClimbingState : PlayerState
         movementDirection = rb.transform.rotation * movementDirection;
         movementDirection = Vector3.ProjectOnPlane(movementDirection, -cur_SurfaceHit.normal);
 
-        if (Vector3.Dot(cur_SurfaceHit.normal, Vector3.up) > 0.5f)
+        if (!climbing || (Vector3.Dot(cur_SurfaceHit.normal, Vector3.up) > 0.5f))
             stateManager.ChangeState(new PlayerWalkingState(data));
     }
     protected override void UpdateMovement()
@@ -94,10 +95,7 @@ public class SurfaceClimbingState : PlayerState
             last_SurfaceHit = cur_SurfaceHit;
             cur_SurfaceHit = hit;
             if (cur_SurfaceHit.transform != climbParent)
-            {
                 climbParent = cur_SurfaceHit.transform;
-                offset = rb.transform.position - climbParent.position;
-            }
             return true;
         }
         return false;

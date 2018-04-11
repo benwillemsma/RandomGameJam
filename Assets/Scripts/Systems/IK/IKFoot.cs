@@ -13,8 +13,8 @@ public class IKFoot : MonoBehaviour
     public Transform foot;
     public Transform heel;
     public Transform toes;
-    
-    private Vector3 lastPos;
+
+    public LayerMask groundMask;
 
     private Quaternion rotationOffset;
     private Vector3 positionOffset;
@@ -31,7 +31,6 @@ public class IKFoot : MonoBehaviour
 
         transform.parent = null;
         positionOffset = transform.position - foot.position;
-        lastPos = transform.position;
 
         if (rightfoot)
         {
@@ -62,12 +61,12 @@ public class IKFoot : MonoBehaviour
     {
         Vector3 heelPoint = Vector3.zero;
         RaycastHit heelHit;
-        if (Physics.Raycast(heel.position + Vector3.up * 5, Vector3.down, out heelHit, 10))
+        if (Physics.Raycast(heel.position + Vector3.up * 5, Vector3.down, out heelHit, 10, groundMask))
             heelPoint = heelHit.point;
 
         Vector3 toePoint = Vector3.zero;
         RaycastHit toeHit;
-        if (Physics.Raycast(toes.position + Vector3.up * 5, Vector3.down, out toeHit, 10))
+        if (Physics.Raycast(toes.position + Vector3.up * 5, Vector3.down, out toeHit, 10, groundMask))
             toePoint = toeHit.point;
 
         if (heelPoint != Vector3.zero && toePoint != Vector3.zero)

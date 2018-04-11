@@ -1,35 +1,33 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class CyclopsAttackState : CyclopsState
+public class CyclopsAttackState : CyclopsWalkingState
 {
     #region AttackState Variables
 
-    protected EffectManager attackCollider;
+    protected static float beamCooldown;
 
     #endregion
 
-    public CyclopsAttackState(CyclopsData characterData, EffectManager attackCollider) : base(characterData)
+    public CyclopsAttackState(CyclopsData characterData) : base(characterData) { }
+
+    protected override void UpdateAI()
     {
-        this.attackCollider = attackCollider;
+        base.UpdateAI();
+        if ((rb.transform.position - agent.destination).magnitude <= agent.stoppingDistance)
+        {
+            //AxeAttack();
+        }
+        else if (hasDetectedPlayer && beamCooldown <= 0 && (rb.transform.position - agent.destination).magnitude > 20)
+        {
+            //BeamAttack();
+        }
     }
 
-    public override IEnumerator EnterState(BaseState prevState)
+    protected override void SetDestination()
     {
-        if (attackCollider) attackCollider.enabled = true;
-        return base.EnterState(prevState);
-    }
-
-    public override IEnumerator ExitState(BaseState nextState)
-    {
-        if (attackCollider) attackCollider.enabled = false;
-        return base.ExitState(nextState);
-    }
-
-    protected virtual void Recoil()
-    {
-
+        agent.speed = 7f;
+        MoveTo(player.transform.position);
     }
 }
