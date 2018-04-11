@@ -1767,6 +1767,9 @@ MonoBehaviour:
   walkingThreshold: 2
   searchThreshold: 15
   attackThreshold: 19
+  Fire: {fileID: 198152353489600724}
+  Smoke: {fileID: 198962327579938978}
+  EyeBeam: {fileID: 0}
 --- !u!114 &114239839111980820
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2241,7 +2244,7 @@ ParticleSystem:
   stopAction: 0
   looping: 1
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   useRigidbodyForVelocity: 1
@@ -5647,7 +5650,7 @@ ParticleSystem:
   stopAction: 0
   looping: 1
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   useRigidbodyForVelocity: 1

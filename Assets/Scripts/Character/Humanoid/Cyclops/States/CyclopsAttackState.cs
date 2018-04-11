@@ -10,10 +10,7 @@ public class CyclopsAttackState : CyclopsWalkingState
 
     #endregion
 
-    public CyclopsAttackState(CyclopsData characterData) : base(characterData)
-    {
-
-    }
+    public CyclopsAttackState(CyclopsData characterData) : base(characterData) { }
 
     protected override void UpdateAI()
     {
@@ -30,7 +27,7 @@ public class CyclopsAttackState : CyclopsWalkingState
 
     protected override void SetDestination()
     {
-        agent.speed = 6.5f;
+        agent.speed = 7f;
         MoveTo(player.transform.position);
     }
 }

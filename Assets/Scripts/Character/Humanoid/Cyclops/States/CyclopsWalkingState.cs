@@ -10,9 +10,7 @@ public class CyclopsWalkingState : CyclopsState
 
     #endregion
 
-    public CyclopsWalkingState(CyclopsData characterData) : base(characterData)
-    {
-    }
+    public CyclopsWalkingState(CyclopsData characterData) : base(characterData) { }
 
     public override IEnumerator EnterState(BaseState prevState)
     {
