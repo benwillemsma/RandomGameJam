@@ -8,11 +8,7 @@ Material:
   m_PrefabInternal: {fileID: 0}
   m_Name: Axe
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
-<<<<<<< HEAD
-  m_ShaderKeywords: _METALLICGLOSSMAP _NORMALMAP _PARALLAXMAP
-=======
   m_ShaderKeywords: _METALLICGLOSSMAP _NORMALMAP
->>>>>>> 095c1cde627da20ac441555a54229d4707b5cdd5
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -23,11 +19,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BumpMap:
-<<<<<<< HEAD
         m_Texture: {fileID: 2800000, guid: b1781aee65b2185478d74d6a4999edb6, type: 3}
-=======
-        m_Texture: {fileID: 2800000, guid: 77914836629166246929b29e0aeafeb1, type: 3}
->>>>>>> 095c1cde627da20ac441555a54229d4707b5cdd5
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
@@ -47,7 +39,6 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-<<<<<<< HEAD
         m_Texture: {fileID: 2800000, guid: 0df9884e8ac4d5f4489c075596d3eb93, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -60,22 +51,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ParallaxMap:
-        m_Texture: {fileID: 2800000, guid: b4bb3771ca16fab4f8a020fe0e7e16fe, type: 3}
-=======
-        m_Texture: {fileID: 2800000, guid: 8d0dabb9356f9a64e88bd5e76d0d0bc9, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MetallicGlossMap:
-        m_Texture: {fileID: 2800000, guid: 025d783b421e89a44b5df26def992de8, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _OcclusionMap:
-        m_Texture: {fileID: 2800000, guid: c54d15d68adac074fb80b68a4698255d, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _ParallaxMap:
         m_Texture: {fileID: 0}
->>>>>>> 095c1cde627da20ac441555a54229d4707b5cdd5
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
