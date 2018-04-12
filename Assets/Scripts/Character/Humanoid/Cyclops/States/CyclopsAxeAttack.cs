@@ -10,10 +10,16 @@ public class CyclopsAxeAttack : CyclopsAttack
 
     public CyclopsAxeAttack(CyclopsData characterData, EffectManager attackCollider) : base(characterData, attackCollider) { }
 
-    protected override void UpdateAI() { }
+    protected override void UpdateAI()
+    {
+        if (elapsedTime >= attackCollider.duration) stateManager.ChangeState(new CyclopsAttackState(data));
+    }
 
     public override IEnumerator EnterState(BaseState prevState)
     {
+        float direction = Vector3.Dot(data.transform.right, (player.transform.position - data.transform.position).normalized) * 2;
+
+        anim.SetFloat("HackDirection", direction);
         anim.SetTrigger("HackAttack");
         return base.EnterState(prevState);
     }

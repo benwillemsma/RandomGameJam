@@ -9,6 +9,8 @@ public class EffectManager : MonoBehaviour
     public CharacterData owningCharacter;
     public new Collider collider;
 
+    private float elapsedTime;
+    public float duration;
     private bool overTimeAvailable = false;
     public float overTimeCooldown;
 
@@ -19,30 +21,32 @@ public class EffectManager : MonoBehaviour
     [HideInInspector]
     public List<Effect> effects = new List<Effect>();
 
-
-    void Start()
+    private void Awake()
     {
         if (!collider) collider = GetComponent<Collider>();
+        collider.isTrigger = true;
     }
 
     private void OnEnable()
     {
         if (!collider) collider = GetComponent<Collider>();
         collider.enabled = true;
+        elapsedTime = 0;
     }
 
     private void OnDisable()
     {
+        elapsedTime = 0;
         collider.enabled = false;
     }
 
-    protected void OnCollisionEnter(Collision collision)
+    protected void OnTriggerEnter(Collider other)
     {
         for (int i = 0; i < affectTags.Length; i++)
         {
-            if (collision.gameObject.tag == affectTags[i])
+            if (other.gameObject.tag == affectTags[i])
             {
-                CharacterData character = collision.collider.attachedRigidbody.GetComponent<CharacterData>();
+                CharacterData character = other.attachedRigidbody.GetComponent<CharacterData>();
                 if (character && character != owningCharacter && !affectedCharaters.Contains(character))
                 {
                     affectedCharaters.Add(character);
@@ -68,17 +72,18 @@ public class EffectManager : MonoBehaviour
             }
             StartCoroutine(GameManager.CallAfterDelay(() => overTimeAvailable = true, overTimeCooldown));
         }
+        elapsedTime += Time.deltaTime;
+        if (elapsedTime >= duration) enabled = false;
     }
 
-    protected void OnCollisionExit(Collision collision)
+    protected void OnTriggerExit(Collider other)
     {
-        Debug.Log(collision.collider, collision.collider);
-        CharacterData character = collision.collider.attachedRigidbody.GetComponent<CharacterData>();
+        CharacterData character = other.attachedRigidbody.GetComponent<CharacterData>();
         if (character && character != owningCharacter && affectedCharaters.Contains(character))
         {
             affectedCharaters.Remove(character);
             for (int e = 0; e < effects.Count; e++)
-                effects[e].OnEffectStart(character);
+                effects[e].OnEffectEnd(character);
         }
     }
 }

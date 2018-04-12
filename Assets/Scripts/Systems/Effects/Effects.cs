@@ -12,35 +12,3 @@ public abstract class Effect : MonoBehaviour
     public abstract void OnEffectStay(CharacterData character);
     public abstract void OnEffectEnd(CharacterData character);
 }
-
-public class DamageEffect : Effect
-{
-    public override void OnEffectStart(CharacterData character)
-    {
-        character.TakeDamage(initial_value);
-    }
-    public override void OnEffectStay(CharacterData character)
-    {
-        character.TakeDamage(overTime_value);
-    }
-    public override void OnEffectEnd(CharacterData character)
-    {
-        character.TakeDamage(overTime_value);
-    }
-}
-
-public class KnockBackEffect : Effect
-{
-    public override void OnEffectStart(CharacterData character)
-    {
-
-    }
-    public override void OnEffectStay(CharacterData character)
-    {
-
-    }
-    public override void OnEffectEnd(CharacterData character)
-    {
-
-    }
-}

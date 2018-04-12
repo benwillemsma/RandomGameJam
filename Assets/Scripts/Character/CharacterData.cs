@@ -41,12 +41,14 @@ public abstract class CharacterData : MonoBehaviour
     [SerializeField]
     protected float m_maxHealth = 100;
     [SerializeField]
+    protected float m_currentHealth;
+    [SerializeField]
     protected float m_damageImmuneDuration = 0.5f;
     [SerializeField]
     protected float m_deathDelay = 3f;
 
     protected bool m_isDead = false;
-    protected float m_currentHealth;
+    
     protected float m_damageImmune;
 
     public float Health
@@ -62,7 +64,7 @@ public abstract class CharacterData : MonoBehaviour
             m_currentHealth -= damage;
 
             if (Health <= 0)
-                GameManager.Instance.StartCoroutine(Die());
+                RespawnCharacter();
         }
     }
 
@@ -94,6 +96,7 @@ public abstract class CharacterData : MonoBehaviour
     {
         transform.position = SpawnPoint;
         RB.velocity = Vector3.zero;
+        m_currentHealth = m_maxHealth;
     }
     #endregion
 

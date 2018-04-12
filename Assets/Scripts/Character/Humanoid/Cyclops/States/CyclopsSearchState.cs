@@ -23,6 +23,7 @@ public class CyclopsSearchState : CyclopsWalkingState
     {
         if (hasDetectedPlayer)
         {
+            agent.stoppingDistance = 20;
             agent.speed = 5;
             MoveTo(player.transform);
         }

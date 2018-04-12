@@ -15,11 +15,14 @@ public class CyclopsAttackState : CyclopsWalkingState
     protected override void UpdateAI()
     {
         base.UpdateAI();
+
         if ((rb.transform.position - agent.destination).magnitude <= agent.stoppingDistance)
         {
-            stateManager.ChangeState(new CyclopsAxeAttack(data, data.AxeAttack));
+            float direction = Vector3.Dot(data.transform.forward, (player.transform.position - data.transform.position).normalized);
+            if (direction >= 0.6f) stateManager.ChangeState(new CyclopsAxeAttack(data, data.AxeAttack));
         }
-        else if (hasDetectedPlayer && beamCooldown <= 0 && (rb.transform.position - agent.destination).magnitude > 20)
+
+        else if (hasDetectedPlayer && beamCooldown <= 0 && (rb.transform.position - agent.destination).magnitude > 50)
         {
             //BeamAttack();
         }
@@ -27,6 +30,7 @@ public class CyclopsAttackState : CyclopsWalkingState
 
     protected override void SetDestination()
     {
+        agent.stoppingDistance = 17;
         agent.speed = 7f;
         MoveTo(player.transform.position);
     }

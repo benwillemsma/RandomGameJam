@@ -22,7 +22,6 @@ public class CyclopsWalkingState : CyclopsState
     {
         anim.SetFloat("Speed", agent.velocity.magnitude);
         anim.SetFloat("TurnAngle", turnAngle);
-        turnAngle = 0;
     }
 
     protected override void UpdateAI()
@@ -33,6 +32,7 @@ public class CyclopsWalkingState : CyclopsState
 
     protected virtual void SetDestination()
     {
+        agent.stoppingDistance = 5;
         agent.speed = 5;
 
         if ((rb.transform.position - agent.destination).magnitude <= agent.stoppingDistance)
@@ -46,14 +46,22 @@ public class CyclopsWalkingState : CyclopsState
 
     protected override void MoveTo(Transform point)
     {
-        float newAngle = Vector3.SignedAngle(rb.transform.forward, point.position - rb.transform.position, Vector3.up);
-        turnAngle = Mathf.Lerp(turnAngle, newAngle, Time.deltaTime * agent.speed);
         base.MoveTo(point);
+        Turn(point.position);
     }
+
     protected override void MoveTo(Vector3 point)
     {
-        float newAngle = Vector3.SignedAngle(rb.transform.forward, point - rb.transform.position, Vector3.up);
-        turnAngle = Mathf.Lerp(turnAngle, newAngle, Time.deltaTime * agent.speed);
         base.MoveTo(point);
+        Turn(point);
+    }
+
+    protected void Turn(Vector3 nextPoint)
+    {
+        if (agent.path.corners.Length > 1)
+            nextPoint = agent.path.corners[1];
+
+        Debug.DrawLine(data.transform.position, nextPoint, Color.red, 0.5f);
+        turnAngle = Vector3.SignedAngle(data.transform.forward, nextPoint - data.transform.position, Vector3.up);
     }
 }

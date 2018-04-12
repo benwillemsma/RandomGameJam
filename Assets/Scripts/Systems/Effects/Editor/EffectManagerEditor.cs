@@ -80,6 +80,19 @@ public class EffectManagerEditor : Editor
         return -1;
     }
 
+    private void CleanEffects()
+    {
+        for (int i = 0; i < m_target.effects.Count; i++)
+        {
+            if (m_target.effects[i] == null)
+            {
+                m_target.effects.RemoveAt(i);
+                i--;
+            }
+        }
+        Debug.Log(m_target.effects.Count);
+    }
+
     private void AddEffect()
     {
         switch ((types)type)
@@ -95,6 +108,8 @@ public class EffectManagerEditor : Editor
             default:
                 break;
         }
+        //m_target.effects[m_target.effects.Count - 1].hideFlags = HideFlags.HideInInspector;
+        CleanEffects();
     }
 
     private void RemoveEffect()
@@ -111,11 +126,11 @@ public class EffectManagerEditor : Editor
             default:
                 break;
         }
-        Debug.Log(m_target.effects.Count);
         if (index >= 0 && m_target.effects.Count > 0)
         {
             DestroyImmediate(m_target.effects[index]);
             m_target.effects.RemoveAt(index);
         }
+        CleanEffects();
     }
 }
