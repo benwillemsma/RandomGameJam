@@ -17,7 +17,7 @@ public class CyclopsAttackState : CyclopsWalkingState
         base.UpdateAI();
         if ((rb.transform.position - agent.destination).magnitude <= agent.stoppingDistance)
         {
-            //AxeAttack();
+            stateManager.ChangeState(new CyclopsAxeAttack(data, data.AxeAttack));
         }
         else if (hasDetectedPlayer && beamCooldown <= 0 && (rb.transform.position - agent.destination).magnitude > 20)
         {

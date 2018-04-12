@@ -34,13 +34,16 @@ public class EffectManagerEditor : Editor
             EditorGUILayout.LabelField("Effects", EditorStyles.boldLabel);
             for (int i = 0; i < m_target.effects.Count; i++)
             {
-                EditorGUILayout.Space();
-                EditorGUILayout.PropertyField(effectsProp.GetArrayElementAtIndex(i), GUIContent.none);
-                EditorGUI.indentLevel = 1;
-                ShowEffectValues(m_target.effects[i], "" + m_target.effects[i].GetType());
-                EditorGUI.indentLevel = 0;
-                EditorGUILayout.Space();
-                EditorGUILayout.LabelField("", GUI.skin.horizontalSlider);
+                if (m_target.effects[i])
+                {
+                    EditorGUILayout.Space();
+                    EditorGUILayout.PropertyField(effectsProp.GetArrayElementAtIndex(i), GUIContent.none);
+                    EditorGUI.indentLevel = 1;
+                    ShowEffectValues(m_target.effects[i], "" + m_target.effects[i].GetType());
+                    EditorGUI.indentLevel = 0;
+                    EditorGUILayout.Space();
+                    EditorGUILayout.LabelField("", GUI.skin.horizontalSlider);
+                }
             }
             EditorGUILayout.Space();
 
@@ -71,7 +74,7 @@ public class EffectManagerEditor : Editor
     {
         for (int i = 0; i < m_target.effects.Count; i++)
         {
-            if (m_target.effects[i].GetType() == typeof(T))
+            if (m_target.effects[i] && m_target.effects[i].GetType() == typeof(T))
                 return i;
         }
         return -1;
@@ -83,11 +86,11 @@ public class EffectManagerEditor : Editor
         {
             case types.Damage:
                 if (CheckForType<DamageEffect>() == -1)
-                    m_target.effects.Add(CreateInstance<DamageEffect>());
+                    m_target.effects.Add(m_target.gameObject.AddComponent<DamageEffect>());
                 break;
             case types.Knockback:
                 if (CheckForType<KnockBackEffect>() == -1)
-                    m_target.effects.Add(CreateInstance<KnockBackEffect>());
+                    m_target.effects.Add(m_target.gameObject.AddComponent<KnockBackEffect>());
                 break;
             default:
                 break;
@@ -108,7 +111,11 @@ public class EffectManagerEditor : Editor
             default:
                 break;
         }
+        Debug.Log(m_target.effects.Count);
         if (index >= 0 && m_target.effects.Count > 0)
+        {
+            DestroyImmediate(m_target.effects[index]);
             m_target.effects.RemoveAt(index);
+        }
     }
 }

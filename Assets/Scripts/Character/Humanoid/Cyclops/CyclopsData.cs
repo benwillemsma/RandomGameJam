@@ -22,7 +22,10 @@ public class CyclopsData : EnemyData
     public float searchThreshold;
     [Range(2, PlayerData.MaxDetection)]
     public float attackThreshold;
-    
+
+    [Header("Attack")]
+    public EffectManager AxeAttack;
+
     [Header("Particles")]
     public ParticleSystem Fire;
     public ParticleSystem Smoke;

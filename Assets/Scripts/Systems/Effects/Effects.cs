@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class Effect : ScriptableObject
+public abstract class Effect : MonoBehaviour
 {
     public float initial_value;
     public float final_value;
