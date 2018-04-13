@@ -28,7 +28,6 @@ public class CyclopsData : EnemyData
 
     [Header("Particles")]
     public ParticleSystem Fire;
-    public ParticleSystem Smoke;
     public ParticleSystem EyeBeam;
     private bool onFire;
 
@@ -50,14 +49,7 @@ public class CyclopsData : EnemyData
     {
         onFire = toggle;
         if (onFire)
-        {
-            Fire.Play();
-            Smoke.Play();
-        }
-        else
-        {
-            Fire.Stop();
-            Smoke.Stop();
-        }
+            Fire.Play(true);
+        else Fire.Stop(true);
     }
 }
