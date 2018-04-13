@@ -14,8 +14,7 @@ public class CyclopsAttackState : CyclopsWalkingState
 
     protected override void UpdateAI()
     {
-        TryDetectPlayer();
-        SetDestination();
+        base.UpdateAI();
 
         if ((rb.transform.position - agent.destination).magnitude <= agent.stoppingDistance)
         {

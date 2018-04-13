@@ -37,6 +37,9 @@ public abstract class CyclopsState : EnemyState<CyclopsData>
             data.detectionLevel -= Time.deltaTime;
         }
 
+        data.detectionLevel = Mathf.Clamp(data.detectionLevel, 0, PlayerData.MaxDetection);
+        IK.HeadWeight = Mathf.Clamp(IK.HeadWeight, 0, 1);
+
         float playerDetection = player.TotalDetection(data.transform.position) + data.detectionLevel;
         if (playerDetection > data.attackThreshold)
         {
@@ -54,9 +57,6 @@ public abstract class CyclopsState : EnemyState<CyclopsData>
             if (GetType() != typeof(CyclopsWalkingState))
                 stateManager.ChangeState(new CyclopsWalkingState(data));
         }
-
-        data.detectionLevel = Mathf.Clamp(data.detectionLevel, 0, PlayerData.MaxDetection);
-        IK.HeadWeight = Mathf.Clamp(IK.HeadWeight, 0, 1);
     }
 
     protected bool CheckLineOfSight()

@@ -1626,6 +1626,7 @@ ModelImporter:
     2100008: initialShadingGroup
     4300000: Group6169
     7400000: Cyclops_HackMiddle
+    7400002: Stand
     9500000: //RootNode
     13700000: Group6169
   externalObjects: {}
@@ -1651,12 +1652,14 @@ ModelImporter:
       improve retargeting quality.\n\t'HipPart1_R' is inbetween humanoid transforms
       and has rotation animation that will be discarded.\n\t'HipPart2_R' is inbetween
       humanoid transforms and has rotation animation that will be discarded.\n\t'Spine1Part1_M'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'ShoulderPart1_R'
       is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'ShoulderPart2_R'
       is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'ElbowPart1_R'
-      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'Wrist_R'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'ElbowPart2_R'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'ShoulderPart1_L'
       is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'ShoulderPart2_L'
       is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'ElbowPart1_L'
-      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'Wrist_L'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'ElbowPart2_L'
       is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'HipPart1_L'
       is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'HipPart2_L'
       is inbetween humanoid transforms and has rotation animation that will be discarded.\n"
@@ -1684,6 +1687,72 @@ ModelImporter:
       hasAdditiveReferencePose: 0
       loopTime: 0
       loopBlend: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 0
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 1
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves:
+      - name: RightFoot
+        curve:
+          serializedVersion: 2
+          curve:
+          - serializedVersion: 2
+            time: 0
+            value: 1
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+          - serializedVersion: 2
+            time: 1
+            value: 1
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+          preInfinity: 3
+          postInfinity: 3
+          rotationOrder: 0
+      - name: LeftFoot
+        curve:
+          serializedVersion: 2
+          curve:
+          - serializedVersion: 2
+            time: 0
+            value: 1
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+          - serializedVersion: 2
+            time: 1
+            value: 1
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+          preInfinity: 3
+          postInfinity: 3
+          rotationOrder: 0
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Stand
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 2
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
       loopBlendOrientation: 1
       loopBlendPositionY: 1
       loopBlendPositionXZ: 1
@@ -1858,7 +1927,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: Shoulder_L
+    - boneName: Scapula_L
       humanName: LeftShoulder
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -1866,7 +1935,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: Shoulder_R
+    - boneName: Scapula_R
       humanName: RightShoulder
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -1874,7 +1943,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: ShoulderPart1_L
+    - boneName: Shoulder_L
       humanName: LeftUpperArm
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -1882,7 +1951,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: ShoulderPart1_R
+    - boneName: Shoulder_R
       humanName: RightUpperArm
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -1906,7 +1975,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: ElbowPart2_L
+    - boneName: Wrist_L
       humanName: LeftHand
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -1914,7 +1983,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: ElbowPart2_R
+    - boneName: Wrist_R
       humanName: RightHand
       limit:
         min: {x: 0, y: 0, z: 0}

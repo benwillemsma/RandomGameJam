@@ -17,6 +17,8 @@ public class EffectManager : MonoBehaviour
     [Space(10)]
     public string[] affectTags;
     public List<CharacterData> affectedCharaters = new List<CharacterData>();
+    [HideInInspector]
+    public Collider lastHitCol;
 
     [HideInInspector]
     public List<Effect> effects = new List<Effect>();
@@ -30,6 +32,7 @@ public class EffectManager : MonoBehaviour
     private void OnEnable()
     {
         if (!collider) collider = GetComponent<Collider>();
+        lastHitCol = null;
         collider.enabled = true;
         elapsedTime = 0;
     }
@@ -38,6 +41,7 @@ public class EffectManager : MonoBehaviour
     {
         elapsedTime = 0;
         collider.enabled = false;
+        lastHitCol = null;
     }
 
     protected void OnTriggerEnter(Collider other)
@@ -55,6 +59,11 @@ public class EffectManager : MonoBehaviour
                 }
             }
         }
+    }
+
+    protected void OnCollisionEnter(Collision collision)
+    {
+        lastHitCol = collision.collider;
     }
 
     protected void Update()
@@ -78,12 +87,15 @@ public class EffectManager : MonoBehaviour
 
     protected void OnTriggerExit(Collider other)
     {
-        CharacterData character = other.attachedRigidbody.GetComponent<CharacterData>();
-        if (character && character != owningCharacter && affectedCharaters.Contains(character))
+        if (other.gameObject.layer == LayerMask.NameToLayer("Character"))
         {
-            affectedCharaters.Remove(character);
-            for (int e = 0; e < effects.Count; e++)
-                effects[e].OnEffectEnd(character);
+            CharacterData character = other.attachedRigidbody.GetComponent<CharacterData>();
+            if (character && character != owningCharacter && affectedCharaters.Contains(character))
+            {
+                affectedCharaters.Remove(character);
+                for (int e = 0; e < effects.Count; e++)
+                    effects[e].OnEffectEnd(character);
+            }
         }
     }
 }

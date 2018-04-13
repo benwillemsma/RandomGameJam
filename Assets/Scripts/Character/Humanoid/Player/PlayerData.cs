@@ -9,7 +9,7 @@ public class PlayerData : HumanoidData
     public float lightPerSecond;
     public float lightCharge;
 
-    public const float MaxDetection = 20;
+    public const float MaxDetection = 15;
     [Header("Stealth")]
     public float soundLevel;
     public float lightLevel;

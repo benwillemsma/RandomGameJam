@@ -1652,9 +1652,11 @@ ModelImporter:
       and has rotation animation that will be discarded.\n\t'HipPart2_R' is inbetween
       humanoid transforms and has rotation animation that will be discarded.\n\t'RootPart2_M'
       is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'Spine1Part1_M'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'ShoulderPart1_R'
       is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'ShoulderPart2_R'
       is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'ElbowPart1_R'
       is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'ElbowPart2_R'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'ShoulderPart1_L'
       is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'ShoulderPart2_L'
       is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'ElbowPart1_L'
       is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'ElbowPart2_L'
@@ -1689,9 +1691,9 @@ ModelImporter:
       loopBlendPositionY: 1
       loopBlendPositionXZ: 1
       keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
+      keepOriginalPositionY: 0
       keepOriginalPositionXZ: 0
-      heightFromFeet: 0
+      heightFromFeet: 1
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves:
@@ -1859,7 +1861,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: Shoulder_L
+    - boneName: Scapula_L
       humanName: LeftShoulder
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -1867,7 +1869,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: Shoulder_R
+    - boneName: Scapula_R
       humanName: RightShoulder
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -1875,7 +1877,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: ShoulderPart1_L
+    - boneName: Shoulder_L
       humanName: LeftUpperArm
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -1883,7 +1885,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: ShoulderPart1_R
+    - boneName: Shoulder_R
       humanName: RightUpperArm
       limit:
         min: {x: 0, y: 0, z: 0}

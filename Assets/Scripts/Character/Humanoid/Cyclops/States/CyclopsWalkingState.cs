@@ -38,9 +38,7 @@ public class CyclopsWalkingState : CyclopsState
         if ((rb.transform.position - agent.destination).magnitude <= agent.stoppingDistance)
         {
             data.patrolIndex = Random.Range(0, data.patrolPoints.Length - 1);
-            data.StartCoroutine(GameManager.CallAfterDelay
-                (() => MoveTo(data.patrolPoints[data.patrolIndex]),
-                Random.Range(3, 10)));
+            MoveTo(data.patrolPoints[data.patrolIndex]);
         }
     }
 
