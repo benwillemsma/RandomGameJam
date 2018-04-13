@@ -7,47 +7,20 @@ public class CyclopsAxeAttack : CyclopsAttack
     #region ChargeAttack Variables
 
     private float duration;
+    private bool isRecoiling;
 
     #endregion
 
     public CyclopsAxeAttack(CyclopsData characterData, EffectManager attackCollider) : base(characterData, attackCollider)
     {
+        cameraShaker = attackCollider.GetComponent<CameraShaker>();
         duration = attackCollider.duration;
-    }
-
-    protected override void UpdateAI()
-    {
-        if (attackCollider.lastHitCol != null)
-        {
-            StartRecoil();
-            duration = elapsedTime;
-            elapsedTime = 0;
-        }
-        if (elapsedTime >= duration)
-        {
-            StopRecoil();
-            stateManager.ChangeState(new CyclopsAttackState(data));
-        }
-    }
-
-    private void StartRecoil()
-    {
-        anim.StopRecording();
-        anim.StartPlayback();
-        anim.speed = -0.5f;
-    }
-
-    private void StopRecoil()
-    {
-        anim.StopPlayback();
-        anim.speed = 1;
-        anim.Play("Stand", 0);
     }
 
     public override IEnumerator EnterState(BaseState prevState)
     {
-        float direction = Vector3.Dot(data.transform.right, (player.transform.position - data.transform.position).normalized) * 2;
-        
+        float direction = Vector3.Dot(data.transform.right, (player.transform.position - data.transform.position).normalized);
+
         anim.SetFloat("HackDirection", direction);
         anim.SetTrigger("HackAttack");
         anim.StartRecording(0);
@@ -59,5 +32,46 @@ public class CyclopsAxeAttack : CyclopsAttack
     {
         anim.ResetTrigger("HackAttack");
         return base.EnterState(prevState);
+    }
+
+    protected override void UpdateAI()
+    {
+        if (attackCollider.firstHitCol != null && !isRecoiling)
+        {
+            attackCollider.firstHitCol = null;
+            data.StartCoroutine(RecoilDelay(0.5f));
+            cameraShaker.Shakecamera(200, 0.5f);
+        }
+        if (elapsedTime >= duration)
+        {
+            StopRecoil();
+            stateManager.ChangeState(new CyclopsAttackState(data));
+        }
+    }
+
+    private IEnumerator RecoilDelay(float delay)
+    {
+        isRecoiling = true;
+        anim.speed = 0;
+        anim.StopRecording();
+        duration = elapsedTime + delay;
+        elapsedTime = 0;
+
+        yield return new WaitForSeconds(delay);
+        StartRecoil();
+    }
+
+    private void StartRecoil()
+    {
+        anim.StartPlayback();
+        anim.speed = -0.8f;
+    }
+
+    private void StopRecoil()
+    {
+        attackCollider.enabled = true;
+        anim.StopPlayback();
+        anim.speed = 1;
+        anim.Play("Stand", 0);
     }
 }

@@ -8,6 +8,7 @@ public abstract class CyclopsAttack : CyclopsAttackState
     #region AttackState Variables
 
     protected EffectManager attackCollider;
+    protected CameraShaker cameraShaker;
 
     #endregion
 

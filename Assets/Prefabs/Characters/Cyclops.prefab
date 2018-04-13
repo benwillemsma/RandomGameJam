@@ -4836,9 +4836,10 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4102273517916322}
+  - component: {fileID: 54994665717115876}
   - component: {fileID: 65224722401718234}
   - component: {fileID: 65811410863477556}
-  - component: {fileID: 54994665717115876}
+  - component: {fileID: 114643258196544358}
   - component: {fileID: 114975066856500322}
   - component: {fileID: 114484136485319300}
   m_Layer: 8
@@ -11403,6 +11404,7 @@ GameObject:
   - component: {fileID: 4866855195431238}
   - component: {fileID: 95821449530628020}
   - component: {fileID: 114527135975504696}
+  - component: {fileID: 114022498032300992}
   m_Layer: 0
   m_Name: Cyclops_Model
   m_TagString: Untagged
@@ -24482,6 +24484,21 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114022498032300992
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1906662337872202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c223aa5a8e941d045b787b61272aa00f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  preset1_strength: 50
+  preset1_duration: 0.5
+  preset2_strength: 100
+  preset2_duration: 0.5
 --- !u!114 &114083707253202142
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -24574,7 +24591,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2adb600c1083b04a97679f57d0113c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainCamera: {fileID: 0}
 --- !u!114 &114554202442532106
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -24594,6 +24610,21 @@ MonoBehaviour:
   groundMask:
     serializedVersion: 2
     m_Bits: 1
+--- !u!114 &114643258196544358
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1387412066330402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c223aa5a8e941d045b787b61272aa00f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  preset1_strength: 50
+  preset1_duration: 0.5
+  preset2_strength: 100
+  preset2_duration: 0.5
 --- !u!114 &114801557369393172
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -24631,6 +24662,7 @@ MonoBehaviour:
   affectTags:
   - Player
   affectedCharaters: []
+  firstHitCol: {fileID: 0}
   lastHitCol: {fileID: 0}
   effects:
   - {fileID: 114484136485319300}

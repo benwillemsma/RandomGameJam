@@ -4,7 +4,7 @@ using System.Collections;
 public class IKController : MonoBehaviour
 {
     protected Animator anim;
-    public Transform mainCamera;
+    protected Transform mainCamera;
 
     protected IKTarget _RightHand = new IKTarget();
     protected IKTarget _RightFoot = new IKTarget();

@@ -18,6 +18,8 @@ public class ThirdPersonCamera : MonoBehaviour
     private float desiredZoom = 4;
     private float zoom = 4;
 
+    private float shakeStrength;
+
     void Awake ()
     {
         player = GameManager.player;
@@ -34,8 +36,14 @@ public class ThirdPersonCamera : MonoBehaviour
             mainOffset = transform.position - cameraRotator.position;
         }
     }
-	
-	void LateUpdate ()
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.M))
+            ShakeCamera(200, 0.5f);
+    }
+
+    void LateUpdate ()
     {
         // Update Pseudo Camera
         cameraRotator.position = pivotPoint.position;
@@ -53,9 +61,26 @@ public class ThirdPersonCamera : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Q)) player.CameraOffset = -player.CameraOffset;
         aimOffset = Mathf.Lerp(aimOffset, player.CameraOffset, Time.deltaTime * 3);
-        transform.localPosition = (mainOffset.normalized * zoom) + (Vector3.right * aimOffset);
+        transform.localPosition = (mainOffset.normalized * zoom) + (Vector3.right * aimOffset) + (Vector3.up * shakeStrength);
 
         CheckLineOfSight();
+    }
+
+    public void ShakeCamera(float strength,float duration)
+    {
+        StartCoroutine(Instance.Shake(strength, strength / duration));
+    }
+
+    private IEnumerator Shake(float strength, float dampening)
+    {
+        float elapsedTime = 0;
+        while (strength > Mathf.Epsilon)
+        {
+            shakeStrength = 0.1f * Mathf.Sin(strength * elapsedTime);
+            strength -= dampening * Time.deltaTime;
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
     }
 
     private Vector3 ClampCameraForward(Vector3 inForward)

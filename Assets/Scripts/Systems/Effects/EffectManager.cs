@@ -18,6 +18,8 @@ public class EffectManager : MonoBehaviour
     public string[] affectTags;
     public List<CharacterData> affectedCharaters = new List<CharacterData>();
     [HideInInspector]
+    public Collider firstHitCol;
+    [HideInInspector]
     public Collider lastHitCol;
 
     [HideInInspector]
@@ -32,16 +34,16 @@ public class EffectManager : MonoBehaviour
     private void OnEnable()
     {
         if (!collider) collider = GetComponent<Collider>();
+        firstHitCol = null;
         lastHitCol = null;
         collider.enabled = true;
-        elapsedTime = 0;
     }
 
     private void OnDisable()
     {
-        elapsedTime = 0;
         collider.enabled = false;
         lastHitCol = null;
+        firstHitCol = null;
     }
 
     protected void OnTriggerEnter(Collider other)
@@ -62,8 +64,12 @@ public class EffectManager : MonoBehaviour
     }
 
     protected void OnCollisionEnter(Collision collision)
-    {
+    { 
+        if (collision.rigidbody && collision.rigidbody == owningCharacter.RB)
+            return;
+        
         lastHitCol = collision.collider;
+        if (!firstHitCol) firstHitCol = collision.collider; 
     }
 
     protected void Update()
@@ -81,8 +87,12 @@ public class EffectManager : MonoBehaviour
             }
             StartCoroutine(GameManager.CallAfterDelay(() => overTimeAvailable = true, overTimeCooldown));
         }
-        elapsedTime += Time.deltaTime;
-        if (elapsedTime >= duration) enabled = false;
+        if (!enabled)
+        {
+            elapsedTime += Time.deltaTime;
+            if (elapsedTime >= duration) enabled = false;
+        }
+        else elapsedTime = 0;
     }
 
     protected void OnTriggerExit(Collider other)
