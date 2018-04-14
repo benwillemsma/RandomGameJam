@@ -36,7 +36,7 @@ public class CyclopsAttackState : CyclopsWalkingState
 
     protected override void SetDestination()
     {
-        agent.stoppingDistance = 17;
+        agent.stoppingDistance = 19;
         agent.speed = 7f;
         MoveTo(player.transform.position);
     }

@@ -47,8 +47,6 @@ public class SurfaceClimbingState : PlayerState
         }
         base.UpdateState();
     }
-    protected override void UpdatePaused() { }
-    protected override void UpdateTransition() { }
 
     protected override void UpdateInput()
     {
@@ -60,7 +58,8 @@ public class SurfaceClimbingState : PlayerState
         movementDirection = rb.transform.rotation * movementDirection;
         movementDirection = Vector3.ProjectOnPlane(movementDirection, -cur_SurfaceHit.normal);
 
-        if (!climbing || (Vector3.Dot(cur_SurfaceHit.normal, Vector3.up) > 0.5f))
+        data.UseStamina(8 * Time.deltaTime);
+        if (!climbing || (Vector3.Dot(cur_SurfaceHit.normal, Vector3.up) > 0.5f) || data.Stamina <= 0)
             stateManager.ChangeState(new PlayerWalkingState(data));
     }
     protected override void UpdateMovement()

@@ -44,10 +44,18 @@ public abstract class CharacterData : MonoBehaviour
     protected float m_currentHealth;
     [SerializeField]
     protected float m_damageImmuneDuration = 0.5f;
+
     [SerializeField]
-    protected float m_deathDelay = 3f;
+    protected float m_healthRegen = 5;
+    [SerializeField]
+    protected float m_healthRegenDelay = 1;
+    protected float m_healthRegenTimer = 0;
+
+    [SerializeField]
+    protected float m_deathDelay = 5f;
 
     protected bool m_isDead = false;
+    public bool IsDead { get { return m_isDead; } }
     
     protected float m_damageImmune;
 
@@ -60,12 +68,19 @@ public abstract class CharacterData : MonoBehaviour
     {
         if (m_damageImmune <= 0)
         {
+            m_healthRegenTimer = 0;
             m_damageImmune = m_damageImmuneDuration;
             m_currentHealth -= damage;
 
-            if (Health <= 0)
-                RespawnCharacter();
+            if (m_currentHealth <= 0)
+                StartCoroutine(Die());
         }
+    }
+
+    public virtual void Heal(float health)
+    {
+        m_currentHealth += health;
+        m_currentHealth = Mathf.Min(m_currentHealth, m_maxHealth);
     }
 
     protected virtual void SetUndamageable(float duration = Mathf.Infinity)
@@ -80,6 +95,9 @@ public abstract class CharacterData : MonoBehaviour
 
     protected virtual void UpdateHealthStatus()
     {
+        m_healthRegenTimer += Time.deltaTime;
+        if (m_healthRegenTimer > m_healthRegenDelay)
+            Heal(m_healthRegen * Time.deltaTime);
         if (m_damageImmune > 0)
             m_damageImmune -= Time.deltaTime;
     }
@@ -87,14 +105,25 @@ public abstract class CharacterData : MonoBehaviour
     protected virtual IEnumerator Die()
     {
         m_isDead = true;
+        if(m_rb) m_rb.constraints = RigidbodyConstraints.None;
+
         yield return new WaitForSeconds(m_deathDelay);
-        Destroy(transform.gameObject);
-        GameManager.Instance.Continue();
+
+        if (spawn) Respawn();
+        else Destroy(transform.gameObject);
     }
 
-    public void RespawnCharacter()
+    public virtual void Respawn()
     {
-        transform.position = SpawnPoint;
+        m_isDead = false;
+        if (m_rb) m_rb.constraints = RigidbodyConstraints.FreezeRotation;
+        if (spawn)
+        {
+            transform.position = spawn.position;
+            transform.rotation = spawn.rotation;
+        }
+        else transform.position = SpawnPoint;
+
         RB.velocity = Vector3.zero;
         m_currentHealth = m_maxHealth;
     }

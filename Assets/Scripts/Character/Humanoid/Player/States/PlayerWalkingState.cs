@@ -50,16 +50,20 @@ public class PlayerWalkingState : PlayerState
         }
         else if (Input.GetButtonUp("Crouch") && !data.toggleCrouch)
             crouching = false;
-        sprinting = Input.GetButton("Sprint");
-        if (sprinting) crouching = false;
-    }
-    protected override void UpdateMovement()
-    {
-        if (sprinting) movementDirection *= 1.5f;
-        else if (crouching) movementDirection /= 2f;
-        rb.transform.rotation = Quaternion.Lerp(rb.transform.rotation, properRotation, Time.deltaTime * 5);
+        sprinting = Input.GetButton("Sprint") && data.Stamina > 0;
+        if (sprinting)
+        {
+            movementDirection *= 2f;
+            data.UseStamina(8 * Time.deltaTime);
+            crouching = false;
+        }
+        else if (crouching)
+            movementDirection /= 2f;
+
+        if (!data.IsDead) rb.transform.rotation = Quaternion.Lerp(rb.transform.rotation, properRotation, Time.deltaTime * 5);
         rb.transform.Rotate(rb.transform.up, Input.GetAxis("Mouse X") * Time.deltaTime * data.CameraSensitivity, Space.World);
     }
+
     protected override void UpdatePhysics()
     {
         if (grounded)
@@ -97,7 +101,7 @@ public class PlayerWalkingState : PlayerState
     //Physics  Functions
     public override void OnTriggerStay(Collider other)
     {
-        if (!inTransition && climbing)
+        if (!inTransition && climbing && data.Stamina > 0)
         {
             if (other.tag == "ClimbingNode")
             {

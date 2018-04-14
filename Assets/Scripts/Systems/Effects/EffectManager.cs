@@ -34,6 +34,7 @@ public class EffectManager : MonoBehaviour
     private void OnEnable()
     {
         if (!collider) collider = GetComponent<Collider>();
+        affectedCharaters.Clear();
         firstHitCol = null;
         lastHitCol = null;
         collider.enabled = true;
@@ -44,6 +45,7 @@ public class EffectManager : MonoBehaviour
         collider.enabled = false;
         lastHitCol = null;
         firstHitCol = null;
+        affectedCharaters.Clear();
     }
 
     protected void OnTriggerEnter(Collider other)

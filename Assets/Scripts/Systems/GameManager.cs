@@ -12,9 +12,9 @@ public class GameManager : MonoBehaviour
     public static PlayerData player;
 
     private string m_mainMenuScene = "MainMenu";
-    private string m_pauseMenuScene = "PauseMenu";
     private string m_playScene = "PlayScene";
-    private string m_hudScene = "HudScene";
+
+    public Canvas m_pauseScreen;
 
     public float objectDestroyDelay = 10;
 
@@ -41,7 +41,7 @@ public class GameManager : MonoBehaviour
         if (SceneManager.GetActiveScene().buildIndex > 5)
         {
             if (!focus && !m_paused && !Application.isEditor)
-                AddScene(m_pauseMenuScene);
+                TogglePause();
         }
     }
 
@@ -51,6 +51,7 @@ public class GameManager : MonoBehaviour
             return;
 
         m_paused = !m_paused;
+        m_pauseScreen.gameObject.SetActive(m_paused);
         Time.timeScale = m_paused ? 0 : 1;
         ToggleCursor(m_paused);
         ToggleStateMachinesPause();
@@ -63,6 +64,7 @@ public class GameManager : MonoBehaviour
             return;
 
         m_paused = pause;
+        m_pauseScreen.gameObject.SetActive(pause);
         Time.timeScale = pause ? 0 : 1;
         ToggleCursor(pause);
         ToggleStateMachinesPause();
@@ -170,14 +172,6 @@ public class GameManager : MonoBehaviour
         if (this != Instance)
             return;
 
-        if (scene.name == m_pauseMenuScene)
-            TogglePause();
-
-        else if (scene.name == m_hudScene)
-        {
-            ToggleCursor(m_paused);
-        }
-
         else if (scene.name == m_mainMenuScene)
         {
             m_paused = false;
@@ -191,9 +185,6 @@ public class GameManager : MonoBehaviour
             if (!player) SpawnPlayer();
 
             ToggleCursor(false);
-
-            if (!SceneManager.GetSceneByName(m_hudScene).isLoaded)
-                SceneManager.LoadScene(m_hudScene, LoadSceneMode.Additive);
         }
 
         else
@@ -207,8 +198,6 @@ public class GameManager : MonoBehaviour
 
     private void OnSceneUnloaded(Scene scene)
     {
-        if (scene.name == m_pauseMenuScene)
-            TogglePause();
     }
     #endregion
 
@@ -243,10 +232,7 @@ public class GameManager : MonoBehaviour
             return;
 
         if (Input.GetButtonDown("Pause") && SceneManager.GetActiveScene().name == m_playScene)
-        {
-            if (m_paused) UnloadScene(m_pauseMenuScene);
-            else AddScene(m_pauseMenuScene);
-        }
+            TogglePause();
 
         if (Input.GetKeyDown(KeyCode.KeypadPlus))
             Time.timeScale++;

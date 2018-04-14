@@ -2,22 +2,11 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PlayerData : HumanoidData
 {
     #region Variables
-    public float lightPerSecond;
-    public float lightCharge;
-
-    public const float MaxDetection = 15;
-    [Header("Stealth")]
-    public float soundLevel;
-    public float lightLevel;
-    public float TotalDetection(Vector3 atPosition)
-    {
-        float distance = (transform.position - atPosition).magnitude;
-        return soundLevel/distance + lightLevel;
-    }
 
     [Header("Movement")]
     [Range(0, 10)]
@@ -28,9 +17,68 @@ public class PlayerData : HumanoidData
     public float airControl = 5;
     public bool toggleCrouch;
 
+    [Header("Stealth")]
+    public float soundLevel;
+    public float lightLevel;
+    public const float MaxDetection = 15;
+    public float TotalDetection(Vector3 atPosition)
+    {
+        float distance = (transform.position - atPosition).magnitude;
+        return soundLevel / distance + lightLevel;
+    }
+
+    #region Stamina
+
+    [Header("Stamina")]
+    [Range(0, 100), SerializeField]
+    protected float m_maxStamina = 100;
+    [Range(0, 100), SerializeField]
+    protected float m_currentStamina = 100;
+    [Range(0, 100), SerializeField]
+    protected float m_staminaRegen = 5;
+    [Range(0, 100), SerializeField]
+    protected float m_staminaRegenDelay = 1;
+    protected float m_staminaRegenTimer = 0;
+
+    public float Stamina
+    {
+        get { return m_currentStamina; }
+    }
+
+    public virtual void UseStamina(float amount)
+    {
+        m_currentStamina -= amount;
+        m_staminaRegenTimer = 0;
+    }
+
+    public virtual void RegenerateStamina(float amount)
+    {
+        m_currentStamina += amount;
+        m_currentStamina = Mathf.Min(m_currentStamina, m_maxStamina);
+    }
+
+    protected virtual void UpdateStaminaStatus()
+    {
+        m_staminaRegenTimer += Time.deltaTime;
+        if (m_staminaRegenTimer > m_staminaRegenDelay)
+            RegenerateStamina(m_staminaRegen * Time.deltaTime);
+    }
+
+    #endregion
+
     [Header("LayerMasks")]
     public LayerMask groundMask;
     public LayerMask climbingMask;
+
+    [Header("BeamAttack")]
+    [Range(0, 100), SerializeField]
+    protected float lightPerSecond = 5;
+    [Range(0, 100), SerializeField]
+    protected float m_charge = 0;
+    public float LightCharge
+    {
+        get { return m_charge; }
+    }
 
     [Header("Camera")]
     [Range(0, 50)]
@@ -38,6 +86,16 @@ public class PlayerData : HumanoidData
     [Range(0, 2)]
     public float CameraOffset = 0.75f;
     public bool InvertedCamera;
+
+    [Header("HUD")]
+    [SerializeField]
+    protected Slider healthBar;
+    [SerializeField]
+    protected Slider staminaBar;
+    [SerializeField]
+    protected Slider chargeBar;
+
+    private Image healthImage;
 
     #endregion
 
@@ -69,6 +127,25 @@ public class PlayerData : HumanoidData
             StopAllCoroutines();
             DestroyImmediate(gameObject);
         }
+        if (healthBar) healthImage = healthBar.fillRect.GetComponent<Image>();
+    }
+
+    protected override void Update()
+    {
+        base.Update();
+        UpdateStaminaStatus();
+        UpdateHud();
+    }
+
+    public void UpdateHud()
+    {
+        if (healthBar)
+        {
+            healthBar.value = m_currentHealth;
+            healthImage.color = Color.Lerp(Color.red, Color.green, m_currentHealth / 100);
+        }
+        if (staminaBar) staminaBar.value = m_currentStamina;
+        if (chargeBar) chargeBar.value = m_charge;
     }
 
     private void FixedUpdate()
@@ -84,7 +161,7 @@ public class PlayerData : HumanoidData
     private void OnTriggerStay(Collider other)
     {
         if (other.tag == "LightArea")
-            lightCharge = Mathf.Clamp(lightCharge + (Time.deltaTime * lightPerSecond), 0, 100);
+            m_charge = Mathf.Clamp(m_charge + (Time.deltaTime * lightPerSecond), 0, 100);
     }
     #endregion
 }

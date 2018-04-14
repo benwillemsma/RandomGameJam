@@ -20,7 +20,7 @@ public abstract class PlayerState : HumanoidState<PlayerData>
     {
         properRotation = Quaternion.LookRotation(Vector3.ProjectOnPlane(rb.transform.forward, Vector3.up), Vector3.up);
         base.UpdateState();
-        if (canInput) UpdateInput();
+        if (canInput && !data.IsDead) UpdateInput();
 
         Vector3 velocityLevel = rb.velocity;
         velocityLevel.y = 0;

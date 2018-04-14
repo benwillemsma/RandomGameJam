@@ -7,7 +7,7 @@ public class CyclopsAxeAttack : CyclopsAttack
     #region ChargeAttack Variables
 
     private float duration;
-    private bool isRecoiling;
+    private bool recoiling;
     private float min;
     private float max;
 
@@ -47,14 +47,17 @@ public class CyclopsAxeAttack : CyclopsAttack
 
     protected override void UpdateAnimator()
     {
-        float angle = Vector3.SignedAngle(data.transform.forward, (player.transform.position - data.transform.position).normalized, Vector3.up);
-        angle = Mathf.Clamp(angle, min, max);
-        anim.SetFloat("HackDirection", angle);
+        if (!recoiling)
+        {
+            float angle = Vector3.SignedAngle(data.transform.forward, (player.transform.position - data.transform.position).normalized, Vector3.up);
+            angle = Mathf.Clamp(angle, min, max);
+            anim.SetFloat("HackDirection", angle);
+        }
     }
 
     protected override void UpdateAI()
     {
-        if (attackCollider.firstHitCol != null && !isRecoiling)
+        if (attackCollider.firstHitCol != null && !recoiling)
         {
             attackCollider.enabled = false;
             data.StartCoroutine(RecoilDelay(0.5f));
@@ -69,7 +72,7 @@ public class CyclopsAxeAttack : CyclopsAttack
 
     private IEnumerator RecoilDelay(float delay)
     {
-        isRecoiling = true;
+        recoiling = true;
         anim.speed = 0;
         anim.StopRecording();
         duration = elapsedTime + delay;

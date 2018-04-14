@@ -88,7 +88,9 @@ public class NodeClimbingState : PlayerState
 
             moveDirection = new Vector3(moveX, moveY, 0);
 
-            if (!climbing || (!currentNodes[0] && !currentNodes[1])
+            data.UseStamina(8 * Time.deltaTime);
+            if (!climbing || data.Stamina <= 0
+                || (!currentNodes[0] && !currentNodes[1]) 
                 || (!currentNodes[0].Active && !currentNodes[1].Active)
                 || (!currentNodes[0].gameObject.activeInHierarchy && !currentNodes[1].gameObject.activeInHierarchy))
                 stateManager.ChangeState(new PlayerWalkingState(data));
