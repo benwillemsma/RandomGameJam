@@ -8,6 +8,8 @@ public class CyclopsAxeAttack : CyclopsAttack
 
     private float duration;
     private bool isRecoiling;
+    private float min;
+    private float max;
 
     #endregion
 
@@ -22,6 +24,18 @@ public class CyclopsAxeAttack : CyclopsAttack
         anim.SetTrigger("HackAttack");
         anim.StartRecording(0);
 
+        float angle = Vector3.SignedAngle(data.transform.forward, (player.transform.position - data.transform.position).normalized, Vector3.up);
+        if (angle > 0)
+        {
+            min = 0.1f;
+            max = 60;
+        }
+        else
+        {
+            max = -0.1f;
+            min = -60;
+        }
+
         return base.EnterState(prevState);
     }
 
@@ -34,6 +48,7 @@ public class CyclopsAxeAttack : CyclopsAttack
     protected override void UpdateAnimator()
     {
         float angle = Vector3.SignedAngle(data.transform.forward, (player.transform.position - data.transform.position).normalized, Vector3.up);
+        angle = Mathf.Clamp(angle, min, max);
         anim.SetFloat("HackDirection", angle);
     }
 

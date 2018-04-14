@@ -6,6 +6,7 @@ public class DamageEffect : Effect
 {
     public override void OnEffectStart(CharacterData character)
     {
+        Debug.Log(character + ":" + initial_value);
         character.TakeDamage(initial_value);
     }
     public override void OnEffectStay(CharacterData character)
