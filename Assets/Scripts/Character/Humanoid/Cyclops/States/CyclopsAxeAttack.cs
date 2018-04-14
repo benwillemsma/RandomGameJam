@@ -19,9 +19,6 @@ public class CyclopsAxeAttack : CyclopsAttack
 
     public override IEnumerator EnterState(BaseState prevState)
     {
-        float direction = Vector3.Dot(data.transform.right, (player.transform.position - data.transform.position).normalized);
-
-        anim.SetFloat("HackDirection", direction);
         anim.SetTrigger("HackAttack");
         anim.StartRecording(0);
 
@@ -34,11 +31,17 @@ public class CyclopsAxeAttack : CyclopsAttack
         return base.EnterState(prevState);
     }
 
+    protected override void UpdateAnimator()
+    {
+        float angle = Vector3.SignedAngle(data.transform.forward, (player.transform.position - data.transform.position).normalized, Vector3.up);
+        anim.SetFloat("HackDirection", angle);
+    }
+
     protected override void UpdateAI()
     {
         if (attackCollider.firstHitCol != null && !isRecoiling)
         {
-            attackCollider.firstHitCol = null;
+            attackCollider.enabled = false;
             data.StartCoroutine(RecoilDelay(0.5f));
             cameraShaker.Shakecamera(200, 0.5f);
         }
@@ -69,7 +72,6 @@ public class CyclopsAxeAttack : CyclopsAttack
 
     private void StopRecoil()
     {
-        attackCollider.enabled = true;
         anim.StopPlayback();
         anim.speed = 1;
         anim.Play("Stand", 0);
