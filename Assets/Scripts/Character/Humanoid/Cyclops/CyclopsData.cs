@@ -24,7 +24,8 @@ public class CyclopsData : EnemyData
     public float attackThreshold;
 
     [Header("Attack")]
-    public EffectManager AxeAttack;
+    public EffectManager rightAxeAttack;
+    public EffectManager leftAxeAttack;
 
     [Header("Particles")]
     public ParticleSystem Fire;

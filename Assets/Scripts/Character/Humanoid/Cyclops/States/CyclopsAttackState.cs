@@ -18,8 +18,14 @@ public class CyclopsAttackState : CyclopsWalkingState
 
         if ((rb.transform.position - agent.destination).magnitude <= agent.stoppingDistance)
         {
-            float direction = Vector3.Dot(data.transform.forward, (player.transform.position - data.transform.position).normalized);
-            if (direction >= 0.6f) stateManager.ChangeState(new CyclopsAxeAttack(data, data.AxeAttack));
+            float angle = Vector3.SignedAngle(data.transform.forward, (player.transform.position - data.transform.position).normalized, Vector3.up);
+            if (Mathf.Abs(angle) <= 60)
+            {
+                if (angle >= 0)
+                    stateManager.ChangeState(new CyclopsAxeAttack(data, data.rightAxeAttack));
+                else if (angle <= 0)
+                    stateManager.ChangeState(new CyclopsAxeAttack(data, data.leftAxeAttack));
+            }
         }
 
         else if (hasDetectedPlayer && beamCooldown <= 0 && (rb.transform.position - agent.destination).magnitude > 50)
