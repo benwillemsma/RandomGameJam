@@ -80,6 +80,12 @@ public class PlayerWalkingState : PlayerState
         }
     }
 
+    protected override void UpdateAnimator()
+    {
+        anim.SetBool("Sneak", crouching);
+        anim.SetFloat("Speed", movementDirection.magnitude);
+    }
+
     // State Actions
     private void Jump()
     {

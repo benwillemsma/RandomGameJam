@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4201394733154630}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKXElbow_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34,7 +34,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4518131414372542}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKX2Wrist_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49,9 +49,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4807577865936540}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Shoulder_L
-  m_TagString: Untagged
+  m_TagString: Enemy/Cyclops
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -64,7 +64,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4402325290515774}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKXRoot_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -79,7 +79,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4940255145287760}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKXIndexFinger3_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,9 +94,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4521048085544762}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ElbowPart2_R
-  m_TagString: Untagged
+  m_TagString: Enemy/Cyclops
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -109,7 +109,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4903486718200284}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKOffsetCup_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -124,7 +124,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4429629996605812}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TwisterElbow0_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -139,7 +139,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4136090616838132}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SDK1FKIndexFinger1_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -154,7 +154,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4067145761141558}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TwistFollowOffsetKnee_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -169,7 +169,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4573862552575682}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKParentConstraintHip_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -184,7 +184,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4584413362833684}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKExtraCup_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -199,7 +199,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4077153448880396}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKExtraJaw_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -214,7 +214,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4287620151398266}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKStiffOrientSpine1_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -229,7 +229,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4933572783636272}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SDK1FKRingFinger3_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -246,9 +246,9 @@ GameObject:
   - component: {fileID: 4246160120716964}
   - component: {fileID: 114554202442532106}
   - component: {fileID: 65387426825386906}
-  m_Layer: 2
+  m_Layer: 9
   m_Name: FootController
-  m_TagString: Untagged
+  m_TagString: Enemy/Cyclops
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -261,7 +261,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4133525234369224}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKXJaw_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -276,7 +276,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4486830508817446}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKSpineHandle_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -291,7 +291,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4904887560377772}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKArm_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -306,7 +306,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4427507196397004}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKXThumbFinger2_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -321,7 +321,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4261457096258478}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: PoleOffsetArm_RFollowNoScale
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -336,7 +336,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4770859046799660}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SDK1FKIndexFinger2_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -351,7 +351,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4008976369393948}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TwistFollowParentKnee_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -366,7 +366,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4335339710032036}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKParentConstraintToRoot_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -381,7 +381,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4445564478665946}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKXEye_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -396,9 +396,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4201124303913858}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RingFinger2_R
-  m_TagString: Untagged
+  m_TagString: Enemy/Cyclops
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -411,7 +411,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4613548692938338}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKXOffsetShoulder_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -426,7 +426,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4554514875967174}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: PoleArm_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -441,7 +441,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4312811019234406}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKXWrist_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -456,7 +456,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4291966152921222}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKX2Wrist_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -471,7 +471,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4573245897914956}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: AimFollowOnEye
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -486,7 +486,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4409373601182056}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TwistFollowParentOffsetKnee_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -501,7 +501,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4798051915827680}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TwisterElbow2_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -516,9 +516,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4056044918616366}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Spine1_M
-  m_TagString: Untagged
+  m_TagString: Enemy/Cyclops
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -534,7 +534,7 @@ GameObject:
   - component: {fileID: 136177760293587154}
   m_Layer: 9
   m_Name: Colliders
-  m_TagString: Untagged
+  m_TagString: Enemy/Cyclops
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -547,7 +547,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4004268215493588}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKX2Ankle_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -562,9 +562,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4463483016019322}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ShoulderPart1_L
-  m_TagString: Untagged
+  m_TagString: Enemy/Cyclops
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -577,9 +577,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4887427790828760}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ThumbFinger2_R
-  m_TagString: Untagged
+  m_TagString: Enemy/Cyclops
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -592,7 +592,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4096603991125460}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKXRoot_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -607,7 +607,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4433357974491456}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKX2Hip_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -622,7 +622,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4796389470777636}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKExtraNeckPart2_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -637,7 +637,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4259010629604100}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKmessureConstrainToArm_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -652,9 +652,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4515993869705490}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IndexFinger4_L
-  m_TagString: Untagged
+  m_TagString: Enemy/Cyclops
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -667,7 +667,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4962373022439588}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKExtraKnee_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -682,7 +682,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4637467110370848}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: AimFollowOffEye
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -697,7 +697,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4149569324751544}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKSpine2_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -712,7 +712,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4386490066825660}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKOffsetKnee_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -727,7 +727,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4205689990594362}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RollExtraHeel_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -742,7 +742,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4830228785281072}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKExtraRingFinger1_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -757,7 +757,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4961984468245640}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKParentConstraintToChest_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -772,7 +772,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4029663218107436}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKfake2Spine_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -787,7 +787,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4615033309913266}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TwistFollowParentOffsetElbow_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -802,7 +802,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4790926968917634}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKSpRootPart2_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -817,7 +817,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4195521480687550}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKRingFinger3_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -832,9 +832,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4804130845913906}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: MiddleFinger2_L
-  m_TagString: Untagged
+  m_TagString: Enemy/Cyclops
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -847,7 +847,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4720295140411212}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: AimEye_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -862,7 +862,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4308853678634666}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TwistFollowOffsetKnee_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -877,7 +877,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4508037884883650}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKThumbFinger2_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -892,9 +892,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4952108592411498}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IndexFinger1_L
-  m_TagString: Untagged
+  m_TagString: Enemy/Cyclops
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -907,7 +907,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4617335992531400}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKSpine1_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -922,7 +922,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4603125017089646}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKXMiddleFinger1_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -937,7 +937,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4919593732240112}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: LegLockConstrained
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -952,7 +952,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4040930901973472}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKLegHandle_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -967,7 +967,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4025271361791336}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKKnee_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -982,7 +982,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4690498319731760}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKOffsetIndexFinger3_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -997,7 +997,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4130647283808506}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RollExtraToesEnd_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1012,7 +1012,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4532053544759664}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKX2Elbow_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1027,7 +1027,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4592281016025332}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKAnkleHandle_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1042,7 +1042,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4669216053149824}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKExtraCup_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1057,7 +1057,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4991267847796724}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKExtraRootPart1_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1072,7 +1072,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4407956007567524}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKScalerSpine1Part1_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1087,7 +1087,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4282861341049370}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKSpine1_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1102,7 +1102,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4691875049857502}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: AimEye_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1117,7 +1117,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4962514301418484}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKXScapula_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1132,7 +1132,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4816672230218932}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TwisterWrist1_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1147,7 +1147,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4192438559135216}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RollExtraToes_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1162,7 +1162,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4134212876567718}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Heel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1177,7 +1177,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4955745938376364}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKSpRootPart1_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1192,7 +1192,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4153038448970344}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: UnTwistWrist_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1207,7 +1207,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4127982063999836}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKXKnee_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1222,7 +1222,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4313775513096538}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKX2Root_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1237,7 +1237,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4427651497296826}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKParentConstraintRoot_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1252,7 +1252,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4028879690946430}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKAnkle_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1267,7 +1267,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4078792338296398}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKRoot_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1282,7 +1282,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4203426779594732}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKIKMixWrist_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1297,7 +1297,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4808272413995854}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TwistFollowOffsetShoulder_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1312,7 +1312,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4836932245266836}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKXIndexFinger1_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1327,7 +1327,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4356878626818184}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKXHip_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1342,9 +1342,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4789628203815550}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Eye_L
-  m_TagString: Untagged
+  m_TagString: Enemy/Cyclops
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1357,7 +1357,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4215502594784456}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKXOffsetRoot_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1372,9 +1372,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4349310358464082}
-  m_Layer: 2
+  m_Layer: 9
   m_Name: Heel
-  m_TagString: Untagged
+  m_TagString: Enemy/Cyclops
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1387,7 +1387,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4324660588692412}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKSpine2AlignUnIKTwistTo_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1402,7 +1402,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4447519991948672}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: AimOffsetEye_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1417,7 +1417,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4857115381620794}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TwisterKnee0_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1432,7 +1432,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4745858208211366}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TwistFollowParentHip_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1447,9 +1447,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4547535049114106}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EyeEnd_R
-  m_TagString: Untagged
+  m_TagString: Enemy/Cyclops
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1466,7 +1466,7 @@ GameObject:
   - component: {fileID: 136623403502179946}
   m_Layer: 9
   m_Name: Colliders
-  m_TagString: Untagged
+  m_TagString: Enemy/Cyclops
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1479,7 +1479,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4680405876870576}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKThumbFinger3_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1494,7 +1494,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4801529716829590}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1509,7 +1509,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4670783601238288}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TwisterKnee2_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1524,7 +1524,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4802584590448320}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RollOffsetToesEnd_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1539,7 +1539,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4349368503392536}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: UnTwistEndElbow_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1554,7 +1554,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4671365739884014}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FootSideOuter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1569,7 +1569,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4982393446137598}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKOffsetKnee_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1584,7 +1584,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4870985441681272}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKSpineLocator0_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1599,7 +1599,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4999628553451348}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKSpSpine1_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1614,7 +1614,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4037232771261782}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKOffsetMiddleFinger2_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1629,7 +1629,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4600954291808010}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKXRootPart1_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1644,7 +1644,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4305065632171182}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TwistFollowParentOffsetHip_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1659,7 +1659,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4731990040532930}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TwistBalancerHip_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1674,7 +1674,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4328178259901576}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKLegLiftToe_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1689,7 +1689,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4852416675863358}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Toes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1704,7 +1704,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4619072491951912}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKXElbow_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1719,9 +1719,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4070145172866872}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Toes_L
-  m_TagString: Untagged
+  m_TagString: Enemy/Cyclops
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1734,7 +1734,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4124900026387008}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKOffsetThumbFinger2_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1749,7 +1749,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4779158218143436}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RingFinger4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1764,7 +1764,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4353786565180096}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ThumbFinger1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1779,7 +1779,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4988872162979454}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKOffsetRingFinger3_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1794,7 +1794,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4784597250527132}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKOffsetArm_LFollowNoScale
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1809,7 +1809,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4164901254524176}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RollToesEnd_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1824,7 +1824,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4642193966353622}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: HipSwingReversePart2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1839,7 +1839,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4790388772046822}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKGlobalStaticHead_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1854,7 +1854,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4052187094523838}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKX2RootPart2_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1869,7 +1869,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4794178004016016}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKExtraElbow_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1884,7 +1884,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4584290518920056}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: PoleExtraArm_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1899,7 +1899,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4461905075850212}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKExtraChest_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1914,7 +1914,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4999259405141552}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKThumbFinger3_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1929,7 +1929,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4235117926709382}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RollOffsetToes_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1948,7 +1948,7 @@ GameObject:
   - component: {fileID: 136205171905905324}
   m_Layer: 9
   m_Name: Colliders
-  m_TagString: Untagged
+  m_TagString: Enemy/Cyclops
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1961,7 +1961,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4214867550577490}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: UnTwistEndKnee_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1979,7 +1979,7 @@ GameObject:
   - component: {fileID: 136210313919206390}
   m_Layer: 9
   m_Name: Colliders
-  m_TagString: Untagged
+  m_TagString: Enemy/Cyclops
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1992,7 +1992,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4810383515160484}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKExtraToes_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2007,7 +2007,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4078218549090146}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKExtraKnee_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2022,7 +2022,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4798068636487768}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKSpRootPart2FollowOffset_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2037,9 +2037,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4410412366014560}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: JawEnd_M
-  m_TagString: Untagged
+  m_TagString: Enemy/Cyclops
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2052,7 +2052,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4950605474711928}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RootOffsetX_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2067,7 +2067,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4918144293185892}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TwisterKnee1_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2082,7 +2082,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4433973588646160}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: PoleOffsetLeg_LFollow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2100,7 +2100,7 @@ GameObject:
   - component: {fileID: 136957818003743448}
   m_Layer: 9
   m_Name: Colliders (1)
-  m_TagString: Untagged
+  m_TagString: Enemy/Cyclops
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2113,7 +2113,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4373383639022870}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Knee
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2128,9 +2128,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4241630664165972}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RingFinger4_L
-  m_TagString: Untagged
+  m_TagString: Enemy/Cyclops
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2143,7 +2143,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4993618045722780}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: HeadEnd
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2158,7 +2158,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4408860036250752}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKLegFootRoll_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2173,9 +2173,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4921538492474020}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: NeckPart2_M
-  m_TagString: Untagged
+  m_TagString: Enemy/Cyclops
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2188,7 +2188,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4059484182496562}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RollExtraHeel_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2203,7 +2203,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4684504177756706}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKMiddleFinger1_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2218,7 +2218,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4466969597929922}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKExtraLeg_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2233,7 +2233,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4208106406538422}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SDK1FKRingFinger1_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2248,7 +2248,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4885690131493404}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: AimSystem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2263,7 +2263,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4481913299627820}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKArmHandle_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2278,7 +2278,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4344095386536938}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKChest_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2293,7 +2293,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4918513019051618}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TwistFollowParentOffsetChest_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2308,7 +2308,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4637956270095204}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BendSystem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2323,7 +2323,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4684267260817846}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKmessureLoc1Leg_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2338,7 +2338,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4577143702132804}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKExtraThumbFinger1_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2353,7 +2353,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4845827559668670}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKXToes_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2368,7 +2368,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4867633338979626}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: PoleExtraLeg_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2383,7 +2383,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4621466977448446}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKOffsetShoulder_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2398,7 +2398,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4802304710574654}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKOffsetArm_RStatic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2413,7 +2413,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4982946335918526}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wrist
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2428,7 +2428,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4910777977515244}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: UnTwistIKShoulder_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2443,7 +2443,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4926389383769894}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKX2RootPart1_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2458,7 +2458,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4098032374161698}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RollRollerToesEnd_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2473,7 +2473,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4155544666051934}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKSpSpine1Part2_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2488,7 +2488,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4096100146479570}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKStiffOrientSpine2_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2503,7 +2503,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4228224725969578}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKRingFinger3_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2518,7 +2518,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4869529719751580}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Chest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2533,7 +2533,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4480937494962688}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKStatic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2548,7 +2548,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4334353632459352}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TwistFollowOffsetElbow_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2563,7 +2563,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4484868616367104}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SDK2FKIndexFinger1_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2578,9 +2578,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4146537577895374}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RingFinger1_L
-  m_TagString: Untagged
+  m_TagString: Enemy/Cyclops
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2593,7 +2593,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4274860767624840}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKSpSpine1Part1FollowOffset_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2608,7 +2608,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4312570821762308}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKThumbFinger1_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2623,7 +2623,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4500871846492930}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKArm_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2642,7 +2642,7 @@ GameObject:
   - component: {fileID: 136962527292443920}
   m_Layer: 9
   m_Name: Colliders (1)
-  m_TagString: Untagged
+  m_TagString: Enemy/Cyclops
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2655,7 +2655,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4102780078242662}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: AimEye
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2670,7 +2670,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4901466548729270}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Fingers_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2685,7 +2685,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4163608921803314}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: GlobalHead_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2700,7 +2700,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4422652474550942}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TwisterHip1_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2715,7 +2715,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4996118716152914}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKOffsetThumbFinger3_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2730,7 +2730,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4893893978675460}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKOffsetScapula_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2745,7 +2745,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4790577481513150}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKExtraElbow_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2760,7 +2760,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4335897149053472}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKXThumbFinger2_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2775,7 +2775,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4532921717486984}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKOffsetRoot_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2790,7 +2790,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4393403196743248}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKIndexFinger2_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2805,7 +2805,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4122289702652168}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKOffsetRingFinger2_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2820,9 +2820,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4042250208366094}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: HipPart2_L
-  m_TagString: Untagged
+  m_TagString: Enemy/Cyclops
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2835,9 +2835,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4796896331703292}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Hip_R
-  m_TagString: Untagged
+  m_TagString: Enemy/Cyclops
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2850,7 +2850,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4009424648497136}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKOffsetThumbFinger1_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2865,7 +2865,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4355257744540144}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKXSpine1Part2_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2880,7 +2880,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4009545033488888}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: UnTwistChest_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2895,7 +2895,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4515343146572320}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKOffsetNeck_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2910,7 +2910,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4511440017285810}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKXRootPart1_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2925,7 +2925,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4554923772516386}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Shoulder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2940,7 +2940,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4360655836898860}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SDK1FKMiddleFinger1_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2955,7 +2955,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4408476804217782}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKExtraMiddleFinger3_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2970,7 +2970,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4121854299087300}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: UnTwistHead_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2985,7 +2985,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4498891772173184}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: PoleOffsetLeg_RFollowNoScale
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3000,7 +3000,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4026137143085452}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKXNeckPart2_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3015,7 +3015,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4265515870258880}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKRingFinger2_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3030,7 +3030,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4947253735567720}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKExtraMiddleFinger3_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3045,7 +3045,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4243244036075680}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EyeEnd
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3060,7 +3060,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4825062667880238}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Hip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3075,7 +3075,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4794058357877410}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Scapula
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3090,7 +3090,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4968089013720924}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKEye_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3105,7 +3105,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4721060326164600}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: MiddleFinger2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3140,7 +3140,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4765857587775044}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: UnTwistHip_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3155,7 +3155,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4471585269589750}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKOffsetEye_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3170,7 +3170,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4421225254530228}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ToesEnd
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3185,7 +3185,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4026418506138154}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: PoleOffsetArm_LFollowNoScale
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3200,7 +3200,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4172336593900268}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKOffsetAnkle_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3215,7 +3215,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4456065384708044}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SDK1FKMiddleFinger2_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3230,7 +3230,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4156530566700782}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKEye_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3245,7 +3245,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4698738452887518}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: UnTwistEndShoulder_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3260,9 +3260,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4008509113198548}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Chest_M
-  m_TagString: Untagged
+  m_TagString: Enemy/Cyclops
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3275,7 +3275,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4088028054216290}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKAimEye_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3290,7 +3290,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4673971412380290}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKX2Knee_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3305,7 +3305,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4571583882726776}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKXRingFinger2_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3320,9 +3320,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4162276304592648}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ThumbFinger3_L
-  m_TagString: Untagged
+  m_TagString: Enemy/Cyclops
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3335,7 +3335,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4081483218891244}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: PoleOffsetLeg_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3350,7 +3350,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4684230693198076}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKScapula_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3365,7 +3365,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4705890853126536}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKOffsetArm_LStatic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3380,7 +3380,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4687886922292240}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TwisterHip1_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3395,7 +3395,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4696590718026516}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKSpineLocator2_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3410,7 +3410,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4912344795576580}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TwistBalancerHip_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3425,7 +3425,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4832735700715054}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: AimFollowEye
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3440,7 +3440,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4751664017061398}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TwisterElbow2_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3455,7 +3455,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4769970233633642}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKIndexFinger3_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3470,7 +3470,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4988747188422950}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Ankle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3485,7 +3485,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4216160911523834}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TwistBalancerHead_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3500,7 +3500,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4294367630505120}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKSpine2AlignUnIKTwistToOffset_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3515,7 +3515,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4222977010095478}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKFKAlignedArm_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3530,7 +3530,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4487000198350536}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: PoleLeg_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3545,7 +3545,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4054504074420738}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TwistBalancerKnee_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3560,7 +3560,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4502804105941224}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TwistFollowParentShoulder_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3575,7 +3575,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4381446811218808}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TwistFollowParentHip_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3593,7 +3593,7 @@ GameObject:
   - component: {fileID: 136991988111958934}
   m_Layer: 9
   m_Name: Colliders (1)
-  m_TagString: Untagged
+  m_TagString: Enemy/Cyclops
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3606,7 +3606,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4443639563360762}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKOffsetJaw_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3621,7 +3621,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4175796643977344}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: UnTwistEndHead_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3636,7 +3636,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4669396175276044}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKOffsetWrist_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3651,9 +3651,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4199414009274194}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Eye_R
-  m_TagString: Untagged
+  m_TagString: Enemy/Cyclops
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3666,7 +3666,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4529225335147412}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: MiddleFinger4_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3681,9 +3681,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4232649213398958}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neck_M
-  m_TagString: Untagged
+  m_TagString: Enemy/Cyclops
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3696,7 +3696,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4069416077778300}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SDK1FKIndexFinger1_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3711,7 +3711,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4906728248161580}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TwistSystem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3726,7 +3726,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4049464813415572}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TwistBalancerKnee_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3741,7 +3741,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4316900462989928}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TwistFollowOffsetWrist_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3756,7 +3756,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4327284279225362}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKExtraNeck_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3771,7 +3771,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4744898530659634}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKSpine1Part1_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3786,7 +3786,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4617522425334754}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RollToes_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3801,9 +3801,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4328556617680302}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Shoulder_R
-  m_TagString: Untagged
+  m_TagString: Enemy/Cyclops
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3816,7 +3816,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4085898532880672}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: DynamicSystem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3831,7 +3831,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4963876237023160}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TwistFollowParentOffsetKnee_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3846,7 +3846,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4669915595080934}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: HipSwingReversePart1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3861,7 +3861,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4058519606796754}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: UnTwistIKHip_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3876,7 +3876,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4987901013354672}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKLegFootRoll_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3891,7 +3891,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4258241081588520}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RollRollerToes_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3906,7 +3906,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4866241912291378}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: AlignIKToAnkle_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3921,7 +3921,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4991843155832150}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKOffsetSpine1Part2_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3936,7 +3936,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4509849722162008}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKOffsetMiddleFinger3_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3951,7 +3951,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4262094421264124}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TwisterHip2_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3966,7 +3966,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4416549038701826}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKOffsetSpine1Part1_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3981,7 +3981,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4155625500968666}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKIKSpine_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3996,7 +3996,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4778694053525236}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKExtraMiddleFinger1_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4011,7 +4011,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4816196343989044}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKIKParentConstraintArm_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4026,7 +4026,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4244648331859934}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Elbow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4041,7 +4041,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4533897136347492}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SDK1FKRingFinger3_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4056,7 +4056,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4052069752325722}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKOffsetRingFinger2_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4071,7 +4071,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4986082886728682}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKIKParentConstraintLeg_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4086,7 +4086,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4178181163665878}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKExtraSpine1_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4101,7 +4101,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4920088698586516}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TwistBalancerChest_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4116,7 +4116,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4217150084479198}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: PoleOffsetArm_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4131,7 +4131,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4451245859827508}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKOffsetArm_RFollow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4146,7 +4146,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4459713481455830}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TwistFollowOffsetHip_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4161,7 +4161,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4241141529645896}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKXHead_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4176,9 +4176,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4564742069282884}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: MiddleFinger2_R
-  m_TagString: Untagged
+  m_TagString: Enemy/Cyclops
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4191,7 +4191,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4199016072932902}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TwisterShoulder0_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4206,7 +4206,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4227557982733936}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKXCup_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4221,7 +4221,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4338224534683354}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SDK1FKRingFinger1_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4236,7 +4236,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4346658377704708}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKMiddleFinger3_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4251,9 +4251,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4663940157708140}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RingFinger2_L
-  m_TagString: Untagged
+  m_TagString: Enemy/Cyclops
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4266,7 +4266,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4454514328407598}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Spine1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4281,7 +4281,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4474520343626956}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKOffsetAnkle_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4296,7 +4296,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4257516259672212}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKIndexFinger3_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4311,7 +4311,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4574420173060198}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKX2Chest_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4326,7 +4326,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4458554384361504}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: PoleOffsetArm_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4341,7 +4341,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4447102676548316}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKXShoulder_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4356,7 +4356,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4985148561184168}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKdistanceArm_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4371,7 +4371,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4043446880405630}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RollExtraToesEnd_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4386,7 +4386,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4446047223548790}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKExtraWrist_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4401,7 +4401,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4992564412281558}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TwisterWrist2_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4416,7 +4416,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4822988095655334}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKExtraRingFinger1_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4431,7 +4431,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4638582266242348}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKXRingFinger1_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4446,7 +4446,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4957079785040640}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKLegFootRockOuterPivot_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4461,7 +4461,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4368370822523864}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TwistFollowOffsetHip_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4476,7 +4476,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4200180950905462}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SDK1FKRingFinger2_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4491,7 +4491,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4141284669527328}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKX2Shoulder_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4506,7 +4506,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4842028375322248}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKFake1UpLocSpine_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4521,7 +4521,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4674665030834460}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: DrivingSystem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4536,7 +4536,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4661645883387880}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKSpRootFollowOffset_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4551,7 +4551,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4280531119467902}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKXElbow_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4566,7 +4566,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4726744096263922}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKXShoulder_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4581,7 +4581,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4161815433026410}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: UnTwistIKHead_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4596,7 +4596,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4360408367429454}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKCup_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4611,7 +4611,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4388879590994218}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKmessureLoc1Arm_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4626,7 +4626,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4906344392177002}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKXToes_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4641,7 +4641,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4529680857548836}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKOffsetSpine1_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4656,7 +4656,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4944118088958830}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: HipSwingReverseXPart2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4671,7 +4671,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4346243520609710}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RollRollerHeel_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4686,7 +4686,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4335066785565450}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKArmHandle_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4701,7 +4701,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4277437385410238}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKSpRoot_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4716,7 +4716,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4931372074738388}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TwisterHip0_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4731,7 +4731,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4061583650929862}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKExtraIndexFinger2_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4746,9 +4746,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4260888699410066}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ThumbFinger4_L
-  m_TagString: Untagged
+  m_TagString: Enemy/Cyclops
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4761,7 +4761,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4772863835918958}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKmessureLoc2Leg_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4776,9 +4776,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4406737452530656}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wrist_L
-  m_TagString: Untagged
+  m_TagString: Enemy/Cyclops
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4791,7 +4791,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4358337634158500}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKmessureConstrainToLeg_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4806,7 +4806,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4400936857366996}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: UnTwistElbow_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4821,7 +4821,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4806887829101674}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKExtraRingFinger2_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4857,9 +4857,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4387877086952850}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: HipPart2_R
-  m_TagString: Untagged
+  m_TagString: Enemy/Cyclops
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4872,7 +4872,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4780397873301012}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKOffsetMiddleFinger2_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4887,7 +4887,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4881438664163906}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: UnTwistShoulder_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4902,7 +4902,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4549173805453552}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: HipSwingerOffset_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4917,7 +4917,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4007888428090316}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKXWrist_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4932,7 +4932,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4793584169544708}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKIKParentConstraintLeg_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4947,7 +4947,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4760492078019810}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: UnTwistIKShoulder_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4962,7 +4962,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4350096555084334}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SDK1FKCup_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4977,9 +4977,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4275872343465336}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RootPart2_M
-  m_TagString: Untagged
+  m_TagString: Enemy/Cyclops
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4992,7 +4992,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4630973821947908}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: UnTwistEndWrist_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5007,7 +5007,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4071671646436292}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKOffsetHip_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5022,7 +5022,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4456644208461124}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: GlobalOffsetHead_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5037,7 +5037,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4673856638284526}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: UnTwistHip_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5052,7 +5052,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4428182149594498}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SDK1FKIndexFinger3_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5067,7 +5067,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4964930782339874}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKParentConstraintHip_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5082,7 +5082,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4213415540014318}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKFKAlignedArm_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5097,7 +5097,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4871990101186644}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKX2Hip_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5112,7 +5112,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4305885353170946}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: UnTwistIKElbow_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5130,7 +5130,7 @@ GameObject:
   - component: {fileID: 136908401433871704}
   m_Layer: 9
   m_Name: Colliders (2)
-  m_TagString: Untagged
+  m_TagString: Enemy/Cyclops
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5143,7 +5143,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4262548382423046}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TwisterShoulder2_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5158,7 +5158,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4827134325474012}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKFollow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5173,9 +5173,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4446405184658570}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: HeadEnd_M
-  m_TagString: Untagged
+  m_TagString: Enemy/Cyclops
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5188,7 +5188,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4442703352351172}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKX2Ankle_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5205,7 +5205,7 @@ GameObject:
   - component: {fileID: 4463884946642456}
   - component: {fileID: 137026569836469576}
   - component: {fileID: 114464359331581100}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Group6169
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5220,7 +5220,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4568346548942280}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TwisterHip2_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5235,7 +5235,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4508878374159382}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKFKAlignedOffsetLeg_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5250,7 +5250,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4184191430165162}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKSpine2AlignTo_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5265,7 +5265,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4182859123582378}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKXMiddleFinger1_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5280,9 +5280,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4908041595554708}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: MiddleFinger4_R
-  m_TagString: Untagged
+  m_TagString: Enemy/Cyclops
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5295,7 +5295,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4667454541192858}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKXSpine1_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5310,7 +5310,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4443477827096298}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: HipSwingerStabilizer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5346,7 +5346,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4876846618714958}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKExtraAnkle_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5361,7 +5361,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4063485044088982}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKOffsetArm_LFollow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5376,7 +5376,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4049807629914022}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TwisterWrist2_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5391,9 +5391,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4057259862304304}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Head_M
-  m_TagString: Untagged
+  m_TagString: Enemy/Cyclops
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5406,7 +5406,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4072931778670762}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: PoleAnnotationArm_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5421,7 +5421,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4875214526572744}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ThumbFinger4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5436,9 +5436,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4750762307328430}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IndexFinger1_R
-  m_TagString: Untagged
+  m_TagString: Enemy/Cyclops
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5451,7 +5451,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4712289563980860}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKMiddleFinger2_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5466,7 +5466,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4998879581283680}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKOffsetElbow_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5481,7 +5481,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4833701634982028}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKSpine1Part2_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5496,7 +5496,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4562304981850924}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TwistFollowHead_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5511,7 +5511,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4204600122820994}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKSpChestFollowOffset_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5526,7 +5526,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4751947385387894}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKOffsetRootPart2_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5541,7 +5541,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4621877218081788}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: PoleLeg_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5556,7 +5556,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4691485197235520}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKXAnkle_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5571,7 +5571,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4609161749891390}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKXAnkle_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5586,7 +5586,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4293625188536756}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: HipSwingerStabilizerTarget
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5601,7 +5601,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4371492537434130}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKFKAlignedLeg_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5616,9 +5616,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4648664271527196}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Toes_R
-  m_TagString: Untagged
+  m_TagString: Enemy/Cyclops
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5631,7 +5631,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4963511514347580}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKOffsetElbow_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5646,9 +5646,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4988849615629880}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: HipPart1_L
-  m_TagString: Untagged
+  m_TagString: Enemy/Cyclops
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5661,7 +5661,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4992282639998060}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKXNeck_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5676,7 +5676,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4627039481622008}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKmessureConstrainToLeg_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5691,9 +5691,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4898787800248508}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RingFinger3_L
-  m_TagString: Untagged
+  m_TagString: Enemy/Cyclops
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5706,7 +5706,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4850192218561050}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: PoleAnnotationArm_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5721,7 +5721,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4819945342654942}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKX2Knee_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5736,7 +5736,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4663139974192904}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SDK1FKMiddleFinger3_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5751,7 +5751,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4682089267502132}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKExtraRootPart2_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5766,7 +5766,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4184020836443996}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TwistFollowParentShoulder_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5781,9 +5781,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4163942226869160}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IndexFinger2_L
-  m_TagString: Untagged
+  m_TagString: Enemy/Cyclops
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5796,7 +5796,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4625016655671786}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKOffsetScapula_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5811,7 +5811,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4315869227862968}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKParentConstraintToScapula_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5826,7 +5826,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4641274105935000}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ThumbFinger3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5841,7 +5841,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4402966174622450}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TwistFollowOffsetShoulder_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5856,7 +5856,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4911611664284942}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKOffsetRingFinger3_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5871,7 +5871,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4030377668635806}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKScalerSpine1Part2_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5886,7 +5886,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4811499864967718}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TwistBalancerWrist_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5901,7 +5901,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4798351223772968}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKNeckPart2_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5916,7 +5916,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4511040756716512}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKXIndexFinger3_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5931,9 +5931,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4713111116316866}
-  m_Layer: 2
+  m_Layer: 9
   m_Name: Toes
-  m_TagString: Untagged
+  m_TagString: Enemy/Cyclops
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5946,7 +5946,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4075648133969824}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKLegFootRockInnerPivot_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5961,7 +5961,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4102905577718984}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKRootConstraint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5976,7 +5976,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4349937659340162}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKMessure
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5991,7 +5991,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4859670759322534}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RollToes_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6006,7 +6006,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4198961761344492}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RollHeel_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6021,7 +6021,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4629671762222020}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ThumbFinger2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6036,7 +6036,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4112634206848470}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKmessureLoc2Arm_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6051,7 +6051,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4755596646847028}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKExtraThumbFinger3_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6066,7 +6066,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4180740524070308}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TwistBalancerElbow_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6081,7 +6081,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4586188210607548}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKScalerRoot_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6096,7 +6096,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4306038884387244}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKmessureLoc2Arm_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6111,7 +6111,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4748239664494344}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: UnTwistEndWrist_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6126,7 +6126,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4409721726846708}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKX2ToesEnd_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6141,7 +6141,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4324361005266562}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKAnkle_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6156,7 +6156,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4148445513506992}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TwisterKnee0_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6171,9 +6171,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4767552138825852}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ElbowPart1_L
-  m_TagString: Untagged
+  m_TagString: Enemy/Cyclops
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6186,7 +6186,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4569984964226764}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKfake3Spine_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6201,7 +6201,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4076526720567786}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKOffsetIndexFinger2_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6216,7 +6216,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4404628434399414}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: PoleExtraLeg_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6231,7 +6231,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4008746703203616}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKXMiddleFinger2_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6246,7 +6246,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4895513160297944}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKRingFinger2_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6261,7 +6261,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4051664096811266}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: UnTwistEndChest_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6276,9 +6276,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4261201708183116}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Knee_R
-  m_TagString: Untagged
+  m_TagString: Enemy/Cyclops
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6291,7 +6291,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4067053741033734}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKMessureFromShoulder_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6306,9 +6306,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4409849091588986}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wrist_R
-  m_TagString: Untagged
+  m_TagString: Enemy/Cyclops
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6321,7 +6321,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4523110256922886}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TwistFollowOffsetChest_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6336,9 +6336,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4137295099012092}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ThumbFinger1_R
-  m_TagString: Untagged
+  m_TagString: Enemy/Cyclops
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6351,9 +6351,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4741422367038832}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cup_R
-  m_TagString: Untagged
+  m_TagString: Enemy/Cyclops
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6366,7 +6366,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4446539573629056}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TwistFollowParentOffsetHip_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6381,7 +6381,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4012822547155788}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKXOffsetHip_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6396,7 +6396,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4770916960617026}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKSpChest_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6411,7 +6411,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4465890989384326}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TwistFollowParentOffsetShoulder_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6426,7 +6426,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4694396976630958}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: AimOffsetEye
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6441,7 +6441,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4509073718166768}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKSpineLocator1_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6456,7 +6456,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4338630703810018}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: HipSwingReverseXPart1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6471,7 +6471,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4553948643788808}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKExtraArm_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6486,7 +6486,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4496515656058832}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKMessureFromHip_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6501,7 +6501,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4457957011593534}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKXToesEnd_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6516,7 +6516,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4179327333282138}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TwisterElbow1_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6531,7 +6531,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4761757420313382}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: PoleOffsetLeg_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6546,7 +6546,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4383497004384340}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKToes_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6561,7 +6561,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4827872735705222}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TwistFollowOffsetElbow_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6576,7 +6576,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4652625463157474}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: UnTwistIKKnee_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6591,7 +6591,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4739126637596206}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TwistFollowWrist_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6606,7 +6606,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4328470295590334}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKParentConstraintToScapula_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6621,7 +6621,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4231339344419210}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKXScapula_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6636,7 +6636,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4866996228053530}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKExtraRingFinger2_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6651,9 +6651,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4066253338593636}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Hip_L
-  m_TagString: Untagged
+  m_TagString: Enemy/Cyclops
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6666,7 +6666,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4622348410736164}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TwistFollowParentChest_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6681,7 +6681,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4620972204343230}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKXToesEnd_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6696,7 +6696,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4163165731224424}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKMiddleFinger2_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6711,7 +6711,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4554736639621968}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKToesHandle_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6726,7 +6726,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4170218514162028}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKSpSpine1Part1_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6741,7 +6741,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4159687555928888}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKXToes_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6756,7 +6756,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4849025605788380}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: MotionSystem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6771,7 +6771,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4040318800806068}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKOffsetThumbFinger2_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6786,7 +6786,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4121103196340176}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKFKAlignedOffsetArm_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6801,7 +6801,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4770453424213976}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKElbow_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6816,7 +6816,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4123190442185624}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: UnTwistShoulder_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6831,7 +6831,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4598924540654110}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: UnTwistEndKnee_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6846,7 +6846,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4718991310644996}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: UnTwistElbow_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6861,7 +6861,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4389910660559666}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKdistanceLeg_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6876,7 +6876,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4908583456716098}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Group
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6891,7 +6891,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4164433104312978}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IndexFinger4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6906,7 +6906,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4035876213844036}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKExtraThumbFinger1_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6921,7 +6921,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4903521942350608}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKXMiddleFinger3_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6936,7 +6936,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4017492348159570}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TwisterKnee2_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6955,7 +6955,7 @@ GameObject:
   - component: {fileID: 136630931405652206}
   m_Layer: 9
   m_Name: Colliders (1)
-  m_TagString: Untagged
+  m_TagString: Enemy/Cyclops
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6968,7 +6968,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4933685149873624}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TwistBalancerElbow_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6983,7 +6983,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4828442496078432}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TwistFollowKnee_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6998,7 +6998,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4478009589513976}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKXKnee_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7013,7 +7013,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4733466554088844}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKMiddleFinger1_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7028,7 +7028,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4688745759434976}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TwisterWrist0_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7043,7 +7043,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4025759759416542}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RingFinger4_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7058,7 +7058,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4074116413298476}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKExtraEye_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7073,9 +7073,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4356933835908580}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Jaw_M
-  m_TagString: Untagged
+  m_TagString: Enemy/Cyclops
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7088,7 +7088,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4291249091687926}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKOffsetMiddleFinger1_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7103,7 +7103,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4537989274031748}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RootSystem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7118,7 +7118,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4906125303515664}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKXShoulder_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7133,7 +7133,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4185055580376274}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RingFinger2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7148,7 +7148,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4022491939820550}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TwistFollowParentOffsetElbow_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7163,7 +7163,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4209042636547762}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: PoleOffsetLeg_LStatic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7178,7 +7178,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4624639346465546}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKExtraThumbFinger3_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7193,7 +7193,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4877014463437234}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RootCenterBtwLegs_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7208,7 +7208,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4486213860260816}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: UnTwistIKHip_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7223,7 +7223,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4752997591486926}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKExtraRoot_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7238,7 +7238,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4217426267195636}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKSpSpine1Part2FollowOffset_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7253,7 +7253,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4769181184038134}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: PoleAnnotationLeg_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7268,7 +7268,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4844560361279728}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Neck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7283,7 +7283,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4305386172543482}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TwistFollowWrist_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7298,7 +7298,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4219356126982428}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKXKnee_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7313,7 +7313,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4060942122720284}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: PoleOffsetArm_LStatic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7331,7 +7331,7 @@ GameObject:
   - component: {fileID: 136698804419568392}
   m_Layer: 9
   m_Name: Colliders
-  m_TagString: Untagged
+  m_TagString: Enemy/Cyclops
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7344,7 +7344,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4931903824629186}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKExtraSpine2_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7359,7 +7359,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4739323210681110}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKOffsetIndexFinger1_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7374,9 +7374,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4010169014423904}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Scapula_R
-  m_TagString: Untagged
+  m_TagString: Enemy/Cyclops
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7389,9 +7389,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4131282767113560}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cup_L
-  m_TagString: Untagged
+  m_TagString: Enemy/Cyclops
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7404,7 +7404,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4073023708936470}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKXThumbFinger1_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7419,7 +7419,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4253522337603284}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKExtraArm_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7434,7 +7434,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4122623659933232}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKLeg_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7449,9 +7449,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4664117493677394}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: MiddleFinger1_R
-  m_TagString: Untagged
+  m_TagString: Enemy/Cyclops
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7464,7 +7464,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4195139471530548}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKXSpine1Part1_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7479,7 +7479,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4511980589239604}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKNeckPart1_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7494,7 +7494,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4762986489129790}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKOffsetNeckPart1_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7509,7 +7509,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4988998003255596}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RootCenterBtwLegsOffset_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7524,9 +7524,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4418064587405896}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ShoulderPart1_R
-  m_TagString: Untagged
+  m_TagString: Enemy/Cyclops
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7539,7 +7539,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4156051340673910}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IndexFinger1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7554,9 +7554,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4714764768360668}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ToesEnd_R
-  m_TagString: Untagged
+  m_TagString: Enemy/Cyclops
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7569,7 +7569,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4591688901938516}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKOffsetMiddleFinger1_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7584,7 +7584,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4697673068834478}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKExtraSpine1Part1_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7599,7 +7599,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4219403774138312}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKOffsetLeg_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7614,7 +7614,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4490414552372844}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: PoleAnnotationLeg_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7629,7 +7629,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4798356321973866}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: AimEye_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7644,7 +7644,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4782804281486126}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: PoleOffsetLeg_RFollow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7659,7 +7659,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4926577442478524}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKXChest_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7674,7 +7674,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4671630845751330}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SDK1FKThumbFinger3_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7689,7 +7689,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4690786135839836}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKIndexFinger1_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7704,9 +7704,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4371764333173148}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Elbow_L
-  m_TagString: Untagged
+  m_TagString: Enemy/Cyclops
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7719,7 +7719,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4717567896787924}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKXKnee_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7734,7 +7734,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4356677542160456}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SDK2FKRingFinger1_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7749,9 +7749,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4419276547397462}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ThumbFinger1_L
-  m_TagString: Untagged
+  m_TagString: Enemy/Cyclops
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7764,7 +7764,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4270459575182538}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: UnTwistKnee_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7779,7 +7779,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4648591949734292}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Jaw
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7794,7 +7794,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4972377057411640}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKIKParentConstraintSpine_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7809,7 +7809,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4134881627182480}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKOffsetWrist_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7824,7 +7824,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4732049094793520}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKXRingFinger3_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7839,7 +7839,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4742301671279658}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKOffsetIndexFinger2_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7854,9 +7854,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4733001152294942}
-  m_Layer: 2
+  m_Layer: 9
   m_Name: Heel
-  m_TagString: Untagged
+  m_TagString: Enemy/Cyclops
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7869,7 +7869,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4123571583872150}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKXAnkle_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7884,7 +7884,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4028988382184482}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKThumbFinger2_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7899,7 +7899,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4024651150821398}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKOffsetToes_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7914,7 +7914,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4725328297717820}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: AlignIKToAnkle_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7929,7 +7929,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4686182070283796}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TwistFollowKnee_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7944,7 +7944,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4575119688986090}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKXRootPart2_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7959,7 +7959,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4796711316914332}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKOffsetRootPart1_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7974,7 +7974,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4423402762639420}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKXThumbFinger1_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7989,7 +7989,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4100135728771968}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKLeg_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8004,7 +8004,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4012494256884754}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TwisterKnee1_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8019,7 +8019,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4640884351081716}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKmessureConstrainToArm_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8034,7 +8034,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4024791919358792}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: AlignIKToChest_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8049,7 +8049,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4606064178829508}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKSystem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8064,7 +8064,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4349905344070196}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKRingFinger1_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8079,7 +8079,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4022870081659914}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKmessureLoc1Arm_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8094,9 +8094,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4790086796394274}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: MiddleFinger1_L
-  m_TagString: Untagged
+  m_TagString: Enemy/Cyclops
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8109,7 +8109,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4862239020178994}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKGlobalHead_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8124,7 +8124,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4365994328153944}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKExtraIndexFinger3_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8139,7 +8139,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4830251595616308}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TwistFollowShoulder_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8154,7 +8154,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4803068788332942}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: AlignIKToWrist_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8169,7 +8169,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4807891729147518}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKExtraWrist_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8184,7 +8184,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4042774024478732}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKX2ToesEnd_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8199,7 +8199,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4902037707782040}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SDK2FKIndexFinger1_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8214,9 +8214,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4875157549220892}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Spine1Part1_M
-  m_TagString: Untagged
+  m_TagString: Enemy/Cyclops
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8229,7 +8229,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4609413811508012}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKOffsetLeg_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8244,7 +8244,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4216129077894032}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKParentConstraintToWrist_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8259,7 +8259,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4190944035505360}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TwistFollowShoulder_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8274,7 +8274,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4013392106401238}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SDK1FKThumbFinger3_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8289,7 +8289,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4397717981929040}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKCup_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8304,7 +8304,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4848290628278640}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TwistFollowParentElbow_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8319,7 +8319,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4102826162928878}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RingFinger3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8334,7 +8334,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4986874934960178}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKIKMixElbow_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8349,7 +8349,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4798604084882686}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKXHip_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8364,7 +8364,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4085725042340268}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKIKArm_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8379,7 +8379,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4867090450236500}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKExtraRingFinger3_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8394,7 +8394,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4511455586951908}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: PoleOffsetLeg_LFollowNoScale
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8409,7 +8409,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4086661608608712}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TwistFollowElbow_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8424,7 +8424,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4741520053043992}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKScalerRootPart2_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8442,7 +8442,7 @@ GameObject:
   - component: {fileID: 135320191223101664}
   m_Layer: 9
   m_Name: Colliders
-  m_TagString: Untagged
+  m_TagString: Enemy/Cyclops
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8455,7 +8455,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4383784163527650}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKWrist_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8470,7 +8470,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4056684250988354}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKScalerRootPart1_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8485,9 +8485,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4320831342364014}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ThumbFinger3_R
-  m_TagString: Untagged
+  m_TagString: Enemy/Cyclops
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8500,7 +8500,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4524026753716042}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKXAnkle_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8515,7 +8515,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4216261481897458}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: UnTwistIKWrist_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8530,7 +8530,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4467766995915816}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RollExtraToes_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8545,7 +8545,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4971042467919426}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKScalerSpine1_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8560,7 +8560,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4449133727210878}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKExtraRingFinger3_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8575,7 +8575,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4408480760175886}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKExtraIndexFinger1_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8590,7 +8590,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4165057350829068}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: PoleAimLeg_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8605,7 +8605,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4008371873240234}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKHip_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8620,7 +8620,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4249854381145138}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKIKMixElbow_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8635,7 +8635,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4538446228460992}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: HipSwingReverse
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8650,7 +8650,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4107236515178798}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKIndexFinger1_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8665,7 +8665,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4527981882468474}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKXOffsetHip_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8680,7 +8680,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4692313404429300}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKXThumbFinger3_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8695,7 +8695,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4301765347029636}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKX2Spine1_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8710,7 +8710,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4213619315203734}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKWrist_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8725,9 +8725,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4104449735613630}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Root_M
-  m_TagString: Untagged
+  m_TagString: Enemy/Cyclops
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8740,7 +8740,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4383145412617962}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKXIndexFinger1_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8755,7 +8755,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4048615205599642}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKXMiddleFinger2_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8770,7 +8770,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4019832372974812}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKFKAlignedOffsetArm_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8788,7 +8788,7 @@ GameObject:
   - component: {fileID: 135519919161998058}
   m_Layer: 9
   m_Name: Colliders
-  m_TagString: Untagged
+  m_TagString: Enemy/Cyclops
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8801,7 +8801,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4778626347072672}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TwisterWrist0_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8816,7 +8816,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4942594523699684}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKExtraEye_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8831,7 +8831,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4751000687603382}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKIKMixKnee_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8846,7 +8846,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4842315625971032}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RollOffsetToesEnd_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8861,7 +8861,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4881691835080762}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TwistFollowParentKnee_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8876,7 +8876,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4948616117463112}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKHip_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8894,7 +8894,7 @@ GameObject:
   - component: {fileID: 136216146315510908}
   m_Layer: 9
   m_Name: Colliders
-  m_TagString: Untagged
+  m_TagString: Enemy/Cyclops
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8907,9 +8907,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4073204996992950}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ThumbFinger4_R
-  m_TagString: Untagged
+  m_TagString: Enemy/Cyclops
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8922,7 +8922,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4147174750944230}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: PoleOffsetArm_RStatic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8937,7 +8937,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4795927637305758}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TwistFollowParentElbow_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8952,7 +8952,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4980717249673036}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: HipSwingReverseRoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8967,7 +8967,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4297902186689518}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: UnTwistEndHip_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8982,7 +8982,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4060671488175164}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKOffsetThumbFinger1_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8997,7 +8997,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4097258385702280}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKXThumbFinger3_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9012,7 +9012,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4043692979521756}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKmessureLoc1Leg_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9027,9 +9027,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4658540765028472}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IndexFinger3_L
-  m_TagString: Untagged
+  m_TagString: Enemy/Cyclops
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9042,7 +9042,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4236506088781866}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TwistFollowParentOffsetHead_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9057,7 +9057,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4222851455466006}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKExtraHip_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9072,7 +9072,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4703078945526362}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKKnee_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9087,7 +9087,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4525782850738914}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKOffsetHead_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9102,7 +9102,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4930855575815814}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TwistFollowParentOffsetWrist_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9117,9 +9117,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4142873493187974}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RingFinger1_R
-  m_TagString: Untagged
+  m_TagString: Enemy/Cyclops
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9132,7 +9132,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4613047488870240}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Root
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9149,7 +9149,7 @@ GameObject:
   - component: {fileID: 4125632518338894}
   - component: {fileID: 198348093536399568}
   - component: {fileID: 199362304109443716}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: PARTICLE_CyclopsOnFire.Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9164,7 +9164,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4654569816979604}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TwistFollowParentWrist_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9179,7 +9179,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4007804079716002}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKIKMixKnee_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9194,7 +9194,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4719731828060048}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKFKAlignedLeg_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9209,7 +9209,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4802629706729970}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKToes_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9224,7 +9224,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4220044645709724}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: UnTwistEndElbow_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9239,7 +9239,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4225393222044496}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: PoleAimLeg_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9254,7 +9254,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4759886422134282}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKOffsetSpine2_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9269,7 +9269,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4880689441603062}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKIKSystem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9284,7 +9284,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4001863352695748}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RollRollerToes_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9299,7 +9299,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4219396557035640}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKXRingFinger1_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9314,7 +9314,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4011667913001724}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKXCup_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9329,7 +9329,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4169209198319672}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKXHip_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9344,9 +9344,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4798375154141266}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ElbowPart1_R
-  m_TagString: Untagged
+  m_TagString: Enemy/Cyclops
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9359,7 +9359,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4441677834827466}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: PoleOffsetArm_RFollow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9374,7 +9374,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4443193678278668}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ConstraintSystem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9389,7 +9389,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4794906319851282}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKXRingFinger2_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9404,7 +9404,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4111157020751600}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKExtraIndexFinger1_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9419,7 +9419,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4204714068606262}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKSpRootPart1FollowOffset_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9434,7 +9434,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4025053402501570}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IndexFinger2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9449,7 +9449,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4694140719316430}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKLegFootRockOuterPivot_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9464,7 +9464,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4575631768645722}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKXEye_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9479,7 +9479,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4488162218995070}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKOffsetChest_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9494,9 +9494,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4534766735452130}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: DeformationSystem
-  m_TagString: Untagged
+  m_TagString: Enemy/Cyclops
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9509,9 +9509,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4152452195123722}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EyeEnd_L
-  m_TagString: Untagged
+  m_TagString: Enemy/Cyclops
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9524,7 +9524,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4157921070310476}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TwistFollowChest_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9539,7 +9539,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4056234975892902}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TwistFollowOffsetHead_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9554,7 +9554,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4796491598571406}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKIKParentConstraintArm_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9569,7 +9569,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4488910468067926}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKExtraAnkle_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9588,7 +9588,7 @@ GameObject:
   - component: {fileID: 136738098293448980}
   m_Layer: 9
   m_Name: Colliders
-  m_TagString: Untagged
+  m_TagString: Enemy/Cyclops
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9601,7 +9601,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4290420604354002}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKExtraNeckPart1_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9616,7 +9616,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4192812347635366}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKX2Spine1Part1_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9631,7 +9631,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4835373029437482}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RollOffsetToes_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9646,7 +9646,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4061361028348474}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKmessureLoc2Leg_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9661,9 +9661,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4207325075822640}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Ankle_L
-  m_TagString: Untagged
+  m_TagString: Enemy/Cyclops
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9676,7 +9676,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4101990667956010}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKX2Spine1Part2_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9691,9 +9691,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4033179977059258}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Spine1Part2_M
-  m_TagString: Untagged
+  m_TagString: Enemy/Cyclops
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9706,9 +9706,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4297678587021940}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: HipPart1_R
-  m_TagString: Untagged
+  m_TagString: Enemy/Cyclops
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9721,7 +9721,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4160862165797156}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKOffsetThumbFinger3_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9739,7 +9739,7 @@ GameObject:
   - component: {fileID: 135257507078253722}
   m_Layer: 9
   m_Name: Colliders (1)
-  m_TagString: Untagged
+  m_TagString: Enemy/Cyclops
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9752,9 +9752,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4487445802898422}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Scapula_L
-  m_TagString: Untagged
+  m_TagString: Enemy/Cyclops
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9767,7 +9767,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4084197981594666}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKExtraSpine1Part2_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9782,7 +9782,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4117076714255980}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TwisterShoulder1_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9797,7 +9797,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4864169685590436}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Geometry
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9812,7 +9812,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4145760217903886}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SDK1FKMiddleFinger1_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9827,7 +9827,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4202936303778768}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: PoleExtraArm_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9842,9 +9842,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4014987221682324}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ToesEnd_L
-  m_TagString: Untagged
+  m_TagString: Enemy/Cyclops
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9857,7 +9857,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4220543595473264}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKRootPart2_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9872,7 +9872,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4933457432466220}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IndexFinger3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9887,7 +9887,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4569353058058260}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: PoleOffsetLeg_RStatic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9902,7 +9902,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4428312490921298}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKIKLeg_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9917,9 +9917,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4740866236865350}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ShoulderPart2_R
-  m_TagString: Untagged
+  m_TagString: Enemy/Cyclops
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9932,7 +9932,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4948256607895678}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKExtraHead_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9947,7 +9947,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4942804779126754}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKOffsetRingFinger1_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9962,9 +9962,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4415048140933096}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ElbowPart2_L
-  m_TagString: Untagged
+  m_TagString: Enemy/Cyclops
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9977,7 +9977,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4316525930376876}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: AimOffsetEye_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9992,7 +9992,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4111805703849952}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKShoulder_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10007,7 +10007,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4790129702823632}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SDK1FKRingFinger2_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10026,7 +10026,7 @@ GameObject:
   - component: {fileID: 136915267299728684}
   m_Layer: 9
   m_Name: Colliders (1)
-  m_TagString: Untagged
+  m_TagString: Enemy/Cyclops
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10039,9 +10039,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4273171114459052}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IndexFinger2_R
-  m_TagString: Untagged
+  m_TagString: Enemy/Cyclops
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10054,7 +10054,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4749756875770502}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TwistFollowParentWrist_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10069,7 +10069,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4761963969124368}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RootExtraX_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10084,7 +10084,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4364180561939100}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SDK1FKMiddleFinger3_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10099,7 +10099,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4504697468405990}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKHead_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10114,7 +10114,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4630384581486346}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKHandle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10129,7 +10129,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4135060107253964}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: UnTwistEndShoulder_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10144,7 +10144,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4107351879621170}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKExtraThumbFinger2_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10159,7 +10159,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4785483217066838}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TwistFollowParentOffsetShoulder_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10174,9 +10174,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4190598855091862}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: NeckPart1_M
-  m_TagString: Untagged
+  m_TagString: Enemy/Cyclops
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10189,7 +10189,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4329796294888684}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKOffsetArm_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10204,7 +10204,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4067394799379734}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKXChest_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10219,7 +10219,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4668689699516094}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKJoints
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10234,7 +10234,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4575234709733718}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKOffsetIndexFinger1_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10249,7 +10249,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4079060891204424}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKX2Toes_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10264,7 +10264,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4858471712032802}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKXIndexFinger2_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10279,7 +10279,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4566852267611774}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FootSideInner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10294,7 +10294,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4081908264632788}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKExtraIndexFinger3_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10309,9 +10309,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4698035043143510}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Ankle_R
-  m_TagString: Untagged
+  m_TagString: Enemy/Cyclops
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10324,7 +10324,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4813302896456248}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RootX_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10339,7 +10339,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4055153234168472}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TwistBalancerShoulder_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10354,7 +10354,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4447716649638782}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TwistFollowElbow_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10371,9 +10371,9 @@ GameObject:
   - component: {fileID: 4667896341499586}
   - component: {fileID: 114801557369393172}
   - component: {fileID: 65745700531904688}
-  m_Layer: 2
+  m_Layer: 9
   m_Name: FootController
-  m_TagString: Untagged
+  m_TagString: Enemy/Cyclops
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10386,7 +10386,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4024730630140634}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKExtraThumbFinger2_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10401,7 +10401,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4246138373651910}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKLegFootRockInnerPivot_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10416,9 +10416,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4182950226983410}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IndexFinger4_R
-  m_TagString: Untagged
+  m_TagString: Enemy/Cyclops
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10431,7 +10431,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4391670534134812}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKOffsetNeckPart2_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10446,9 +10446,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4976041269569552}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ThumbFinger2_L
-  m_TagString: Untagged
+  m_TagString: Enemy/Cyclops
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10461,7 +10461,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4313472066316112}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TwistBalancerWrist_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10476,7 +10476,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4865783657542642}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKOffsetCup_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10491,7 +10491,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4671573932662036}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKExtraMiddleFinger1_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10506,7 +10506,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4848651638516406}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKIKArm_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10525,7 +10525,7 @@ GameObject:
   - component: {fileID: 23203839264418256}
   m_Layer: 0
   m_Name: AxeOther
-  m_TagString: Untagged
+  m_TagString: Enemy/Cyclops
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10538,9 +10538,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4732324281004482}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Knee_L
-  m_TagString: Untagged
+  m_TagString: Enemy/Cyclops
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10553,7 +10553,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4791991366156644}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKXShoulder_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10568,7 +10568,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4956384633156768}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKOffsetHip_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10583,7 +10583,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4594883514453782}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKXNeckPart1_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10598,7 +10598,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4039892950917034}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKExtraShoulder_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10613,7 +10613,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4589573274062510}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKExtraScapula_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10628,7 +10628,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4924749754360522}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKOffsetSpine1_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10643,7 +10643,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4114491765492012}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RingFinger1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10658,7 +10658,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4824132300400120}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKJaw_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10673,7 +10673,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4301465637177390}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKMiddleFinger3_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10688,7 +10688,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4393784661627058}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TwistBalancerShoulder_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10703,7 +10703,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4495482997539620}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKXRingFinger3_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10718,9 +10718,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4056664760121808}
-  m_Layer: 2
+  m_Layer: 9
   m_Name: Toes
-  m_TagString: Untagged
+  m_TagString: Enemy/Cyclops
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10733,7 +10733,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4526818871911808}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: JawEnd
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10748,7 +10748,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4971819306624038}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: UnTwistIKWrist_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10763,7 +10763,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4185955908966166}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKIKMixWrist_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10778,7 +10778,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4920449637431684}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKSpineCurve_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10793,7 +10793,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4592199157384604}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RollToesEnd_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10808,7 +10808,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4195192595041086}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKXToes_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10823,7 +10823,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4895626965395172}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKX2Elbow_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10838,7 +10838,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4281130338059928}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Main
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10853,7 +10853,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4431290375543156}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKfake0Spine_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10868,7 +10868,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4075720935922278}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: UnTwistKnee_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10883,7 +10883,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4814008815529640}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TwistFollowOffsetWrist_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10898,9 +10898,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4450347576154870}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RootPart1_M
-  m_TagString: Untagged
+  m_TagString: Enemy/Cyclops
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10913,7 +10913,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4341336852173484}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKElbow_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10928,7 +10928,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4011934064022824}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RollRollerToesEnd_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10943,7 +10943,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4957278422958006}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKScalerChest_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10958,7 +10958,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4112177657957656}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKfake1Spine_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10973,7 +10973,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4184785289313500}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKExtraMiddleFinger2_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10988,7 +10988,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4723739175275610}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKOffsetMiddleFinger3_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11003,7 +11003,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4324401818339580}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SDK1FKMiddleFinger2_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11018,7 +11018,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4211701862359938}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKLegHandle_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11033,7 +11033,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4244887621260340}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TwistFollowHip_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11048,7 +11048,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4416226328159778}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKRingFinger1_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11063,7 +11063,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4821666899091010}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKExtraLeg_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11078,7 +11078,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4852957711418844}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKLegLiftToe_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11093,7 +11093,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4385606107846116}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TwisterShoulder1_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11108,7 +11108,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4905025185829710}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKShoulder_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11125,7 +11125,7 @@ GameObject:
   - component: {fileID: 4788618107493470}
   - component: {fileID: 198784128071952436}
   - component: {fileID: 199167376343520354}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: PARTICLE_CyclopsOnFire01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11140,7 +11140,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4089768991327636}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TwisterShoulder2_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11155,7 +11155,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4861894006406832}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKCurve
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11170,7 +11170,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4777922727767946}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: MiddleFinger1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11185,7 +11185,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4735492731659888}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKRootPart1_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11200,7 +11200,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4578634628721630}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKExtraHip_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11215,9 +11215,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4289362222008988}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: MiddleFinger3_L
-  m_TagString: Untagged
+  m_TagString: Enemy/Cyclops
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11230,7 +11230,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4964861317507942}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKSpineLocator3_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11245,7 +11245,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4079232886659468}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TwistFollowHip_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11260,7 +11260,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4136710668669214}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RootZeroXform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11275,7 +11275,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4305810583251646}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKOffsetArm_RFollowNoScale
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11290,7 +11290,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4783883645973190}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TwisterHip0_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11305,7 +11305,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4528974942931982}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TwisterShoulder0_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11320,7 +11320,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4818692489618066}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: HipSwinger_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11335,7 +11335,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4547801552979540}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SDK1FKThumbFinger2_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11350,7 +11350,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4375404882689456}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKXOffsetShoulder_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11365,7 +11365,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4895711127625578}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKNeck_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11380,7 +11380,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4824225283799924}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKIndexFinger2_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11395,7 +11395,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4046893112825568}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKExtraMiddleFinger2_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11410,7 +11410,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4519252724357282}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKFKAlignedOffsetLeg_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11425,7 +11425,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4154026807987772}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RollHeel_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11443,7 +11443,7 @@ GameObject:
   - component: {fileID: 95821449530628020}
   - component: {fileID: 114527135975504696}
   - component: {fileID: 114022498032300992}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cyclops_Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11458,7 +11458,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4002604138925040}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKSystem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11473,7 +11473,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4765662347365736}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Fingers_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11488,7 +11488,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4887303413640110}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKScapula_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11503,7 +11503,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4067905862685284}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RollOffsetHeel_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11518,7 +11518,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4867367071190778}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TwisterWrist1_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11533,7 +11533,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4344420597309042}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKMessureFromShoulder_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11548,7 +11548,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4784325104052200}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKX2Shoulder_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11563,7 +11563,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4211791457089806}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKOffsetRingFinger1_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11578,7 +11578,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4937954476158032}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: UnTwistIKKnee_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11593,7 +11593,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4114586045804390}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKdistanceArm_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11608,7 +11608,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4080716778023180}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: UnTwistEndHip_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11623,7 +11623,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4373254938143300}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKExtraSpine1_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11638,7 +11638,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4297132282102010}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKAnkleHandle_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11653,7 +11653,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4164319581337094}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TwisterElbow0_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11668,7 +11668,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4327011182552884}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: GlobalSystem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11683,7 +11683,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4010725499429456}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKParentConstraintShoulder_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11698,7 +11698,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4328315371184710}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKOffsetShoulder_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11713,7 +11713,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4381196030914386}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKXSpine1Part1_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11731,7 +11731,7 @@ GameObject:
   - component: {fileID: 136631554195884364}
   m_Layer: 9
   m_Name: Colliders (1)
-  m_TagString: Untagged
+  m_TagString: Enemy/Cyclops
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11744,7 +11744,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4283358279104058}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SDK1FKIndexFinger3_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11759,7 +11759,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4961216505537510}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKOffsetToes_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11774,9 +11774,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4837958901526420}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Elbow_R
-  m_TagString: Untagged
+  m_TagString: Enemy/Cyclops
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11789,7 +11789,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4465941703359976}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: UnTwistIKChest_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11804,9 +11804,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4213120219897792}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: MiddleFinger3_R
-  m_TagString: Untagged
+  m_TagString: Enemy/Cyclops
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11819,7 +11819,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4586686008865784}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKExtraShoulder_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11834,9 +11834,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4678134189345494}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RingFinger3_R
-  m_TagString: Untagged
+  m_TagString: Enemy/Cyclops
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11849,7 +11849,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4245572412333964}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKXIndexFinger2_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11864,7 +11864,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4237545136586004}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKXRootPart2_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11879,7 +11879,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4272693764207440}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SDK1FKIndexFinger2_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11894,7 +11894,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4701619243991722}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKExtraToes_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11909,7 +11909,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4773557124470050}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Eye
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11924,7 +11924,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4587536523694406}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TwistFollowParentOffsetWrist_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11939,7 +11939,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4471006481768792}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: PoleOffsetArm_LFollow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11954,7 +11954,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4284075812560980}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKX2Toes_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11969,7 +11969,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4442368973216072}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKXSpine1Part2_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11984,7 +11984,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4568948545359066}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SDK1FKThumbFinger2_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11999,7 +11999,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4536281323048820}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKExtraIndexFinger2_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12014,7 +12014,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4238865674981542}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKSpine0AlignTo_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12029,7 +12029,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4607807525496476}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RollOffsetHeel_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12044,7 +12044,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4788900105617934}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: UnTwistIKElbow_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12059,7 +12059,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4066151461315876}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SDK2FKRingFinger1_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12074,7 +12074,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4246939751257852}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TwistFollowParentHead_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12089,7 +12089,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4311326879643854}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKXHip_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12104,7 +12104,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4373252963953974}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: AlignIKToWrist_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12119,7 +12119,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4171786632152866}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKXElbow_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12134,7 +12134,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4578049382446750}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKOffsetIndexFinger3_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12149,7 +12149,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4687166456966838}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: PoleArm_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12164,7 +12164,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4973033095966272}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RootSpineAligned
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12179,7 +12179,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4280175568471274}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKAimEye_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12194,7 +12194,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4086938780660054}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: MiddleFinger3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12209,7 +12209,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4255985864812490}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SDK1FKCup_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12224,7 +12224,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4855486444608716}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKParentConstraintShoulder_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12239,7 +12239,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4595075925051000}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKOffsetArm_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12254,7 +12254,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4542013459278342}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKToesHandle_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12269,7 +12269,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4308281042385680}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKIKLeg_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12284,7 +12284,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4421687501574840}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKParentConstraintToWrist_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12299,7 +12299,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4971330032734708}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FitSkeleton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12316,7 +12316,7 @@ GameObject:
   - component: {fileID: 4543010930745894}
   m_Layer: 9
   m_Name: Eye
-  m_TagString: Untagged
+  m_TagString: Enemy/Cyclops
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12329,7 +12329,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4987245658031466}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: MiddleFinger4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12344,7 +12344,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4852095313162252}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RootCenter_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12359,7 +12359,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4292505563936334}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TwisterElbow1_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12374,7 +12374,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4681358182703864}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKXWrist_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12392,7 +12392,7 @@ GameObject:
   - component: {fileID: 136057680369212874}
   m_Layer: 9
   m_Name: Colliders
-  m_TagString: Untagged
+  m_TagString: Enemy/Cyclops
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12405,7 +12405,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4309378066550706}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKMessureFromHip_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12420,7 +12420,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4776316511813800}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKXSpine1_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12435,7 +12435,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4456464968150906}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKExtraScapula_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12450,7 +12450,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4402993877161426}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKXWrist_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12465,7 +12465,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4196965169457062}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RollRollerHeel_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12480,9 +12480,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4946182027848508}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ShoulderPart2_L
-  m_TagString: Untagged
+  m_TagString: Enemy/Cyclops
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12495,7 +12495,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4050893228544212}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKXMiddleFinger3_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12510,7 +12510,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4820866232579792}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKOffsetEye_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12525,7 +12525,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4821778139675028}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FKThumbFinger1_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12540,7 +12540,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4364877551203940}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: UnTwistWrist_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12555,7 +12555,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4962383696277322}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RootCenterBtwLegsBlended_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12570,7 +12570,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4649369666843908}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12585,7 +12585,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4675723269772064}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKdistanceLeg_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12600,9 +12600,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4840203692367604}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IndexFinger3_R
-  m_TagString: Untagged
+  m_TagString: Enemy/Cyclops
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12615,7 +12615,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4833562462397206}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKSpSpine1FollowOffset_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12630,7 +12630,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4743743269740350}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKSpSpineOffset_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24660,6 +24660,8 @@ MonoBehaviour:
   m_maxHealth: 100
   m_currentHealth: 0
   m_damageImmuneDuration: 0.5
+  m_healthRegen: 5
+  m_healthRegenDelay: 1
   m_deathDelay: 3
   useAI: 1
   patrolIndex: 0
@@ -24746,7 +24748,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd5fc655059b4a64ea857bccb0e7d8e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initial_value: 50
+  initial_value: 30
   final_value: 0
   overTime_value: 0
 --- !u!114 &114527135975504696
@@ -24824,7 +24826,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd5fc655059b4a64ea857bccb0e7d8e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initial_value: 50
+  initial_value: 30
   final_value: 0
   overTime_value: 0
 --- !u!114 &114964667460469850

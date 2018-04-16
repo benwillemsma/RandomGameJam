@@ -52,9 +52,12 @@ public class IKFoot : MonoBehaviour
 
     private void Update()
     {
-        transform.rotation = Quaternion.LookRotation(Vector3.ProjectOnPlane(transform.forward, data.transform.right), Vector3.up);
-        transform.position = foot.position + positionOffset;
-        AdjustFootIK();
+        if (data)
+        {
+            transform.rotation = Quaternion.LookRotation(Vector3.ProjectOnPlane(transform.forward, data.transform.right), Vector3.up);
+            transform.position = foot.position + positionOffset;
+            AdjustFootIK();
+        }
     }
 
     private void AdjustFootIK()
