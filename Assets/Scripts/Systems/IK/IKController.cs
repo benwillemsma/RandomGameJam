@@ -3,6 +3,8 @@ using System.Collections;
 
 public class IKController : MonoBehaviour
 {
+    public int AnimationLayer;
+
     protected Animator anim;
     protected Transform mainCamera;
 
@@ -45,55 +47,58 @@ public class IKController : MonoBehaviour
     }
     protected virtual void OnAnimatorIK(int layerIndex)
     {
-        _RightElbow = transform.position + transform.up + transform.right * 5.0f;
-        _LeftElbow = transform.position + transform.up - transform.right * 5.0f;
-        _RightKnee = transform.position + transform.up * 5f + transform.forward * 2f + transform.right * 2f;
-        _LeftKnee = transform.position + transform.up * 5f + transform.forward * 2f - transform.right * 2f;
+        if (layerIndex == AnimationLayer)
+        {
+            _RightElbow = transform.position + transform.up + transform.right * 5.0f;
+            _LeftElbow = transform.position + transform.up - transform.right * 5.0f;
+            _RightKnee = transform.position + transform.up * 5f + transform.forward * 2f + transform.right * 2f;
+            _LeftKnee = transform.position + transform.up * 5f + transform.forward * 2f - transform.right * 2f;
 
-        anim.SetLookAtWeight(_lookWeight, _headWeight / 2, _headWeight, 0, 1);
-        anim.SetLookAtPosition(_lookAtPosition);
+            anim.SetLookAtWeight(_lookWeight, _headWeight / 2, _headWeight, 0, 1);
+            anim.SetLookAtPosition(_lookAtPosition);
 
-        //  --Arm IK--
-        //RightHand
-        anim.SetIKPositionWeight(AvatarIKGoal.RightHand, _RightHand.positionWeight);
-        anim.SetIKRotationWeight(AvatarIKGoal.RightHand, _RightHand.rotationWeight);
-        anim.SetIKPosition(AvatarIKGoal.RightHand, _RightHand.position);
-        anim.SetIKRotation(AvatarIKGoal.RightHand, _RightHand.rotation);
+            //  --Arm IK--
+            //RightHand
+            anim.SetIKPositionWeight(AvatarIKGoal.RightHand, _RightHand.positionWeight);
+            anim.SetIKRotationWeight(AvatarIKGoal.RightHand, _RightHand.rotationWeight);
+            anim.SetIKPosition(AvatarIKGoal.RightHand, _RightHand.position);
+            anim.SetIKRotation(AvatarIKGoal.RightHand, _RightHand.rotation);
 
-        //LeftHand
-        anim.SetIKPositionWeight(AvatarIKGoal.LeftHand, _LeftHand.positionWeight);
-        anim.SetIKRotationWeight(AvatarIKGoal.LeftHand, _LeftHand.rotationWeight);
-        anim.SetIKPosition(AvatarIKGoal.LeftHand, _LeftHand.position);
-        anim.SetIKRotation(AvatarIKGoal.LeftHand, _LeftHand.rotation);
+            //LeftHand
+            anim.SetIKPositionWeight(AvatarIKGoal.LeftHand, _LeftHand.positionWeight);
+            anim.SetIKRotationWeight(AvatarIKGoal.LeftHand, _LeftHand.rotationWeight);
+            anim.SetIKPosition(AvatarIKGoal.LeftHand, _LeftHand.position);
+            anim.SetIKRotation(AvatarIKGoal.LeftHand, _LeftHand.rotation);
 
-        //RightElbow
-        anim.SetIKHintPositionWeight(AvatarIKHint.RightElbow, _RightHand.weight);
-        anim.SetIKHintPosition(AvatarIKHint.RightElbow, _RightElbow);
+            //RightElbow
+            anim.SetIKHintPositionWeight(AvatarIKHint.RightElbow, _RightHand.weight);
+            anim.SetIKHintPosition(AvatarIKHint.RightElbow, _RightElbow);
 
-        //LeftElbow
-        anim.SetIKHintPositionWeight(AvatarIKHint.LeftElbow, _LeftHand.weight);
-        anim.SetIKHintPosition(AvatarIKHint.LeftElbow, _LeftElbow);
+            //LeftElbow
+            anim.SetIKHintPositionWeight(AvatarIKHint.LeftElbow, _LeftHand.weight);
+            anim.SetIKHintPosition(AvatarIKHint.LeftElbow, _LeftElbow);
 
-        //  --Leg IK--
-        //RightFoot
-        anim.SetIKPositionWeight(AvatarIKGoal.RightFoot, _RightFoot.positionWeight);
-        anim.SetIKRotationWeight(AvatarIKGoal.RightFoot, _RightFoot.rotationWeight);
-        anim.SetIKPosition(AvatarIKGoal.RightFoot, _RightFoot.position);
-        anim.SetIKRotation(AvatarIKGoal.RightFoot, _RightFoot.rotation);
+            //  --Leg IK--
+            //RightFoot
+            anim.SetIKPositionWeight(AvatarIKGoal.RightFoot, _RightFoot.positionWeight);
+            anim.SetIKRotationWeight(AvatarIKGoal.RightFoot, _RightFoot.rotationWeight);
+            anim.SetIKPosition(AvatarIKGoal.RightFoot, _RightFoot.position);
+            anim.SetIKRotation(AvatarIKGoal.RightFoot, _RightFoot.rotation);
 
-        //LeftFoot
-        anim.SetIKPositionWeight(AvatarIKGoal.LeftFoot, _LeftFoot.positionWeight);
-        anim.SetIKRotationWeight(AvatarIKGoal.LeftFoot, _LeftFoot.rotationWeight);
-        anim.SetIKPosition(AvatarIKGoal.LeftFoot, _LeftFoot.position);
-        anim.SetIKRotation(AvatarIKGoal.LeftFoot, _LeftFoot.rotation);
+            //LeftFoot
+            anim.SetIKPositionWeight(AvatarIKGoal.LeftFoot, _LeftFoot.positionWeight);
+            anim.SetIKRotationWeight(AvatarIKGoal.LeftFoot, _LeftFoot.rotationWeight);
+            anim.SetIKPosition(AvatarIKGoal.LeftFoot, _LeftFoot.position);
+            anim.SetIKRotation(AvatarIKGoal.LeftFoot, _LeftFoot.rotation);
 
-        //RightKnee
-        anim.SetIKHintPositionWeight(AvatarIKHint.RightKnee, _RightFoot.weight);
-        anim.SetIKHintPosition(AvatarIKHint.RightKnee, _RightKnee);
+            //RightKnee
+            anim.SetIKHintPositionWeight(AvatarIKHint.RightKnee, _RightFoot.weight);
+            anim.SetIKHintPosition(AvatarIKHint.RightKnee, _RightKnee);
 
-        //LeftKnee
-        anim.SetIKHintPositionWeight(AvatarIKHint.LeftKnee, _LeftFoot.weight);
-        anim.SetIKHintPosition(AvatarIKHint.LeftKnee, _LeftKnee);
+            //LeftKnee
+            anim.SetIKHintPositionWeight(AvatarIKHint.LeftKnee, _LeftFoot.weight);
+            anim.SetIKHintPosition(AvatarIKHint.LeftKnee, _LeftKnee);
+        }
     }
 
     //Initial SetupFunctions

@@ -14,13 +14,8 @@ public abstract class CyclopsAttack : CyclopsAttackState
 
     public CyclopsAttack(CyclopsData characterData, EffectManager attackCollider) : base(characterData)
     {
-        this.attackCollider = attackCollider;
-    }
-
-    public override IEnumerator EnterState(BaseState prevState)
-    {
         if (attackCollider) attackCollider.enabled = true;
-        return base.EnterState(prevState);
+        this.attackCollider = attackCollider;
     }
 
     public override IEnumerator ExitState(BaseState nextState)

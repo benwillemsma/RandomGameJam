@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class CyclopsAxeAttack : CyclopsAttack
 {
@@ -8,8 +9,6 @@ public class CyclopsAxeAttack : CyclopsAttack
 
     private float duration;
     private bool recoiling;
-    private float min;
-    private float max;
 
     #endregion
 
@@ -23,18 +22,6 @@ public class CyclopsAxeAttack : CyclopsAttack
     {
         anim.SetTrigger("HackAttack");
         anim.StartRecording(0);
-
-        float angle = Vector3.SignedAngle(data.transform.forward, (player.transform.position - data.transform.position).normalized, Vector3.up);
-        if (angle > 0)
-        {
-            min = 0.1f;
-            max = 60;
-        }
-        else
-        {
-            max = -0.1f;
-            min = -60;
-        }
 
         return base.EnterState(prevState);
     }
@@ -50,20 +37,20 @@ public class CyclopsAxeAttack : CyclopsAttack
         if (!recoiling)
         {
             float angle = Vector3.SignedAngle(data.transform.forward, (player.transform.position - data.transform.position).normalized, Vector3.up);
-            angle = Mathf.Clamp(angle, min, max);
             anim.SetFloat("HackDirection", angle);
         }
     }
 
     protected override void UpdateAI()
     {
+        SetDestination();
         if (attackCollider.firstHitCol != null && !recoiling)
         {
             attackCollider.enabled = false;
             data.StartCoroutine(RecoilDelay(0.5f));
             cameraShaker.Shakecamera(200, 0.5f);
         }
-        if (elapsedTime >= duration)
+        else if (elapsedTime >= duration)
         {
             StopRecoil();
             stateManager.ChangeState(new CyclopsAttackState(data));
