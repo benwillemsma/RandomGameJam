@@ -14,13 +14,10 @@ public abstract class CyclopsAttack : CyclopsAttackState
 
     public CyclopsAttack(CyclopsData characterData, EffectManager attackCollider) : base(characterData)
     {
-        if (attackCollider) attackCollider.enabled = true;
-        this.attackCollider = attackCollider;
-    }
-
-    public override IEnumerator ExitState(BaseState nextState)
-    {
-        if (attackCollider) attackCollider.enabled = false;
-        return base.ExitState(nextState);
+        if (attackCollider)
+        {
+            attackCollider.Clear();
+            this.attackCollider = attackCollider;
+        }
     }
 }

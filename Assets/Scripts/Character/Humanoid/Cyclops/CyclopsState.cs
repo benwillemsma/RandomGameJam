@@ -20,26 +20,21 @@ public abstract class CyclopsState : EnemyState<CyclopsData>
     protected override void UpdateAI()
     {
         TryDetectPlayer();
+        UpdateDetectionState();
     }
 
     protected void TryDetectPlayer()
     {
         hasDetectedPlayer = CheckLineOfSight();
-        if (hasDetectedPlayer)
-        {
-            IK.LookAtPosition = player.transform.position + Vector3.up;
-            IK.HeadWeight += Time.deltaTime;
-            data.detectionLevel += Time.deltaTime;
-        }
-        else
-        {
-            IK.HeadWeight -= Time.deltaTime;
-            data.detectionLevel -= Time.deltaTime;
-        }
+
+        if (hasDetectedPlayer) data.detectionLevel += Time.deltaTime;
+        else data.detectionLevel -= Time.deltaTime; 
 
         data.detectionLevel = Mathf.Clamp(data.detectionLevel, 0, PlayerData.MaxDetection);
-        IK.HeadWeight = Mathf.Clamp(IK.HeadWeight, 0, 1);
+    }
 
+    protected void UpdateDetectionState()
+    {
         float playerDetection = player.TotalDetection(data.transform.position) + data.detectionLevel;
         if (playerDetection > data.attackThreshold)
         {

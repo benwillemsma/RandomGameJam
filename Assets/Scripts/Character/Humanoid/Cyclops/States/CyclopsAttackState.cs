@@ -27,6 +27,8 @@ public class CyclopsAttackState : CyclopsWalkingState
 
     protected override void UpdateMovement()
     {
+        data.eye.LookAt(player.transform.position);
+
         Vector3 forward = player.transform.position - data.transform.position;
         forward.y = 0;
         data.transform.rotation = Quaternion.Slerp(data.transform.rotation, Quaternion.LookRotation(forward, Vector3.up), Time.deltaTime);
@@ -36,7 +38,10 @@ public class CyclopsAttackState : CyclopsWalkingState
     {
         base.UpdateAI();
 
-        if ((data.transform.position - player.transform.transform.position).magnitude < 20)
+        float playerDistance = (data.transform.position - player.transform.transform.position).magnitude;
+        if (player.IsDead)
+            stateManager.ChangeState(new CyclopsWalkingState(data));
+        else if (playerDistance < 20 && playerDistance > 15)
         {
             float angle = Vector3.SignedAngle(data.transform.forward, (player.transform.position - data.transform.position).normalized, Vector3.up);
             if (Mathf.Abs(angle) <= 60)
@@ -46,10 +51,9 @@ public class CyclopsAttackState : CyclopsWalkingState
             }
         }
 
-        else if (hasDetectedPlayer && beamCooldown <= 0 && (data.transform.position - player.transform.transform.position).magnitude > 50)
-        {
-            //BeamAttack();
-        }
+        else if (hasDetectedPlayer && beamCooldown <= 0 && playerDistance > 50)
+            stateManager.ChangeState(new CyclopsBeamAttack(data, null));
+        beamCooldown -= Time.deltaTime;
     }
 
     protected override void SetDestination()

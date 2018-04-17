@@ -21170,13 +21170,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   owningCharacter: {fileID: 114814631026113000}
   collider: {fileID: 65619191938433430}
-  duration: 3
   overTimeCooldown: 0
   affectTags:
   - Enemy/Cyclops
   affectedCharaters: []
-  firstHitCol: {fileID: 0}
-  lastHitCol: {fileID: 0}
+  hitSomething: 0
   effects:
   - {fileID: 114635317670437594}
 --- !u!114 &114350375186677318

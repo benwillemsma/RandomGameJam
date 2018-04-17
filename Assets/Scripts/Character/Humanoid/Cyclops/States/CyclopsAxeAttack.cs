@@ -15,11 +15,12 @@ public class CyclopsAxeAttack : CyclopsAttack
     public CyclopsAxeAttack(CyclopsData characterData, EffectManager attackCollider) : base(characterData, attackCollider)
     {
         cameraShaker = attackCollider.GetComponent<CameraShaker>();
-        duration = attackCollider.duration;
+        duration = 2.5f;
     }
 
     public override IEnumerator EnterState(BaseState prevState)
     {
+        UpdateAnimator();
         anim.SetTrigger("HackAttack");
         anim.StartRecording(0);
 
@@ -29,7 +30,17 @@ public class CyclopsAxeAttack : CyclopsAttack
     public override IEnumerator ExitState(BaseState prevState)
     {
         anim.ResetTrigger("HackAttack");
+        if (anim.recorderMode == AnimatorRecorderMode.Record)
+            anim.StopRecording();
+        else if (anim.recorderMode == AnimatorRecorderMode.Playback)
+            anim.StopPlayback();
+
         return base.EnterState(prevState);
+    }
+
+    protected override void UpdateMovement()
+    {
+        if (!recoiling) base.UpdateMovement();
     }
 
     protected override void UpdateAnimator()
@@ -43,12 +54,12 @@ public class CyclopsAxeAttack : CyclopsAttack
 
     protected override void UpdateAI()
     {
-        SetDestination();
-        if (attackCollider.firstHitCol != null && !recoiling)
+        TryDetectPlayer();
+
+        if (attackCollider.hitSomething && !recoiling)
         {
-            attackCollider.enabled = false;
             data.StartCoroutine(RecoilDelay(0.5f));
-            cameraShaker.Shakecamera(200, 0.5f);
+            if (cameraShaker) cameraShaker.Shakecamera(200, 0.5f);
         }
         else if (elapsedTime >= duration)
         {

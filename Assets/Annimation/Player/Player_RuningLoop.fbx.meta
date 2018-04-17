@@ -1462,7 +1462,7 @@ ModelImporter:
     13700006: Sword_LP
   externalObjects: {}
   materials:
-    importMaterials: 1
+    importMaterials: 0
     materialName: 0
     materialSearch: 1
     materialLocation: 1
@@ -1476,17 +1476,11 @@ ModelImporter:
     rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: "\nClip 'Take 001' has import animation warnings that
-      might lower retargeting quality:\nNote: Activate translation DOF on avatar to
-      improve retargeting quality.\n\t'Spine1_M' has translation animation that will
-      be discarded.\n\t'Chest_M' has translation animation that will be discarded.\n\t'Chest_M'
-      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'Scapula_R'
-      has translation animation that will be discarded.\n\t'Shoulder_R' has translation
-      animation that will be discarded.\n\t'ShoulderPart2_R' is inbetween humanoid
-      transforms and has rotation animation that will be discarded.\n\t'Head_M' has
-      translation animation that will be discarded.\n\t'Scapula_L' has translation
-      animation that will be discarded.\n\t'Shoulder_L' has translation animation
-      that will be discarded.\n\t'ShoulderPart2_L' is inbetween humanoid transforms
-      and has rotation animation that will be discarded.\n"
+      might lower retargeting quality:\n\t'ShoulderPart1_R' is inbetween humanoid
+      transforms and has rotation animation that will be discarded.\n\t'ShoulderPart2_R'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'ShoulderPart1_L'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'ShoulderPart2_L'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n"
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
@@ -1504,7 +1498,7 @@ ModelImporter:
       firstFrame: 38
       lastFrame: 62
       wrapMode: 0
-      orientationOffsetY: 13.04
+      orientationOffsetY: 0
       level: 0
       cycleOffset: 0.5
       loop: 0
@@ -1512,9 +1506,9 @@ ModelImporter:
       loopTime: 1
       loopBlend: 1
       loopBlendOrientation: 1
-      loopBlendPositionY: 1
-      loopBlendPositionXZ: 1
-      keepOriginalOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 1
       keepOriginalPositionY: 1
       keepOriginalPositionXZ: 0
       heightFromFeet: 0
@@ -1639,7 +1633,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: Shoulder_L
+    - boneName: Scapula_L
       humanName: LeftShoulder
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -1647,7 +1641,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: Shoulder_R
+    - boneName: Scapula_R
       humanName: RightShoulder
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -1655,7 +1649,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: ShoulderPart1_L
+    - boneName: Shoulder_L
       humanName: LeftUpperArm
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -1663,7 +1657,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: ShoulderPart1_R
+    - boneName: Shoulder_R
       humanName: RightUpperArm
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -1967,29 +1961,37 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
+    - boneName: Chest_M
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
     skeleton:
-    - name: Player_RuningLoop2(Clone)
+    - name: Player_RuningLoop(Clone)
       parentName: 
       position: {x: 0, y: 0, z: 0}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Character
-      parentName: Player_RuningLoop2(Clone)
+      parentName: Player_RuningLoop(Clone)
       position: {x: -0, y: 0, z: 0}
       rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
       scale: {x: 38.148693, y: 38.148693, z: 38.148693}
     - name: Clothes
-      parentName: Player_RuningLoop2(Clone)
+      parentName: Player_RuningLoop(Clone)
       position: {x: -0, y: 0, z: 0}
       rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
       scale: {x: 38.148693, y: 38.148693, z: 38.148693}
     - name: Eye_LP
-      parentName: Player_RuningLoop2(Clone)
+      parentName: Player_RuningLoop(Clone)
       position: {x: -0, y: 1.8780214, z: 0.08469}
       rotation: {x: 0.000000021668717, y: -0.1305262, z: 0.0000000028527407, w: 0.9914449}
       scale: {x: 0.056935675, y: 0.056935675, z: 0.056935675}
     - name: Group
-      parentName: Player_RuningLoop2(Clone)
+      parentName: Player_RuningLoop(Clone)
       position: {x: -0, y: 0, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
@@ -5571,7 +5573,7 @@ ModelImporter:
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Sword_LP
-      parentName: Player_RuningLoop2(Clone)
+      parentName: Player_RuningLoop(Clone)
       position: {x: 0.87957805, y: 1.3120544, z: 0.09409483}
       rotation: {x: -0.7062083, y: -0.03563519, z: -0.03563519, w: 0.7062083}
       scale: {x: 1, y: 1, z: 1}
@@ -5584,7 +5586,7 @@ ModelImporter:
     feetSpacing: 0
     rootMotionBoneName: 
     rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
-    hasTranslationDoF: 0
+    hasTranslationDoF: 1
     hasExtraRoot: 1
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}

@@ -8,9 +8,7 @@ public class EffectManager : MonoBehaviour
 {
     public CharacterData owningCharacter;
     public new Collider collider;
-
-    private float elapsedTime;
-    public float duration;
+    
     private bool overTimeAvailable = false;
     public float overTimeCooldown;
 
@@ -18,34 +16,15 @@ public class EffectManager : MonoBehaviour
     public string[] affectTags;
     public List<CharacterData> affectedCharaters = new List<CharacterData>();
     [HideInInspector]
-    public Collider firstHitCol;
-    [HideInInspector]
-    public Collider lastHitCol;
+    public bool hitSomething;
 
     [HideInInspector]
     public List<Effect> effects = new List<Effect>();
 
-    private void Awake()
+    public void Clear()
     {
-        if (!collider) collider = GetComponent<Collider>();
-        collider.isTrigger = true;
-    }
-
-    private void OnEnable()
-    {
-        if (!collider) collider = GetComponent<Collider>();
         affectedCharaters.Clear();
-        firstHitCol = null;
-        lastHitCol = null;
-        collider.enabled = true;
-    }
-
-    private void OnDisable()
-    {
-        collider.enabled = false;
-        lastHitCol = null;
-        firstHitCol = null;
-        affectedCharaters.Clear();
+        hitSomething = false;
     }
 
     protected void OnTriggerEnter(Collider other)
@@ -69,9 +48,8 @@ public class EffectManager : MonoBehaviour
     { 
         if (collision.rigidbody && collision.rigidbody == owningCharacter.RB)
             return;
-        
-        lastHitCol = collision.collider;
-        if (!firstHitCol) firstHitCol = collision.collider; 
+
+        hitSomething = true;
     }
 
     protected void Update()
@@ -89,12 +67,6 @@ public class EffectManager : MonoBehaviour
             }
             StartCoroutine(GameManager.CallAfterDelay(() => overTimeAvailable = true, overTimeCooldown));
         }
-        if (!enabled)
-        {
-            elapsedTime += Time.deltaTime;
-            if (elapsedTime >= duration) enabled = false;
-        }
-        else elapsedTime = 0;
     }
 
     protected void OnTriggerExit(Collider other)

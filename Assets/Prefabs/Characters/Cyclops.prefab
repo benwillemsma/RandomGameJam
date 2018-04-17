@@ -24552,7 +24552,7 @@ Rigidbody:
   m_AngularDrag: 0.05
   m_UseGravity: 0
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 126
   m_CollisionDetection: 2
 --- !u!54 &54619429982960298
@@ -24565,7 +24565,7 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
@@ -24582,7 +24582,7 @@ Rigidbody:
   m_AngularDrag: 0.05
   m_UseGravity: 0
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 126
   m_CollisionDetection: 2
 --- !u!65 &65045720975550978
@@ -24839,13 +24839,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   owningCharacter: {fileID: 114083707253202142}
   collider: {fileID: 65045720975550978}
-  duration: 3
   overTimeCooldown: 0
   affectTags:
   - Player
   affectedCharaters: []
-  firstHitCol: {fileID: 0}
-  lastHitCol: {fileID: 0}
+  hitSomething: 0
   effects:
   - {fileID: 114840848395005306}
 --- !u!114 &114464359331581100
@@ -24982,13 +24980,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   owningCharacter: {fileID: 114083707253202142}
   collider: {fileID: 65224722401718234}
-  duration: 3
   overTimeCooldown: 0
   affectTags:
   - Player
   affectedCharaters: []
-  firstHitCol: {fileID: 0}
-  lastHitCol: {fileID: 0}
+  hitSomething: 0
   effects:
   - {fileID: 114484136485319300}
 --- !u!135 &135257507078253722
@@ -25496,7 +25492,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 541883593
+  randomSeed: -535201927
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -28908,7 +28904,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 0
-  randomSeed: -344345481
+  randomSeed: 1812478007
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -31303,7 +31299,7 @@ ParticleSystem:
   CollisionModule:
     enabled: 1
     serializedVersion: 3
-    type: 0
+    type: 1
     collisionMode: 0
     colliderForce: 0
     multiplyColliderForceByParticleSize: 0
@@ -31443,11 +31439,11 @@ ParticleSystem:
     radiusScale: 2
     collidesWith:
       serializedVersion: 2
-      m_Bits: 4294967295
+      m_Bits: 512
     maxCollisionShapes: 256
     quality: 0
     voxelSize: 0.5
-    collisionMessages: 0
+    collisionMessages: 1
     collidesWithDynamic: 1
     interiorCollisions: 0
   TriggerModule:
@@ -32320,7 +32316,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 141109166
+  randomSeed: -1328105737
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -35723,7 +35719,7 @@ ParticleSystem:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-  moveWithTransform: 1
+  moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 0
   randomSeed: -1843764082
@@ -39138,7 +39134,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 515035038
+  randomSeed: 1363855203
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -42544,7 +42540,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -766370979
+  randomSeed: 1679433208
   InitialModule:
     serializedVersion: 3
     enabled: 1

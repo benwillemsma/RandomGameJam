@@ -1463,7 +1463,7 @@ ModelImporter:
     13700006: Sword_LP
   externalObjects: {}
   materials:
-    importMaterials: 1
+    importMaterials: 0
     materialName: 0
     materialSearch: 1
     materialLocation: 1
