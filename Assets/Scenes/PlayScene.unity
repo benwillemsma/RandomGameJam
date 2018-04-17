@@ -2826,6 +2826,16 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 114464359331581100, guid: ad582db803344994ab4de6ee0d7ccf81,
+        type: 2}
+      propertyPath: light0
+      value: 
+      objectReference: {fileID: 511785860}
+    - target: {fileID: 114464359331581100, guid: ad582db803344994ab4de6ee0d7ccf81,
+        type: 2}
+      propertyPath: light1
+      value: 
+      objectReference: {fileID: 150984124}
     - target: {fileID: 114083707253202142, guid: ad582db803344994ab4de6ee0d7ccf81,
         type: 2}
       propertyPath: patrolPoints.Array.data[0]
@@ -2881,16 +2891,6 @@ Prefab:
       propertyPath: patrolPoints.Array.data[10]
       value: 
       objectReference: {fileID: 264874170}
-    - target: {fileID: 114464359331581100, guid: ad582db803344994ab4de6ee0d7ccf81,
-        type: 2}
-      propertyPath: light0
-      value: 
-      objectReference: {fileID: 511785860}
-    - target: {fileID: 114464359331581100, guid: ad582db803344994ab4de6ee0d7ccf81,
-        type: 2}
-      propertyPath: light1
-      value: 
-      objectReference: {fileID: 150984124}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ad582db803344994ab4de6ee0d7ccf81, type: 2}
   m_IsPrefabParent: 0
