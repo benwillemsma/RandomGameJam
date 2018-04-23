@@ -1647,17 +1647,16 @@ ModelImporter:
       : rotation error = 0.780605 deg\n"
     animationImportErrors: 
     animationImportWarnings: "\nClip 'Take 001' has import animation warnings that
-      might lower retargeting quality:\nNote: Activate translation DOF on avatar to
-      improve retargeting quality.\n\t'Hip_R' is inbetween humanoid transforms and
-      has rotation animation that will be discarded.\n\t'HipPart2_R' is inbetween
-      humanoid transforms and has rotation animation that will be discarded.\n\t'Scapula_R'
-      has translation animation that will be discarded.\n\t'ShoulderPart2_R' is inbetween
-      humanoid transforms and has rotation animation that will be discarded.\n\t'ElbowPart1_R'
-      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'Wrist_R'
-      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'Scapula_L'
-      has translation animation that will be discarded.\n\t'ShoulderPart2_L' is inbetween
-      humanoid transforms and has rotation animation that will be discarded.\n\t'ElbowPart1_L'
-      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'Wrist_L'
+      might lower retargeting quality:\n\t'Hip_R' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n\t'HipPart2_R' is inbetween
+      humanoid transforms and has rotation animation that will be discarded.\n\t'ShoulderPart1_R'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'ShoulderPart2_R'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'ElbowPart1_R'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'ElbowPart2_R'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'ShoulderPart1_L'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'ShoulderPart2_L'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'ElbowPart1_L'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'ElbowPart2_L'
       is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'Hip_L'
       is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'HipPart2_L'
       is inbetween humanoid transforms and has rotation animation that will be discarded.\n"
@@ -1849,7 +1848,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: Shoulder_L
+    - boneName: Scapula_L
       humanName: LeftShoulder
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -1857,7 +1856,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: Shoulder_R
+    - boneName: Scapula_R
       humanName: RightShoulder
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -1865,7 +1864,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: ShoulderPart1_L
+    - boneName: Shoulder_L
       humanName: LeftUpperArm
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -1873,7 +1872,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: ShoulderPart1_R
+    - boneName: Shoulder_R
       humanName: RightUpperArm
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -1897,7 +1896,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: ElbowPart2_L
+    - boneName: Wrist_L
       humanName: LeftHand
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -1905,7 +1904,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: ElbowPart2_R
+    - boneName: Wrist_R
       humanName: RightHand
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -6184,7 +6183,7 @@ ModelImporter:
     feetSpacing: 0
     rootMotionBoneName: 
     rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
-    hasTranslationDoF: 0
+    hasTranslationDoF: 1
     hasExtraRoot: 1
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}

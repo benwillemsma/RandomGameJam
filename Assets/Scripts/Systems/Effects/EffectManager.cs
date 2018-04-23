@@ -17,6 +17,7 @@ public class EffectManager : MonoBehaviour
     public List<CharacterData> affectedCharaters = new List<CharacterData>();
     [HideInInspector]
     public bool hitSomething;
+    public Collision lastHit;
 
     [HideInInspector]
     public List<Effect> effects = new List<Effect>();
@@ -50,6 +51,7 @@ public class EffectManager : MonoBehaviour
             return;
 
         hitSomething = true;
+        lastHit = collision;
     }
 
     protected void Update()

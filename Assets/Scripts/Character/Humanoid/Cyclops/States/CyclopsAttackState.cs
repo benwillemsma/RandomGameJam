@@ -27,11 +27,14 @@ public class CyclopsAttackState : CyclopsWalkingState
 
     protected override void UpdateMovement()
     {
-        data.eye.LookAt(player.transform.position);
+        if (player)
+        {
+            data.eye.LookAt(player.transform.position);
 
-        Vector3 forward = player.transform.position - data.transform.position;
-        forward.y = 0;
-        data.transform.rotation = Quaternion.Slerp(data.transform.rotation, Quaternion.LookRotation(forward, Vector3.up), Time.deltaTime);
+            Vector3 forward = player.transform.position - data.transform.position;
+            forward.y = 0;
+            data.transform.rotation = Quaternion.Slerp(data.transform.rotation, Quaternion.LookRotation(forward, Vector3.up), Time.deltaTime);
+        }
     }
 
     protected override void UpdateAI()
@@ -41,7 +44,7 @@ public class CyclopsAttackState : CyclopsWalkingState
         float playerDistance = (data.transform.position - player.transform.transform.position).magnitude;
         if (player.IsDead)
             stateManager.ChangeState(new CyclopsWalkingState(data));
-        else if (playerDistance < 20 && playerDistance > 15)
+        else if (playerDistance < 18 && playerDistance > 15)
         {
             float angle = Vector3.SignedAngle(data.transform.forward, (player.transform.position - data.transform.position).normalized, Vector3.up);
             if (Mathf.Abs(angle) <= 60)
@@ -61,11 +64,14 @@ public class CyclopsAttackState : CyclopsWalkingState
         agent.stoppingDistance = 1;
         agent.speed = 8f;
 
-        Vector3 newPoint = player.transform.position - (player.transform.position - data.transform.position).normalized * 18;
+        if (player)
+        {
+            Vector3 newPoint = player.transform.position - (player.transform.position - data.transform.position).normalized * 16;
 
-        NavMeshHit hit;
-        if (NavMesh.FindClosestEdge(newPoint, out hit, 0))
-            MoveTo(hit.position);
-        else MoveTo(newPoint);
+            NavMeshHit hit;
+            if (NavMesh.FindClosestEdge(newPoint, out hit, 0))
+                MoveTo(hit.position);
+            else MoveTo(newPoint);
+        }
     }
 }

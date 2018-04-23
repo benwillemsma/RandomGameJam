@@ -30,6 +30,7 @@ public class CyclopsData : EnemyData
     [Header("Particles")]
     public ParticleSystem Fire;
     public ParticleSystem EyeBeam;
+    public ParticleSystem GroundPound;
     private bool onFire;
 
     #endregion

@@ -4,10 +4,8 @@ using UnityEngine;
 
 public class SurfaceClimbingState : PlayerState
 {
-    private List<Collider> Surfaces = new List<Collider>();
-
-    private Transform climbParent;
-    private Vector3 offset;
+    Transform parentRef;
+    Vector3 offset;
 
     private RaycastHit last_SurfaceHit;
     private RaycastHit cur_SurfaceHit;
@@ -18,21 +16,24 @@ public class SurfaceClimbingState : PlayerState
 
     private bool freehang = false;
 
-    public SurfaceClimbingState(PlayerData player,Collider surface) : base(player)
+    public SurfaceClimbingState(PlayerData player,Transform surface) : base(player)
     {
+        parentRef = surface;
         climbing = true;
-        Surfaces.Add(surface);
     }
 
     //Transitions
     public override IEnumerator EnterState(BaseState prevState)
     {
+        offset = parentRef.InverseTransformDirection(data.transform.position - parentRef.position);
         rb.velocity = Vector3.zero;
         rb.useGravity = false;
+        anim.SetBool("Climbing", true);
         yield return base.EnterState(prevState);
     }
     public override IEnumerator ExitState(BaseState nextState)
     {
+        anim.SetBool("Climbing", false);
         rb.useGravity = true;
         yield return base.ExitState(nextState);
     }
@@ -50,7 +51,6 @@ public class SurfaceClimbingState : PlayerState
 
     protected override void UpdateInput()
     {
-        SurfaceCheck();
         moveX = Input.GetAxisRaw("Horizontal");
         moveY = Input.GetAxisRaw("Vertical");
 
@@ -58,10 +58,11 @@ public class SurfaceClimbingState : PlayerState
         movementDirection = rb.transform.rotation * movementDirection;
         movementDirection = Vector3.ProjectOnPlane(movementDirection, -cur_SurfaceHit.normal);
 
-        data.UseStamina(8 * Time.deltaTime);
-        if (!climbing || (Vector3.Dot(cur_SurfaceHit.normal, Vector3.up) > 0.5f) || data.Stamina <= 0)
+        //data.UseStamina(1 * Time.deltaTime);
+        if (!climbing || data.Stamina <= 0 || Vector3.Dot(-data.transform.forward,Vector3.up) > 0.9f)
             stateManager.ChangeState(new PlayerWalkingState(data));
     }
+
     protected override void UpdateMovement()
     {
         if (cur_SurfaceHit.collider) freehang = Vector3.Dot(-cur_SurfaceHit.normal, Vector3.up) > 0.5f;
@@ -69,32 +70,37 @@ public class SurfaceClimbingState : PlayerState
         properRotation = Quaternion.LookRotation(forward, Vector3.up);
         rb.transform.rotation = Quaternion.Lerp(rb.transform.rotation, properRotation, Time.deltaTime * 5);
     }
+
     protected override void UpdatePhysics()
     {
-        if (Input.GetButton("Jump")) Jump();
-        else
+        if (Input.GetButton("Jump"))
+            Jump();
+        else if (parentRef)
         {
-            if (climbParent)
-            {
-                if (offset != Vector3.zero) rb.transform.position = climbParent.position + offset;
-                rb.velocity = movementDirection * data.runSpeed;
-                if (cur_SurfaceHit.collider) rb.velocity += -cur_SurfaceHit.normal * 0.2f;
-                offset = rb.transform.position - climbParent.position + (rb.velocity * Time.deltaTime);
-            }
+            data.transform.position = parentRef.position + parentRef.rotation * offset;
+            Vector3 velocity =  movementDirection * data.runSpeed;
+            if (cur_SurfaceHit.collider) velocity += -cur_SurfaceHit.normal * 0.2f;
+            offset += parentRef.InverseTransformDirection(velocity * Time.deltaTime);
         }
     }
 
     private bool SurfaceCheck()
     {
-        Vector3 start = rb.transform.position + rb.transform.up;
+        Vector3 start = rb.transform.position + rb.transform.up - rb.transform.forward * 0.2f;
         Vector3 direction = rb.transform.forward;
+
+        Debug.DrawRay(start, direction, Color.red);
+
         RaycastHit hit;
-        if (Physics.Raycast(start, direction, out hit, 1.1f, data.climbingMask))
+        if (Physics.Raycast(start, direction, out hit, 1.5f, data.climbingMask))
         {
             last_SurfaceHit = cur_SurfaceHit;
             cur_SurfaceHit = hit;
-            if (cur_SurfaceHit.transform != climbParent)
-                climbParent = cur_SurfaceHit.transform;
+            if (cur_SurfaceHit.transform != parentRef)
+            {
+                parentRef = cur_SurfaceHit.transform;
+                offset = parentRef.InverseTransformDirection(data.transform.position - parentRef.position);
+            }
             return true;
         }
         return false;
@@ -103,8 +109,7 @@ public class SurfaceClimbingState : PlayerState
     //State Actions
     private void Jump()
     {
-        anim.SetBool("climbing", false);
-        anim.SetBool("isGrounded", false);
+        anim.SetBool("Climbing", false);
         
         //Drop/Move allong wall
         rb.velocity = (data.transform.right * moveX / 2 + Vector3.up * moveY) * 5 + Vector3.up;
@@ -116,9 +121,6 @@ public class SurfaceClimbingState : PlayerState
     //Physics  Functions
     public override void OnTriggerEnter(Collider collider)
     {
-        if (!Surfaces.Contains(collider))
-            Surfaces.Add(collider);
-        
         if (!inTransition)
         {
             if (collider.tag == "ClimbingNode")
@@ -126,16 +128,6 @@ public class SurfaceClimbingState : PlayerState
                 ClimbingNode node = collider.gameObject.GetComponent<ClimbingNode>();
                 if (node) stateManager.ChangeState(new NodeClimbingState(data, node));
             }
-        }
-    }
-
-    public override void OnTriggerExit(Collider collider)
-    {
-        if (Surfaces.Contains(collider))
-        {
-            Surfaces.Remove(collider);
-            if (Surfaces.Count == 0)
-                stateManager.ChangeState(new PlayerWalkingState(data));
         }
     }
 }

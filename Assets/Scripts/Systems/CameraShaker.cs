@@ -29,9 +29,12 @@ public class CameraShaker : MonoBehaviour
 
     public void ShakecameraPreset1()
     {
-        float distance = (transform.position - player.position).magnitude;
-        float falloff = Mathf.Max(0, distance);
-        mainCamera.ShakeCamera(preset1_strength - falloff, preset1_duration);
+        if (player)
+        {
+            float distance = (transform.position - player.position).magnitude;
+            float falloff = Mathf.Max(0, distance);
+            mainCamera.ShakeCamera(preset1_strength - falloff, preset1_duration);
+        }
     }
 
     public void ShakecameraPreset2()

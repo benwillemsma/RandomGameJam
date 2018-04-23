@@ -115,9 +115,7 @@ public class PlayerWalkingState : PlayerState
                 if (node) stateManager.ChangeState(new NodeClimbingState(data, node));
             }
             else if (other.tag == "ClimbingSurface")
-            {
-                stateManager.ChangeState(new SurfaceClimbingState(data, other));
-            }
+                stateManager.ChangeState(new SurfaceClimbingState(data, other.transform));
         }
     }
 }

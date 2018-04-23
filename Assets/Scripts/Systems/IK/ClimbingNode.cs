@@ -67,7 +67,7 @@ public class ClimbingNode : MonoBehaviour
             Rotate();
     }
 
-    private void OnDrawGizmosSelected()
+    private void OnDrawGizmos()
     {
         Gizmos.color = Color.grey;
         Gizmos.DrawLine(transform.position, rightHand.transform.position);

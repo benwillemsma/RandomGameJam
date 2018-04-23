@@ -2124,10 +2124,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4969529654533648}
   - component: {fileID: 137843625418894798}
-  - component: {fileID: 65619191938433430}
-  - component: {fileID: 54124868739094888}
-  - component: {fileID: 114167350747388056}
-  - component: {fileID: 114635317670437594}
   m_Layer: 8
   m_Name: Sword_LP
   m_TagString: Untagged
@@ -11697,7 +11693,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1759914935187172}
   m_LocalRotation: {x: 0.46374902, y: -0.53379476, z: -0.46374902, w: 0.53379476}
-  m_LocalPosition: {x: -2.3095263e-17, y: 1.1516894, z: -0.020760749}
+  m_LocalPosition: {x: 0, y: 1.1516894, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4503236744700754}
@@ -16090,7 +16086,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1820605546886962}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 60, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4581304749280350}
@@ -20915,21 +20911,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!54 &54124868739094888
-Rigidbody:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1174007204369446}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!54 &54704754302652110
 Rigidbody:
   m_ObjectHideFlags: 1
@@ -20945,18 +20926,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!65 &65619191938433430
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1174007204369446}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.21, y: 0.89, z: 0.08}
-  m_Center: {x: -0.029310778, y: -0.58, z: -0.0019514933}
 --- !u!81 &81336622892016156
 AudioListener:
   m_ObjectHideFlags: 1
@@ -21157,26 +21126,6 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Slider+SliderEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &114167350747388056
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1174007204369446}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5831aa80b0381484d8354157c6593bab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  owningCharacter: {fileID: 114814631026113000}
-  collider: {fileID: 65619191938433430}
-  overTimeCooldown: 0
-  affectTags:
-  - Enemy/Cyclops
-  affectedCharaters: []
-  hitSomething: 0
-  effects:
-  - {fileID: 114635317670437594}
 --- !u!114 &114350375186677318
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -21275,7 +21224,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2adb600c1083b04a97679f57d0113c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AnimationLayer: 1
+  AnimationLayer: 0
 --- !u!114 &114629221036793254
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -21303,20 +21252,6 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
---- !u!114 &114635317670437594
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1174007204369446}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd5fc655059b4a64ea857bccb0e7d8e1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  initial_value: 1
-  final_value: 0
-  overTime_value: 0
 --- !u!114 &114661150794691448
 MonoBehaviour:
   m_ObjectHideFlags: 1

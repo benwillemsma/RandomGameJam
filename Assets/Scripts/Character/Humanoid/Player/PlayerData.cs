@@ -23,8 +23,12 @@ public class PlayerData : HumanoidData
     public const float MaxDetection = 15;
     public float TotalDetection(Vector3 atPosition)
     {
-        float distance = (transform.position - atPosition).magnitude;
-        return soundLevel / distance + lightLevel;
+        if (this)
+        {
+            float distance = (transform.position - atPosition).magnitude;
+            return soundLevel / distance + lightLevel;
+        }
+        else return 0;
     }
 
     #region Stamina
@@ -97,6 +101,12 @@ public class PlayerData : HumanoidData
 
     private Image healthImage;
 
+    public override void Respawn()
+    {
+        base.Respawn();
+        m_currentStamina = m_maxStamina;
+    }
+
     #endregion
 
     #region Trigger Input
@@ -118,10 +128,7 @@ public class PlayerData : HumanoidData
     {
         base.Awake();
         if (!GameManager.player)
-        {
             GameManager.player = this;
-            DontDestroyOnLoad(this);
-        }
         else
         {
             StopAllCoroutines();
@@ -150,7 +157,7 @@ public class PlayerData : HumanoidData
 
     private void FixedUpdate()
     {
-        lightLevel = LightChecker.instance.GetLIghtValue(transform.position + transform.up);
+        if (LightChecker.instance) lightLevel = LightChecker.instance.GetLIghtValue(transform.position + transform.up);
     }
 
     private void Start ()

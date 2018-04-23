@@ -23,11 +23,14 @@ public class StateManager : MonoBehaviour
     protected void Start()
     {
         //Initialize trigger Delegates
-        SetTriggers(m_state);
-        SetCollisions(m_state);
-        
-        StartCoroutine(m_state.EnterState(null));
-        CurrentState = m_state.ToString();
+        if (m_state != null)
+        {
+            SetTriggers(m_state);
+            SetCollisions(m_state);
+
+            StartCoroutine(m_state.EnterState(null));
+            CurrentState = m_state.ToString();
+        }
     }
 
     protected void Update()
@@ -80,58 +83,70 @@ public class StateManager : MonoBehaviour
     private CollisionDelegate collisionEnter;
     private CollisionDelegate collisionStay;
     private CollisionDelegate collisionExit;
-    
+
     private void RemoveTriggers(BaseState state)
     {
-        triggerEnter -= state.OnTriggerEnter;
-        triggerStay -= state.OnTriggerStay;
-        triggerExit -= state.OnTriggerExit;
+        if (state != null)
+        {
+            triggerEnter -= state.OnTriggerEnter;
+            triggerStay -= state.OnTriggerStay;
+            triggerExit -= state.OnTriggerExit;
+        }
     }
     private void SetTriggers(BaseState state)
     {
-        triggerEnter += state.OnTriggerEnter;
-        triggerStay += state.OnTriggerStay;
-        triggerExit += state.OnTriggerExit;
+        if (state != null)
+        {
+            triggerEnter += state.OnTriggerEnter;
+            triggerStay += state.OnTriggerStay;
+            triggerExit += state.OnTriggerExit;
+        }
     }
 
     private void RemoveCollisions(BaseState state)
     {
-        collisionEnter -= state.OnCollisionEnter;
-        collisionStay -= state.OnCollisionStay;
-        collisionExit -= state.OnCollisionExit;
+        if (state != null)
+        {
+            collisionEnter -= state.OnCollisionEnter;
+            collisionStay -= state.OnCollisionStay;
+            collisionExit -= state.OnCollisionExit;
+        }
     }
     private void SetCollisions(BaseState state)
     {
-        collisionEnter += state.OnCollisionEnter;
-        collisionStay += state.OnCollisionStay;
-        collisionExit += state.OnCollisionExit;
+        if (state != null)
+        {
+            collisionEnter += state.OnCollisionEnter;
+            collisionStay += state.OnCollisionStay;
+            collisionExit += state.OnCollisionExit;
+        }
     }
 
     // Unity Trigger Functions Call Current State Tirgger Functions
     private void OnTriggerEnter(Collider other)
     {
-        triggerEnter.Invoke(other);
+        if (m_state != null) triggerEnter.Invoke(other);
     }
     private void OnTriggerStay(Collider other)
     {
-        triggerStay.Invoke(other);
+        if (m_state != null) triggerStay.Invoke(other);
     }
     private void OnTriggerExit(Collider other)
     {
-        triggerExit.Invoke(other);
+        if (m_state != null) triggerExit.Invoke(other);
     }
 
     // Unity Collision Functions Call Current State Collision Functions
     private void OnCollisionEnter(Collision collision)
     {
-        collisionExit.Invoke(collision);
+        if (m_state != null) collisionExit.Invoke(collision);
     }
     private void OnCollisionStay(Collision collision)
     {
-        collisionStay.Invoke(collision);
+        if (m_state != null) collisionStay.Invoke(collision);
     }
     private void OnCollisionExit(Collision collision)
     {
-        collisionExit.Invoke(collision);
+        if (m_state != null) collisionExit.Invoke(collision);
     }
 }

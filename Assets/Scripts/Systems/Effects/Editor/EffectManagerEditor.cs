@@ -90,7 +90,6 @@ public class EffectManagerEditor : Editor
                 i--;
             }
         }
-        Debug.Log(m_target.effects.Count);
     }
 
     private void AddEffect()

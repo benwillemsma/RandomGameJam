@@ -46,9 +46,9 @@ public class ThirdPersonCamera : MonoBehaviour
     void LateUpdate ()
     {
         // Update Pseudo Camera
-        cameraRotator.position = pivotPoint.position;
         if (!player.IsDead)
         {
+            cameraRotator.position = pivotPoint.position;
             cameraRotator.Rotate(Input.GetAxis("Mouse Y") * (player.InvertedCamera ? 1 : -1) * Time.deltaTime * player.CameraSensitivity, 0, 0);
             cameraRotator.rotation = Quaternion.LookRotation
                 (
@@ -100,9 +100,12 @@ public class ThirdPersonCamera : MonoBehaviour
 
     private void CheckLineOfSight()
     {
-        Vector3 direction = transform.position - pivotPoint.position;
-        RaycastHit hit;
-        if (Physics.Raycast(pivotPoint.position, direction, out hit, direction.magnitude, ~player.groundMask))
-            transform.position = hit.point - direction.normalized * 0.5f;
+        if (pivotPoint)
+        {
+            Vector3 direction = transform.position - pivotPoint.position;
+            RaycastHit hit;
+            if (Physics.Raycast(pivotPoint.position, direction, out hit, direction.magnitude, ~player.groundMask))
+                transform.position = hit.point - direction.normalized * 0.5f;
+        }
     }
 }

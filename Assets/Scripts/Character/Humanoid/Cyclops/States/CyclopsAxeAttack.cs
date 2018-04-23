@@ -60,6 +60,10 @@ public class CyclopsAxeAttack : CyclopsAttack
         {
             data.StartCoroutine(RecoilDelay(0.5f));
             if (cameraShaker) cameraShaker.Shakecamera(200, 0.5f);
+            if (attackCollider.lastHit.rigidbody != player.RB)
+                Object.Instantiate(data.GroundPound,
+                    attackCollider.lastHit.contacts[0].point,
+                    Quaternion.LookRotation(attackCollider.lastHit.contacts[0].normal));
         }
         else if (elapsedTime >= duration)
         {

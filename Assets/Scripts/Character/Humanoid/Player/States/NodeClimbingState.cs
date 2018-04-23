@@ -87,8 +87,8 @@ public class NodeClimbingState : PlayerState
             moveY = Input.GetAxisRaw("Vertical");
 
             moveDirection = new Vector3(moveX, moveY, 0);
+            //data.UseStamina(8 * Time.deltaTime);
 
-            data.UseStamina(8 * Time.deltaTime);
             if (!climbing || data.Stamina <= 0
                 || (!currentNodes[0] && !currentNodes[1]) 
                 || (!currentNodes[0].Active && !currentNodes[1].Active)
@@ -114,12 +114,24 @@ public class NodeClimbingState : PlayerState
                     else
                     {
                         Collider col = SurfaceCheck();
-                        if (col) stateManager.ChangeState(new SurfaceClimbingState(data, col));
+                        if (col) stateManager.ChangeState(new SurfaceClimbingState(data, col.transform));
                     }
                 }
             }
         }
     }
+
+    protected override void UpdateIK()
+    {
+        if (!moving) IK.SetIKPositions
+            (
+            currentNodes[0].rightHand,
+            currentNodes[1].leftHand,
+            currentNodes[0].rightFoot,
+            currentNodes[1].leftFoot
+            );
+    }
+
     protected override void UpdateMovement()
     {
         freehang = currentNodes[0].freehang || currentNodes[1].freehang;

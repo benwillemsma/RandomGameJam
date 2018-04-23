@@ -174,7 +174,7 @@ public class GameManager : MonoBehaviour
 
         else if (scene.name == m_mainMenuScene)
         {
-            m_paused = false;
+            TogglePause(false);
             ToggleCursor(true);
             Time.timeScale = 1;
             if (player) Destroy(player.gameObject);
@@ -183,7 +183,6 @@ public class GameManager : MonoBehaviour
         else if (scene.name == m_playScene)
         {
             if (!player) SpawnPlayer();
-
             ToggleCursor(false);
         }
 
@@ -192,7 +191,7 @@ public class GameManager : MonoBehaviour
             //Scene is LevelScene
             string currentLevel = scene.name;
             PlayerPrefs.SetString("ContinueScene", currentLevel);
-            SceneManager.SetActiveScene(SceneManager.GetSceneByName("PlayScene"));
+            //SceneManager.SetActiveScene(SceneManager.GetSceneByName("PlayScene"));
         }
     }
 
@@ -231,7 +230,7 @@ public class GameManager : MonoBehaviour
         if (this != Instance)
             return;
 
-        if (Input.GetButtonDown("Pause") && SceneManager.GetActiveScene().name == m_playScene)
+        if (Input.GetButtonDown("Pause") && SceneManager.GetActiveScene().name != m_playScene)
             TogglePause();
 
         if (Input.GetKeyDown(KeyCode.KeypadPlus))

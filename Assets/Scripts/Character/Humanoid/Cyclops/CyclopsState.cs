@@ -56,13 +56,16 @@ public abstract class CyclopsState : EnemyState<CyclopsData>
 
     protected bool CheckLineOfSight()
     {
-        Vector3 playerPos = player.transform.position + Vector3.up;
-        Vector3 direction = playerPos - data.eye.position;
-        if (Vector3.Dot(data.eye.forward, direction) > 1 - data.visionAngle / 90)
+        if (player)
         {
-            RaycastHit hit;
-            if (!Physics.Raycast(data.eye.position, direction, out hit, direction.magnitude, data.VisionMask))
-                return true;
+            Vector3 playerPos = player.transform.position + Vector3.up;
+            Vector3 direction = playerPos - data.eye.position;
+            if (Vector3.Dot(data.eye.forward, direction) > 1 - data.visionAngle / 90)
+            {
+                RaycastHit hit;
+                if (!Physics.Raycast(data.eye.position, direction, out hit, direction.magnitude, data.VisionMask))
+                    return true;
+            }
         }
         return false;
     }
