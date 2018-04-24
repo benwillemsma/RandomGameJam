@@ -46,9 +46,12 @@ public class StateManager : MonoBehaviour
     //State Functions
     public void ChangeState(BaseState newState)
     {
-        m_state.InTransition = true;
-        newState.InTransition = true;
-        StartCoroutine(HandleStateTransition(newState));
+        if (!m_state.InTransition)
+        {
+            m_state.InTransition = true;
+            newState.InTransition = true;
+            StartCoroutine(HandleStateTransition(newState));
+        }
     }
     protected IEnumerator HandleStateTransition(BaseState newState)
     {

@@ -25,6 +25,9 @@ public class SurfaceClimbingState : PlayerState
     //Transitions
     public override IEnumerator EnterState(BaseState prevState)
     {
+        if (cur_SurfaceHit.transform.root.tag == "Enemy/Cyclops")
+            cur_SurfaceHit.transform.root.GetComponent<CyclopsData>().beingClimbed = true;
+
         offset = parentRef.InverseTransformDirection(data.transform.position - parentRef.position);
         rb.velocity = Vector3.zero;
         rb.useGravity = false;
@@ -33,6 +36,9 @@ public class SurfaceClimbingState : PlayerState
     }
     public override IEnumerator ExitState(BaseState nextState)
     {
+        if (cur_SurfaceHit.transform.root.tag == "Enemy/Cyclops")
+            cur_SurfaceHit.transform.root.GetComponent<CyclopsData>().beingClimbed = false;
+
         anim.SetBool("Climbing", false);
         rb.useGravity = true;
         yield return base.ExitState(nextState);

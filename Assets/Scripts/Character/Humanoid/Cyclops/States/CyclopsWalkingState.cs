@@ -20,7 +20,9 @@ public class CyclopsWalkingState : CyclopsState
 
     protected override void UpdateAnimator()
     {
-        anim.SetFloat("Speed", agent.velocity.magnitude);
+        float speed = Vector3.Dot(agent.velocity, data.transform.forward);
+        Debug.Log(speed);
+        anim.SetFloat("Speed", speed);
         anim.SetFloat("TurnAngle", turnAngle);
     }
 

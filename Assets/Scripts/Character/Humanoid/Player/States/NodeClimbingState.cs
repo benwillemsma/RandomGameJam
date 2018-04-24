@@ -7,7 +7,6 @@ public class NodeClimbingState : PlayerState
     private ClimbingNode[] currentNodes = new ClimbingNode[2];
 
     private Vector3 moveDirection;
-    private Vector3 lookDirection;
 
     private float movementSpeed = 3f;
     private float moveX = 0;
@@ -35,6 +34,9 @@ public class NodeClimbingState : PlayerState
     //Transitions
     public override IEnumerator EnterState(BaseState prevState)
     {
+        if (currentNodes[0].transform.root.tag == "Enemy/Cyclops")
+            currentNodes[0].transform.root.GetComponent<CyclopsData>().beingClimbed = true;
+
         rb.velocity = Vector3.zero;
         rb.useGravity = false;
         IK.HeadWeight = 0;
@@ -59,6 +61,9 @@ public class NodeClimbingState : PlayerState
     }
     public override IEnumerator ExitState(BaseState nextState)
     {
+        if (currentNodes[0].transform.root.tag == "Enemy/Cyclops")
+            currentNodes[0].transform.root.GetComponent<CyclopsData>().beingClimbed = false;
+
         rb.useGravity = true;
 
         elapsedTime = 0;
@@ -88,8 +93,8 @@ public class NodeClimbingState : PlayerState
 
             moveDirection = new Vector3(moveX, moveY, 0);
             //data.UseStamina(8 * Time.deltaTime);
-
-            if (!climbing || data.Stamina <= 0
+            //!climbing ||
+            if ( data.Stamina <= 0
                 || (!currentNodes[0] && !currentNodes[1]) 
                 || (!currentNodes[0].Active && !currentNodes[1].Active)
                 || (!currentNodes[0].gameObject.activeInHierarchy && !currentNodes[1].gameObject.activeInHierarchy))
@@ -97,25 +102,22 @@ public class NodeClimbingState : PlayerState
 
             if (Input.GetButtonDown("Jump")) Jump();
 
-            else if (Vector3.Dot(Vector3.Project(data.transform.forward, Vector3.up), lookDirection) >= 0)
+            else if (moveDirection.magnitude > Mathf.Epsilon)
             {
-                if (moveDirection.magnitude > Mathf.Epsilon)
-                {
-                    nodeIndex = Mathf.RoundToInt(Mathf.Atan2(moveDirection.x, moveDirection.y) / Mathf.PI * 4);
-                    if (nodeIndex < 0) nodeIndex += 8;
+                nodeIndex = Mathf.RoundToInt(Mathf.Atan2(moveDirection.x, moveDirection.y) / Mathf.PI * 4);
+                if (nodeIndex < 0) nodeIndex += 8;
 
-                    movePolarity = FindNextMove();
-                    ClimbingNode NextNode = FindNextNode();
-                    if (NextNode && NextNode as ClimbingNode)
-                    {
-                        moving = true;
-                        data.StartCoroutine(Climb(NextNode as ClimbingNode));
-                    }
-                    else
-                    {
-                        Collider col = SurfaceCheck();
-                        if (col) stateManager.ChangeState(new SurfaceClimbingState(data, col.transform));
-                    }
+                movePolarity = FindNextMove();
+                ClimbingNode NextNode = FindNextNode();
+                if (NextNode && NextNode as ClimbingNode)
+                {
+                    moving = true;
+                    data.StartCoroutine(Climb(NextNode as ClimbingNode));
+                }
+                else
+                {
+                    Collider col = SurfaceCheck();
+                    if (col) stateManager.ChangeState(new SurfaceClimbingState(data, col.transform));
                 }
             }
         }
@@ -137,9 +139,6 @@ public class NodeClimbingState : PlayerState
         freehang = currentNodes[0].freehang || currentNodes[1].freehang;
         if (!moving && currentNodes[0] && currentNodes[1])
         {
-            lookDirection = Camera.main.transform.forward;
-            lookDirection = Vector3.ProjectOnPlane(lookDirection, rb.transform.up);
-
             //Root Position - While Stationary
             rb.transform.position = (currentNodes[1].PlayerPosition + currentNodes[0].PlayerPosition) / 2;
 
@@ -214,17 +213,7 @@ public class NodeClimbingState : PlayerState
     //State Actions
     private void Jump()
     {
-        anim.SetBool("climbing", false);
-        anim.SetBool("isGrounded", false);
-
-        //Wall Eject
-        if (Vector3.Dot(currentNodes[0].transform.transform.forward, lookDirection) < 0)
-        {
-            rb.transform.LookAt(rb.transform.position + lookDirection);
-            rb.velocity = Vector3.ProjectOnPlane(lookDirection.normalized, Vector3.up) * 2.5f + rb.transform.up * 2;
-        }
-        //Drop/Move allong wall
-        else rb.velocity = (data.transform.right * moveX / 2 + Vector3.up * moveY) * 5 + Vector3.up;
+        rb.velocity = (data.transform.right * moveX / 2 + Vector3.up * moveY) * 5 + Vector3.up;
 
         rb.transform.localEulerAngles = new Vector3(0, rb.transform.localEulerAngles.y, rb.transform.localEulerAngles.z);
         stateManager.ChangeState(new PlayerWalkingState(data));
@@ -273,7 +262,7 @@ public class NodeClimbingState : PlayerState
                 elapsedTime
                 );
             if (freehang) desiredRotation = Quaternion.Euler(0, desiredRotation.eulerAngles.y, desiredRotation.eulerAngles.z);
-            rb.transform.rotation = Quaternion.Lerp(rb.transform.rotation, desiredRotation, Time.deltaTime * 5);
+            rb.transform.rotation = desiredRotation;
 
             //Root Position - While moving
             rb.transform.position = Vector3.Lerp(

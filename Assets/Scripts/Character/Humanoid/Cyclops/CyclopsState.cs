@@ -21,6 +21,9 @@ public abstract class CyclopsState : EnemyState<CyclopsData>
     {
         TryDetectPlayer();
         UpdateDetectionState();
+
+        if (data.beingClimbed)
+            stateManager.ChangeState(new CyclopsShakeState(data)); return;
     }
 
     protected void TryDetectPlayer()

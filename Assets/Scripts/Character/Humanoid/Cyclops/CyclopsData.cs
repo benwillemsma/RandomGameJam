@@ -7,6 +7,8 @@ public class CyclopsData : EnemyData
 {
     #region CyclopsIdleState Variables
 
+    public bool beingClimbed = false;
+
     [Header("Vision Data")]
     public Transform eye;
     [Range(1,90)]
