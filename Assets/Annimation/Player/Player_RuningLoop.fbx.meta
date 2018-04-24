@@ -1476,11 +1476,11 @@ ModelImporter:
     rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: "\nClip 'Take 001' has import animation warnings that
-      might lower retargeting quality:\n\t'ShoulderPart1_R' is inbetween humanoid
-      transforms and has rotation animation that will be discarded.\n\t'ShoulderPart2_R'
-      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'ShoulderPart1_L'
-      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'ShoulderPart2_L'
-      is inbetween humanoid transforms and has rotation animation that will be discarded.\n"
+      might lower retargeting quality:\n\t'Scapula_R' has translation animation that
+      will be discarded.\n\t'ShoulderPart2_R' is inbetween humanoid transforms and
+      has rotation animation that will be discarded.\n\t'Scapula_L' has translation
+      animation that will be discarded.\n\t'ShoulderPart2_L' is inbetween humanoid
+      transforms and has rotation animation that will be discarded.\n"
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
@@ -1633,7 +1633,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: Scapula_L
+    - boneName: Shoulder_L
       humanName: LeftShoulder
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -1641,7 +1641,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: Scapula_R
+    - boneName: Shoulder_R
       humanName: RightShoulder
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -1649,7 +1649,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: Shoulder_L
+    - boneName: ShoulderPart1_L
       humanName: LeftUpperArm
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -1657,7 +1657,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: Shoulder_R
+    - boneName: ShoulderPart1_R
       humanName: RightUpperArm
       limit:
         min: {x: 0, y: 0, z: 0}
