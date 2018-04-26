@@ -230,7 +230,7 @@ public class GameManager : MonoBehaviour
         if (this != Instance)
             return;
 
-        if (Input.GetButtonDown("Pause") && SceneManager.GetActiveScene().name != m_playScene)
+        if (Input.GetButtonDown("Pause") && SceneManager.GetActiveScene().name != m_mainMenuScene)
             TogglePause();
 
         if (Input.GetKeyDown(KeyCode.KeypadPlus))

@@ -155,11 +155,6 @@ public class PlayerData : HumanoidData
         if (chargeBar) chargeBar.value = m_charge;
     }
 
-    private void FixedUpdate()
-    {
-        if (LightChecker.instance) lightLevel = LightChecker.instance.GetLIghtValue(transform.position + transform.up);
-    }
-
     private void Start ()
     {
         m_stateM.State = new PlayerWalkingState(this);
